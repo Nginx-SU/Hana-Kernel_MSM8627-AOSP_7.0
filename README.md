@@ -1,2 +1,70 @@
 # Hana-CoreUX-Kernel_For_Nicki
-Hana Core UX Kernel is custom kernel for Xperia M that based on AOSP Nougat Source.
+  	                                          Hana Core UX + Kernel
+			                                            For Xperia M
+
+Hana Core UX Kernel is codename project from Hana Kernel Development. Hana Kernel Development itself have 2 codename in step of development, AoiCore+ and Hana Core UX is still part of Hana Kernel Project. This kernel have main to optimize Xperia M / M Dual device with latest source kernel, many optimization for processor,gpu and much improvement in LMK and KSM manager.
+
+This kernel is include several feature to increase performance and ARM is aim for all improvement, Custom governor and custom I/O Scheduler is already included too here.
+
+This kernel need kernel configuration app to control this kernel, so try to find kernel configuration app after flash this kernel.
+
+This is kernel tread source
+(AoiCore+ Kernel) / v1.6.3 [EOL] {XDA-ONLY}
+: "http://forum.xda-developers.com/xperia-m/orig-development/6-0-aoicore-kernel-t3454265"
+
+(HanaCoreUX+ Kernel) v1.1 - TEST RELEASE
+: Non released version (Private)
+
+(Hana Kernel) Waiting...
+: Still on development
+
+How to compile kernel from source :
+1. Install Ubuntu and Java JDK
+
+2. Install this package on ubuntu
+{ sudo apt-get install -y build-essential kernel-package libncurses5-dev bzip2 bin86 qt4-dev-tools libncurses5 git-core nautilus-open-terminal git-core gnupg flex bison gperf libsdl-dev libesd0-dev libwxgtk2.6-dev zip curl libncurses5-dev zlib1g-dev ia32-libs lib32z1-dev lib32ncurses5-dev gcc-multilib g++-multilib adb }
+
+3. Clone My Customize Crosstool-NG Toolchains 
+ git clone https://github.com/Nicklas373/Crosstool-NG-Toolchains-5.4.x_Nicki.git
+
+4. NULL (KERNEL SOURCE)
+
+5. After complete, then use this command to compile kernel 
+(on HanaCoreUX+ Kernel directory)
+
+export ARCH=arm
+export CROSS_COMPILE=(Your Current Toolchains Location)/bin/arm-unknown-linux-gnueabihf-
+
+Compiling,
+
+make ARCH=arm cyanogenmod_nicki_defconfig
+make ARCH=arm CROSS_COMPILE=/home/(Your Current Toolchains Location)/bin/arm-unknown-linux-gnueabihf- > hanaLog
+
+Create modules,
+
+mkdir modules
+cp arch/arm/boot/zImage modules
+find . -name "*.ko" -exec cp {} modules \;
+
+
+Extracting modules,
+
+cd /home/(Your Current Location)
+mkdir Hana_ouput
+mv android/kernel/modules Hana_output
+
+Clean before create flashable zip,
+
+cd (Your Kernel Location)
+make clean && make mrproper
+
+Create Flashable zip,
+
+- extract Hana_Core-UX-nicki.zip
+- delete all files in system/lib/modules and replace it with your new modules in Hana_output (.ko files)
+- delete boot.img-zImage in tmp/kernel and replace it with your zImage from Hana_output and rename it too boot.img-zImage
+- create zip use this command on Hana_Core-UX-nicki directory
+
+  zip -r HanaCoreUX+_TEST-nicki
+
+Done your kernel is ready to flash and have fun :D
