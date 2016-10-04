@@ -1,6 +1,4 @@
-# Hana-CoreUX-Kernel_For_Nicki
-  	                                          Hana Core UX + Kernel
-			                               For Xperia M
+# Hana-CoreUX-Kernel_For_NickI
 
 Hana Core UX Kernel is codename project from Hana Kernel Development. Hana Kernel Development itself have 2 codename in step of development, AoiCore+ and Hana Core UX is still part of Hana Kernel Project. This kernel have main to optimize Xperia M / M Dual device with latest source kernel, many optimization for processor,gpu and much improvement in LMK and KSM manager.
 
