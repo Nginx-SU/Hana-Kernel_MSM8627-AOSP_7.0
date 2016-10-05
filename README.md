@@ -6,6 +6,22 @@ This kernel is include several feature to increase performance and ARM is aim fo
 
 This kernel need kernel configuration app to control this kernel, so try to find kernel configuration app after flash this kernel.
 
+This kernel feature is :
+- Linux Kernel Version 3.4.11
+- Compatibility with AOSP and CM based ROM [Min Android 6.0]
+- Added overclock up to 1,7Ghz
+- Added AutoSMP & Alucard Hotplug
+Added custom CPU Governor 
+: Alucard,Intelliactive,Intellidemand,Lionheart,Adaptive,SmartassV2,SmartMax,HYPER and lulzactive
+Added custom I/O Sched Governor 
+: zen,sio,sioplus,tripndroid,fifo,fiops and vr
+Added fast charge feature
+Compiled using GCC 5.4.0 Crosstool-NG Toolchains (Optimized for armv7 with neon-vfpv4)
+Add full support NEON VFPV4 feature 
+Enable Graphite optimization on kernel
+Added Auto hotplug drivers for optimized mpdecision
+Update sync from latest cm13 kernel source build 20160909 (For AoiCore+)
+
 This is kernel tread source
 (AoiCore+ Kernel) / v1.6.3 [EOL] {XDA-ONLY}
 
