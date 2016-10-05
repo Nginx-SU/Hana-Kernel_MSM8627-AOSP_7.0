@@ -350,9 +350,9 @@ KALLSYMS	= scripts/kallsyms
 PERL		= perl
 CHECK		= sparse
 
-
 CHECKFLAGS     := -D__linux__ -Dlinux -D__STDC__ -Dunix -D__unix__ \
 		  -Wbitwise -Wno-return-void $(CF)
+
 
 KERNELFLAGS  = -Ofast -DNDEBUG -munaligned-access -fgcse-lm -fgcse-sm -fsingle-precision-constant -fforce-addr -fsched-spec-load -mtune=cortex-a7 -marm -mfpu=neon-vfpv4 -ftree-vectorize -fpredictive-commoning -ffast-math -floop-nest-optimize $(GRAPHITE_FLAGS)
 MODFLAGS        = -DMODULE $(KERNELFLAGS)
@@ -362,7 +362,6 @@ LDFLAGS_MODULE  = -T $(srctree)/scripts/module-common.lds
 CFLAGS_KERNEL   = $(KERNELFLAGS)
 AFLAGS_KERNEL   = $(KERNELFLAGS)
 CFLAGS_GCOV     = -fprofile-arcs -ftest-coverage
-
 
 # Use LINUXINCLUDE when you must reference the include/ directory.
 # Needed to be compatible with the O= option

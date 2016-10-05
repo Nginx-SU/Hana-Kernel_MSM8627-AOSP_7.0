@@ -356,9 +356,9 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      arch/arm/mach-msm/cache_erp.o
   CC      arch/arm/mach-msm/ebi_erp.o
   CC      arch/arm/mach-msm/hsic_sysmon.o
+  CC      arch/arm/mach-msm/fastchg.o
   CC      arch/arm/mach-msm/timer_page.o
   CC      arch/arm/mach-msm/fih_proc_fs.o
-  CC      arch/arm/mach-msm/fastchg.o
   CC      arch/arm/mach-msm/msm_cpu_pwrctl.o
   CC      arch/arm/mach-msm/alucard_hotplug.o
   CC      arch/arm/mach-msm/cpufreq.o
@@ -1022,13 +1022,12 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      drivers/cpufreq/cpufreq_smartass2.o
   CC      drivers/cpufreq/cpufreq_lionheart.o
   CC      drivers/cpufreq/cpufreq_lulzactive.o
-  CC      drivers/cpufreq/cpufreq_impulse.o
   CC      drivers/cpufreq/cpufreq_alucard.o
   CC      drivers/cpufreq/cpufreq_adaptive.o
   CC      drivers/cpufreq/cpufreq_intellidemand.o
   CC      drivers/cpufreq/cpufreq_HYPER.o
   CC      drivers/cpufreq/cpufreq_intelliactive.o
-  CC      drivers/cpufreq/cpufreq_savagedzen.o
+  CC      drivers/cpufreq/cpufreq_smartmax.o
   CC      drivers/cpufreq/freq_table.o
   CC      drivers/cpufreq/cpufreq_gov_msm.o
   LD      drivers/cpufreq/built-in.o

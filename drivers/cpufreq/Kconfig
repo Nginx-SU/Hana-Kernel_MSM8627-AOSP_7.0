@@ -128,12 +128,6 @@ config CPU_FREQ_DEFAULT_GOV_LULZACTIVE
 	help
 	  Use the CPUFreq governor 'lulzactive' as default.
 
-config CPU_FREQ_DEFAULT_GOV_IMPULSE
-	bool "impulse"
-	select CPU_FREQ_GOV_IMPULSE
-	help
-	  Use the CPUFreq governor 'interactive' as default.
-
 config CPU_FREQ_DEFAULT_GOV_ALUCARD
 	bool "alucard"
 	select CPU_FREQ_GOV_ALUCARD
@@ -175,6 +169,12 @@ config CPU_FREQ_DEFAULT_GOV_INTELLIACTIVE
 	  loading your cpufreq low-level hardware driver, using the
 	  'interactive' governor for latency-sensitive workloads.	
 
+config CPU_FREQ_DEFAULT_GOV_SMARTMAX
+         bool "smartmax"
+         select CPU_FREQ_GOV_SMARTMAX
+         help
+           Use the CPUFreq governor 'smartmax' as default
+ 
 endchoice
 
 config CPU_FREQ_GOV_PERFORMANCE
@@ -303,14 +303,6 @@ config CPU_FREQ_GOV_LULZACTIVE
 
 	  If in doubt, say N.
 
-config CPU_FREQ_GOV_IMPULSE
-	tristate "'impulse' cpufreq policy governor"
-	help
-	  'impulse' - This driver adds a dynamic cpufreq policy governor
-	  designed for optimized balance between power and performance.
-
-	  If in doubt, say N.
-
 config CPU_FREQ_GOV_ALUCARD
 	tristate "'alucard' cpufreq governor"
 	depends on CPU_FREQ
@@ -400,6 +392,12 @@ config CPU_FREQ_GOV_INTELLIACTIVE
 
 	  If in doubt, say N.
 
+config CPU_FREQ_GOV_SMARTMAX
+         tristate "'smartmax' cpufreq policy governor"
+         select CPU_FREQ_TABLE
+         help
+           'smartmax' combined ondemand and smartass2
+ 
 menu "x86 CPU frequency scaling drivers"
 depends on X86
 source "drivers/cpufreq/Kconfig.x86"
