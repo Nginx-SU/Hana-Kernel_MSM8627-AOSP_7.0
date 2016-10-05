@@ -16,11 +16,13 @@ Added custom CPU Governor
 Added custom I/O Sched Governor 
 : zen,sio,sioplus,tripndroid,fifo,fiops and vr
 Added fast charge feature
-Compiled using GCC 5.4.0 Crosstool-NG Toolchains (Optimized for armv7 with neon-vfpv4)
-Add full support NEON VFPV4 feature 
-Enable Graphite optimization on kernel
-Added Auto hotplug drivers for optimized mpdecision
-Update sync from latest cm13 kernel source build 20160909 (For AoiCore+)
+- Compiled using GCC 5.4.0 Crosstool-NG Toolchains (Optimized for armv7 with neon-vfpv4)
+- Add full support NEON VFPV4 feature 
+- Enable Graphite optimization on kernel and GPU
+- Added Auto hotplug drivers for optimized mpdecision
+- Update sync from latest cm13 kernel source build 20160909 (For AoiCore+)
+
+More details on changelog for custom build in kernel source
 
 This is kernel tread source
 (AoiCore+ Kernel) / v1.6.3 [EOL] {XDA-ONLY}
