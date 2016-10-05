@@ -2,7 +2,7 @@ Changelog :
 
 V1.2 PRE-BETA RELEASE:
 - Added optimization on cpu governor
-- Added Cafactive and Smartmax cpu governor
+- Added Smartmax cpu governor
 - Removed Impulse and SavagedZen cpu governor
 - Fix problem on intellidemand (slow response)
 
