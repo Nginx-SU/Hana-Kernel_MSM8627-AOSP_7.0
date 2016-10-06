@@ -11,11 +11,11 @@ This kernel feature is :
 - Compatibility with AOSP and CM based ROM [Min Android 6.0]
 - Added overclock up to 1,7Ghz
 - Added AutoSMP & Alucard Hotplug
-Added custom CPU Governor 
+- Added custom CPU Governor 
 : Alucard,Intelliactive,Intellidemand,Lionheart,Adaptive,SmartassV2,SmartMax,HYPER and lulzactive
-Added custom I/O Sched Governor 
+- Added custom I/O Sched Governor 
 : zen,sio,sioplus,tripndroid,fifo,fiops and vr
-Added fast charge feature
+- Added fast charge feature
 - Compiled using GCC 5.4.0 Crosstool-NG Toolchains (Optimized for armv7 with neon-vfpv4)
 - Add full support NEON VFPV4 feature 
 - Enable Graphite optimization on kernel and GPU
@@ -29,7 +29,7 @@ This is kernel tread source
 
 http://forum.xda-developers.com/xperia-m/orig-development/6-0-aoicore-kernel-t3454265
 
-(HanaCoreUX+ Kernel) v1.1 - TEST RELEASE
+(HanaCoreUX+ Kernel) v1.2 - PRE-TEST RELEASE
 Non released version (Private)
 Download Official build (EXPERIMENTAL) 
 https://www.androidfilehost.com/?w=files&flid=120528
