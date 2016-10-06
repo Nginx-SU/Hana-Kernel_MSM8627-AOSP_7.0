@@ -87,7 +87,7 @@ cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_adaptive.c Hana_CoreUX-Source/drivers
 cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_alucard.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_alucard.c
 cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_HYPER.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_HYPER.c
 cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_intellidemand.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_intellidemand.c
-cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_intelliactive.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_intelliactive.cc
+cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_intelliactive.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_intelliactive.c
 cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_lionheart.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_lionheart.c
 cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_lulzactive.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_lulzactive.c
 cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_smartass2.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_smartass2.c
