@@ -10,9 +10,9 @@ This kernel feature is :
 - Linux Kernel Version 3.4.11
 - Compatibility with AOSP and CM based ROM [Min Android 6.0]
 - Added overclock up to 1,7Ghz
-- Added AutoSMP & Alucard Hotplug
+- Added Intelli Plug & Alucard Hotplug
 - Added custom CPU Governor 
-: Alucard,Intelliactive,Intellidemand,Lionheart,Adaptive,SmartassV2,SmartMax,HYPER and lulzactive
+: Alucard,Intelliactive,Darkness,Lionheart,Adaptive,SmartassV2,SmartMax and HYPER
 - Added custom I/O Sched Governor 
 : zen,sio,sioplus,tripndroid,fifo,fiops and vr
 - Added fast charge feature
@@ -20,18 +20,22 @@ This kernel feature is :
 - Add full support NEON VFPV4 feature 
 - Enable Graphite optimization on kernel and GPU
 - Added Auto hotplug drivers for optimized mpdecision
+- Added ARM Hibernation function
 - Update sync from latest cm13 kernel source build 20160909 (For AoiCore+)
 
 More details on changelog for custom build in kernel source
 
-This is kernel tread source
+This is kernel tread source ;
 (AoiCore+ Kernel) / v1.6.3 [EOL] {XDA-ONLY}
 
 http://forum.xda-developers.com/xperia-m/orig-development/6-0-aoicore-kernel-t3454265
 
-(HanaCoreUX+ Kernel) v1.2 - PRE-TEST RELEASE
+(HanaCoreUX+ Kernel) v1.2.5 - BETA RELEASE
+
 Non released version (Private)
+
 Download Official build (EXPERIMENTAL) 
+
 https://www.androidfilehost.com/?w=files&flid=120528
 
 (Hana Kernel) Waiting...
@@ -80,11 +84,14 @@ make clean && make mrproper
 
 Create Flashable zip,
 
--extract Hana_Core-UX-nicki.zip
--delete all files in system/lib/modules and replace it with your new modules in Hana_output (.ko files)
--delete boot.img-zImage in tmp/kernel and replace it with your zImage from Hana_output and rename it too boot.img-zImage
--create zip use this command on Hana_Core-UX-nicki directory
+Extract Hana_Core-UX-nicki.zip
 
-  zip -r HanaCoreUX+_TEST-nicki
+Delete all files in system/lib/modules and replace it with your new modules in Hana_output (.ko files)
 
-Done “ Hana Core UX + Kernel is ready to flash”
+Delete boot.img-zImage in tmp/kernel and replace it with your zImage from Hana_output and rename it too boot.img-zImage
+
+Create zip use this command on Hana_Core-UX-nicki directory
+
+  "zip -r HanaCoreUX+_TEST-nicki"
+
+Done “Hana Core UX + Kernel is ready to flash”
