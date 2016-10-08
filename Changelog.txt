@@ -1,5 +1,22 @@
 Changelog :
 
+V1.2.5 BETA RELEASE:
+- Re-added Smartmax CPU Governor
+- Improved "get cpu idle time" on stock governor
+- Remove Dynamic Interactive CPU Governor
+- Fix error on stock interactive governor when compile
+- Improved Alucard CPU Governor
+- Full remove implement from ELemental X CPU Governor
+- Clean build
+
+V1.2.3 BETA RELEASE:
+- Removed Intellidemand,Lulzactive and Smartmax cpu governor
+- Added Dynamic Interactive, PMC, and Darkness cpu governor
+- Added Implementation for Intelli Plug Hotplug
+- Removed Auto SMP hotplug
+- Improved on I/O Sched governor
+- Clean build
+
 V1.2 PRE-BETA RELEASE:
 - Added optimization on cpu governor
 - Added Smartmax cpu governor

@@ -106,7 +106,6 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      arch/arm/kernel/topology.o
   CC      arch/arm/kernel/user_accessible_timer.o
   CC      arch/arm/kernel/io.o
-  CC      arch/arm/kernel/autosmp.o
   CC      arch/arm/kernel/fih_sw_info.o
   LD      arch/arm/kernel/built-in.o
   AS      arch/arm/kernel/head.o
@@ -140,6 +139,7 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      arch/arm/common/cpaccess.o
   LD      arch/arm/common/built-in.o
   LD      arch/arm/net/built-in.o
+  SHIPPED arch/arm/crypto/aesbs-core.S
   AS      arch/arm/crypto/aesbs-core.o
   CC      arch/arm/crypto/aesbs-glue.o
   AS      arch/arm/crypto/aes-armv4.o
@@ -148,6 +148,7 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      arch/arm/crypto/sha1_neon_glue.o
   AS      arch/arm/crypto/sha1-armv4-large.o
   CC      arch/arm/crypto/sha1_glue.o
+  SHIPPED arch/arm/crypto/sha256-core.S
   AS      arch/arm/crypto/sha256-core.o
   CC      arch/arm/crypto/sha256_glue.o
   CC      arch/arm/crypto/sha256_neon_glue.o
@@ -364,6 +365,8 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      arch/arm/mach-msm/cpufreq.o
   LD      arch/arm/mach-msm/built-in.o
   CC [M]  arch/arm/mach-msm/reset_modem.o
+  CC      arch/arm/hotplug/intelli_plug.o
+  LD      arch/arm/hotplug/built-in.o
   CC      arch/arm/perfmon/perf-function-hooks.o
   LD      arch/arm/perfmon/built-in.o
   CC      kernel/fork.o
@@ -1021,12 +1024,11 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      drivers/cpufreq/cpufreq_interactive.o
   CC      drivers/cpufreq/cpufreq_smartass2.o
   CC      drivers/cpufreq/cpufreq_lionheart.o
-  CC      drivers/cpufreq/cpufreq_lulzactive.o
   CC      drivers/cpufreq/cpufreq_alucard.o
   CC      drivers/cpufreq/cpufreq_adaptive.o
-  CC      drivers/cpufreq/cpufreq_intellidemand.o
   CC      drivers/cpufreq/cpufreq_HYPER.o
   CC      drivers/cpufreq/cpufreq_intelliactive.o
+  CC      drivers/cpufreq/cpufreq_darkness.o
   CC      drivers/cpufreq/cpufreq_smartmax.o
   CC      drivers/cpufreq/freq_table.o
   CC      drivers/cpufreq/cpufreq_gov_msm.o

@@ -20,7 +20,7 @@ zip -r Hana_Core_UX-nicki *
 rm -rfv META-INF
 rm -rfv system 
 rm -rfv tmp
-mv Hana_Core_UX-nicki.zip /home/nicklas/Hana_Core-UX_v1.1-nicki.zip
+mv Hana_Core_UX-nicki.zip /home/nicklas/Hana_Core-UX_v1.2.5-nicki.zip
 echo "###Cleaning..."
 cd /home/nicklas/Hana_CoreUX-EXT
 rm -rfv work
