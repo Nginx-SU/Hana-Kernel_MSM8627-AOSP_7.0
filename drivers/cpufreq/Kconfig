@@ -154,16 +154,25 @@ config CPU_FREQ_DEFAULT_GOV_INTELLIACTIVE
  	  loading your cpufreq low-level hardware driver, using the
  	  'interactive' governor for latency-sensitive workloads.
 
-config CPU_FREQ_DEFAULT_GOV_DARKNESS
-	bool "darkness"
-  	select CPU_FREQ_GOV_DARKNESS
-  	help
+config CPU_FREQ_DEFAULT_GOV_PEGASUSQ
+ 	bool "pegasusq"
+ 	select CPU_FREQ_GOV_PEGASUSQ
+ 	help
+ 	Use the CPUFreq governor 'pegasusq' as default.
 
-config CPU_FREQ_DEFAULT_GOV_SMARTMAX
-        bool "smartmax"
-        select CPU_FREQ_GOV_SMARTMAX
+config CPU_FREQ_DEFAULT_GOV_LULZACTIVE
+	bool "lulzactive"
+	select CPU_FREQ_GOV_LULZACTIVE
+	select CPU_FREQ_GOV_PERFORMANCE
+	help
+	  Use the CPUFreq governor 'lulzactive' as default.
+
+config CPU_FREQ_DEFAULT_GOV_INTELLIMM
+        bool "intelliminmax"
+        select CPU_FREQ_GOV_INTELLIMM
         help
-          Use the CPUFreq governor 'smartmax' as default
+          Use the CPUFreq governor 'intelliminmax' as default. This is
+          governor will use only 3 different frequencies, idle, UI and max
 
 endchoice
 
@@ -320,10 +329,6 @@ config CPU_FREQ_GOV_HYPER
 	
 	   If in doubt, say N.
 
-config CPU_FREQ_GOV_DYNAMIC_INTERACTIVE
-	tristate "'dynamic_interactive' cpufreq governor"
-	depends on CPU_FREQ
-
 config CPU_FREQ_GOV_INTELLIACTIVE
  	tristate "'intelliactive' cpufreq policy governor"
  	help
@@ -341,16 +346,29 @@ config CPU_FREQ_GOV_INTELLIACTIVE
  
  	  If in doubt, say N.
 
-config CPU_FREQ_GOV_DARKNESS
-	tristate "'darkness' cpufreq governor"
+config CPU_FREQ_GOV_PEGASUSQ
+ 	tristate "'pegasusq' cpufreq policy governor"
+
+config CPU_FREQ_GOV_LULZACTIVE
+	tristate "'lulzactive' cpufreq governor"
 	depends on CPU_FREQ
+	help
+	  'lulzactive' - a new interactive governor by Tegrak!
+	  For more information please visit:
+	  http://tegrak2x.blogspot.com/2011/11/lulzactive-governor-v2.html
 
-config CPU_FREQ_GOV_SMARTMAX
-        tristate "'smartmax' cpufreq policy governor"
-        select CPU_FREQ_TABLE
+	  If in doubt, say N.	
+
+config CPU_FREQ_GOV_INTELLIMM
+        tristate "'intelliminmax' cpufreq policy governor"
+        default n
         help
-          'smartmax' combined ondemand and smartass2
+          To compile this driver as a module, choose M here: the
+          module will be called cpufreq_interactive.
 
+          For details, take a look at linux/Documentation/cpu-freq.
+
+          If in doubt, say N.
  
 menu "x86 CPU frequency scaling drivers"
 depends on X86

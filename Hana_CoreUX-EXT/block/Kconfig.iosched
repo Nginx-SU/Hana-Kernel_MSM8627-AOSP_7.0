@@ -52,6 +52,14 @@ config IOSCHED_SIOPLUS
           basic merging, trying to keep a minimum overhead. It is aimed
           mainly for aleatory access devices (eg: flash devices).
 
+config IOSCHED_FIOPS
+	tristate "IOPS based I/O scheduler"
+	default y
+	---help---
+	  This is an IOPS based I/O scheduler. It will try to distribute
+          IOPS equally among all processes in the system. It's mainly for
+          Flash based storage.
+
 config IOSCHED_ROW
 	tristate "ROW I/O scheduler"
 	default y
@@ -174,6 +182,7 @@ config DEFAULT_IOSCHED
 	default "fifo" if DEFAULT_FIFO
         default "sio" if DEFAULT_SIO
 	default "sioplus" if DEFAULT_SIOPLUS
+	default "fiops" if DEFAULT_FIOPS
 
 endmenu
 

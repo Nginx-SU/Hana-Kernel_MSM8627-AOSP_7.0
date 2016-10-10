@@ -1568,6 +1568,13 @@ config ALUCARD_HOTPLUG
  	default y
  	help
  	  Generic Alucard-hotplug cpu hotplug driver for ARM SOCs
+
+config ALUCARD_HOTPLUG_USE_RQ_STATS
+ 	bool "Enable alucard-hotplug msm rq statistics using"
+ 	depends on ALUCARD_HOTPLUG && MSM_RUN_QUEUE_STATS
+ 	default n
+ 	help
+ 	  Alucard-hotplug msm rq statics using
  
 config MSM_CPU_FREQ_SET_MIN_MAX
 	bool "Set Min/Max CPU frequencies."
@@ -2593,10 +2600,10 @@ config HAS_MACH_MEMUTILS
 	Faster memcpy performance for Krait
 
 config FORCE_FAST_CHARGE
-  bool "Force AC charge mode at will"
-  default y
-  help
-    A simple sysfs interface to force adapters that
-    are detected as USB to charge as AC.
+  	bool "Force AC charge mode at will"
+  	default y
+  	help
+    	A simple sysfs interface to force adapters that
+    	are detected as USB to charge as AC.
 
 endif

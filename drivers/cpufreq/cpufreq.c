@@ -32,8 +32,6 @@
 #include <linux/completion.h>
 #include <linux/mutex.h>
 #include <linux/syscore_ops.h>
-#include <linux/kernel_stat.h>
-#include <linux/tick.h>
 
 #include <trace/events/power.h>
 
@@ -716,6 +714,7 @@ static ssize_t show(struct kobject *kobj, struct attribute *attr, char *buf)
 	struct cpufreq_policy *policy = to_policy(kobj);
 	struct freq_attr *fattr = to_attr(attr);
 	ssize_t ret = -EINVAL;
+	get_online_cpus();
 	policy = cpufreq_cpu_get_sysfs(policy->cpu);
 	if (!policy)
 		goto no_policy;
@@ -757,6 +756,7 @@ static ssize_t store(struct kobject *kobj, struct attribute *attr,
 fail:
 	cpufreq_cpu_put_sysfs(policy);
 no_policy:
+	put_online_cpus();
 	return ret;
 }
 

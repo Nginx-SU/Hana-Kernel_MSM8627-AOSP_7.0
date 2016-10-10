@@ -26,12 +26,6 @@ cp Hana_CoreUX-EXT/arch/arm/Makefile Hana_CoreUX-Source/arch/arm/Makefile
 rm Hana_CoreUX-Source/arch/arm/boot/compressed/Makefile
 cp Hana_CoreUX-EXT/arch/arm/boot/compressed/Makefile Hana_CoreUX-Source/arch/arm/boot/compressed/Makefile
 cp Hana_CoreUX-EXT/arch/arm/configs/hana_core-ux_nicki_defconfig Hana_CoreUX-Source/arch/arm/configs/hana_core-ux_nicki_defconfig
-cd Hana_CoreUX-Source/arch/arm
-mkdir hotplug
-cd /home/nicklas
-cp Hana_CoreUX-EXT/arch/arm/hotplug/intelli_plug.c  Hana_CoreUX-Source/arch/arm/hotplug/intelli_plug.c
-cp Hana_CoreUX-EXT/arch/arm/hotplug/Kconfig  Hana_CoreUX-Source/arch/arm/hotplug/Kconfig
-cp Hana_CoreUX-EXT/arch/arm/hotplug/Makefile  Hana_CoreUX-Source/arch/arm/hotplug/Makefile
 cp Hana_CoreUX-EXT/arch/arm/boot/compressed/Makefile Hana_CoreUX-Source/arch/arm/boot/compressed/Makefile
 rm Hana_CoreUX-Source/arch/arm/include/asm/xor.h
 cp Hana_CoreUX-EXT/arch/arm/include/asm/xor.h Hana_CoreUX-Source/arch/arm/include/asm/xor.h
@@ -39,6 +33,7 @@ cp Hana_CoreUX-EXT/arch/arm/include/asm/rwsem.h Hana_CoreUX-Source/arch/arm/incl
 rm Hana_CoreUX-Source/arch/arm/kernel/Makefile
 cp Hana_CoreUX-EXT/arch/arm/kernel/Makefile Hana_CoreUX-Source/arch/arm/kernel/Makefile
 cp Hana_CoreUX-EXT/arch/arm/kernel/auto_hotplug.c Hana_CoreUX-Source/arch/arm/kernel/auto_hotplug.c
+cp Hana_CoreUX-EXT/arch/arm/kernel/autosmp.c Hana_CoreUX-Source/arch/arm/kernel/autosmp.c
 rm Hana_CoreUX-Source/arch/arm/kernel/head-nommu.S
 cp Hana_CoreUX-EXT/arch/arm/kernel/head-nommu.S Hana_CoreUX-Source/arch/arm/kernel/head-nommu.S
 rm Hana_CoreUX-Source/arch/arm/kernel/head.S
@@ -90,13 +85,12 @@ cp Hana_CoreUX-EXT/drivers/cpufreq/Makefile Hana_CoreUX-Source/drivers/cpufreq/M
 cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_adaptive.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_adaptive.c
 cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_alucard.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_alucard.c
 cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_HYPER.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_HYPER.c
-rm Hana_CoreUX-Source/drivers/cpufreq/cpufreq_interactive.c
-cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_interactive.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_interactive.c
 cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_lionheart.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_lionheart.c
 cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_smartass2.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_smartass2.c
 cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_intelliactive.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_intelliactive.c
-cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_darkness.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_darkness.c
-cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_smartmax.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_smartmax.c
+cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_pegasusq.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_pegasusq.c
+cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_lulzactive.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_lulzactive.c
+cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_intellimm.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_intellimm.c
 rm Hana_CoreUX-Source/drivers/crypto/msm/qcedev.c
 cp Hana_CoreUX-EXT/drivers/crypto/msm/qcedev.c Hana_CoreUX-Source/drivers/crypto/msm/qcedev.c
 rm Hana_CoreUX-Source/drivers/gpu/Makefile
@@ -131,10 +125,6 @@ rm Hana_CoreUX-Source/init/Kconfig
 cp Hana_CoreUX-EXT/init/Kconfig Hana_CoreUX-Source/init/Kconfig
 rm Hana_CoreUX-Source/kernel/sched/features.h
 cp Hana_CoreUX-EXT/kernel/sched/features.h Hana_CoreUX-Source/kernel/sched/features.h
-rm Hana_CoreUX-Source/kernel/sched/core.c
-cp Hana_CoreUX-EXT/kernel/sched/core.c Hana_CoreUX-Source/kernel/sched/core.c
-rm Hana_CoreUX-Source/kernel/sched/sched.h
-cp Hana_CoreUX-EXT/kernel/sched/sched.h Hana_CoreUX-Source/kernel/sched/sched.h
 rm Hana_CoreUX-Source/kernel/power/Kconfig
 cp Hana_CoreUX-EXT/kernel/power/Kconfig Hana_CoreUX-Source/kernel/power/Kconfig
 rm Hana_CoreUX-Source/kernel/power/Makefile
@@ -142,6 +132,8 @@ cp Hana_CoreUX-EXT/kernel/power/Makefile Hana_CoreUX-Source/kernel/power/Makefil
 cp Hana_CoreUX-EXT/kernel/power/quickwakeup.c Hana_CoreUX-Source/kernel/power/quickwakeup.c
 rm Hana_CoreUX-Source/mm/ksm.c
 cp Hana_CoreUX-EXT/mm/ksm.c Hana_CoreUX-Source/mm/ksm.c
+rm Hana_CoreUX-Source/mm/huge_memory.c
+cp Hana_CoreUX-EXT/mm/huge_memory.c Hana_CoreUX-Source/mm/huge_memory.c
 rm Hana_CoreUX-Source/net/netfilter/Makefile
 cp Hana_CoreUX-EXT/net/netfilter/Makefile Hana_CoreUX-Source/net/netfilter/Makefile
 cd Hana_CoreUX-Source
