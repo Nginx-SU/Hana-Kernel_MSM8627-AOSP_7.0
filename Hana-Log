@@ -82,6 +82,7 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      arch/arm/kernel/sys_arm.o
   CC      arch/arm/kernel/time.o
   CC      arch/arm/kernel/traps.o
+  CC      arch/arm/kernel/auto_hotplug.o
   CC      arch/arm/kernel/autosmp.o
   CC      arch/arm/kernel/cpuidle.o
   CC      arch/arm/kernel/armksyms.o
@@ -1024,9 +1025,9 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      drivers/cpufreq/cpufreq_adaptive.o
   CC      drivers/cpufreq/cpufreq_HYPER.o
   CC      drivers/cpufreq/cpufreq_intelliactive.o
-  CC      drivers/cpufreq/cpufreq_pegasusq.o
   CC      drivers/cpufreq/cpufreq_lulzactive.o
   CC      drivers/cpufreq/cpufreq_intellimm.o
+  CC      drivers/cpufreq/cpufreq_intellidemand.o
   CC      drivers/cpufreq/freq_table.o
   CC      drivers/cpufreq/cpufreq_gov_msm.o
   LD      drivers/cpufreq/built-in.o

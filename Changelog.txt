@@ -1,5 +1,13 @@
 Changelog :
 
+V1.2.4 BETA RELEASE:
+- FIX Problem with hotplug not recognized 
+- Added Intellidemand CPU Governor
+- Updated to v5 and Improved Intellidemand Governor for Nicki
+- Updated I/O Sched default list
+- Fix problem on Intelliactive,Intellimm and Lulzactive when compile
+- Update CPU Governor list
+
 V1.2.4 RC1 BETA RELEASE:
 - Reduce DMESG Log Spam on CPU 
 - Use new hashtable implementation on KSM and HGM

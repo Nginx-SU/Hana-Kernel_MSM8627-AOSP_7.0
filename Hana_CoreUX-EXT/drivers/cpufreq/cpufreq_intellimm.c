@@ -43,12 +43,12 @@
 #define MIN_FREQUENCY_DOWN_DIFFERENTIAL		(1)
 
 #ifdef CONFIG_ARCH_MSM8974
-#define DEF_POWER_SAVE_FREQUENCY		(1497600)
-#define DEF_TWO_PHASE_FREQUENCY			(1728000)
-#define DBS_INPUT_EVENT_MIN_FREQ		(1728000)
-#define DEF_FREQUENCY_OPTIMAL			(1728000)
+#define DEF_POWER_SAVE_FREQUENCY		(1100000)
+#define DEF_TWO_PHASE_FREQUENCY			(1700000)
+#define DBS_INPUT_EVENT_MIN_FREQ		(1574400)
+#define DEF_FREQUENCY_OPTIMAL			(1190400)
 #define DEF_FREQ_DOWN_STEP			(550000)
-#define DEF_FREQ_DOWN_STEP_BARRIER		(1728000)
+#define DEF_FREQ_DOWN_STEP_BARRIER		(1190400)
 #else
 #define DEF_POWER_SAVE_FREQUENCY		(750000)
 #define DEF_TWO_PHASE_FREQUENCY			(1300000)
@@ -165,7 +165,7 @@ static struct dbs_tuners {
 	.up_threshold_any_cpu_load = DEF_FREQUENCY_UP_THRESHOLD_ANY_CPU,
 	.ignore_nice = 0,
 	.powersave_bias = 0,
-	.optimal_freq_speed = 1728000,
+	.optimal_freq_speed = 702000,
 	.shortcut = 0,
 	.io_is_busy = 0,
 	.power_save_freq = DEF_POWER_SAVE_FREQUENCY,
@@ -637,12 +637,6 @@ static ssize_t store_input_event_min_freq(struct kobject *a,
 	else if (NR_CPUS == 2)
 		ret = sscanf(buf,"%u,%u",&input_event_min_freq_array[0],
 				&input_event_min_freq_array[1]);
-	else if (NR_CPUS == 4)
-		ret = sscanf(buf, "%u,%u,%u,%u",
-				&input_event_min_freq_array[0],
-				&input_event_min_freq_array[1],
-				&input_event_min_freq_array[2],
-				&input_event_min_freq_array[3]);
 	if (ret < NR_CPUS)
 		return -EINVAL;
 

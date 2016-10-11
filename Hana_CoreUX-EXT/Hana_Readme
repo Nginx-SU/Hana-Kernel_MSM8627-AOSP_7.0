@@ -12,7 +12,7 @@ This kernel feature is :
 - Added overclock up to 1,7Ghz
 - Added AutoSMP & Alucard Hotplug
 - Added custom CPU Governor 
-: Alucard,Intelliactive,IntelliMM,Lionheart,Adaptive,SmartassV2,PegasusQ,HYPER and lulzactive
+: Alucard,Intelliactive,IntelliMM,Lionheart,Adaptive,SmartassV2,Intellidemand,HYPER and lulzactive
 - Added custom I/O Sched Governor 
 : zen,sio,sioplus,tripndroid,fifo,fiops and vr
 - Added fast charge feature (Enable By Default)
@@ -30,7 +30,7 @@ This is kernel tread source
 
 http://forum.xda-developers.com/xperia-m/orig-development/6-0-aoicore-kernel-t3454265
 
-(HanaCoreUX+ Kernel) V1.2.4 RC1 BETA RELEASE:
+(HanaCoreUX+ Kernel) V1.2.4 BETA RELEASE:
 Non released version (Private)
 Download Official build (EXPERIMENTAL) 
 https://www.androidfilehost.com/?w=files&flid=120528

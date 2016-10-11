@@ -26,7 +26,6 @@ cp Hana_CoreUX-EXT/arch/arm/Makefile Hana_CoreUX-Source/arch/arm/Makefile
 rm Hana_CoreUX-Source/arch/arm/boot/compressed/Makefile
 cp Hana_CoreUX-EXT/arch/arm/boot/compressed/Makefile Hana_CoreUX-Source/arch/arm/boot/compressed/Makefile
 cp Hana_CoreUX-EXT/arch/arm/configs/hana_core-ux_nicki_defconfig Hana_CoreUX-Source/arch/arm/configs/hana_core-ux_nicki_defconfig
-cp Hana_CoreUX-EXT/arch/arm/boot/compressed/Makefile Hana_CoreUX-Source/arch/arm/boot/compressed/Makefile
 rm Hana_CoreUX-Source/arch/arm/include/asm/xor.h
 cp Hana_CoreUX-EXT/arch/arm/include/asm/xor.h Hana_CoreUX-Source/arch/arm/include/asm/xor.h
 cp Hana_CoreUX-EXT/arch/arm/include/asm/rwsem.h Hana_CoreUX-Source/arch/arm/include/asm/rwsem.h
@@ -61,6 +60,8 @@ rm Hana_CoreUX-Source/arch/arm/mach-msm/Kconfig
 cp Hana_CoreUX-EXT/arch/arm/mach-msm/Kconfig Hana_CoreUX-Source/arch/arm/mach-msm/Kconfig
 rm Hana_CoreUX-Source/arch/arm/mach-msm/Makefile
 cp Hana_CoreUX-EXT/arch/arm/mach-msm/Makefile Hana_CoreUX-Source/arch/arm/mach-msm/Makefile
+rm Hana_CoreUX-Source/arch/arm/mach-msm/include/mach/kgsl.h
+cp Hana_CoreUX-EXT/arch/arm/mach-msm/include/mach/kgsl.h Hana_CoreUX-Source/arch/arm/mach-msm/include/mach/kgsl.h
 rm Hana_CoreUX-Source/arch/arm/mach-msm/lge/mako/board-mako.c
 cp Hana_CoreUX-EXT/arch/arm/mach-msm/lge/mako/board-mako.c Hana_CoreUX-Source/arch/arm/mach-msm/lge/mako/board-mako.c
 rm Hana_CoreUX-Source/block/Kconfig.iosched
@@ -85,16 +86,18 @@ cp Hana_CoreUX-EXT/drivers/cpufreq/Makefile Hana_CoreUX-Source/drivers/cpufreq/M
 cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_adaptive.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_adaptive.c
 cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_alucard.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_alucard.c
 cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_HYPER.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_HYPER.c
-cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_lionheart.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_lionheart.c
-cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_smartass2.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_smartass2.c
 cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_intelliactive.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_intelliactive.c
-cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_pegasusq.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_pegasusq.c
-cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_lulzactive.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_lulzactive.c
+cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_intellidemand.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_intellidemand.c
 cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_intellimm.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_intellimm.c
+cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_lionheart.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_lionheart.c
+cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_lulzactive.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_lulzactive.c
+cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_smartass2.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_smartass2.c
 rm Hana_CoreUX-Source/drivers/crypto/msm/qcedev.c
 cp Hana_CoreUX-EXT/drivers/crypto/msm/qcedev.c Hana_CoreUX-Source/drivers/crypto/msm/qcedev.c
 rm Hana_CoreUX-Source/drivers/gpu/Makefile
 cp Hana_CoreUX-EXT/drivers/gpu/Makefile Hana_CoreUX-Source/drivers/gpu/Makefile
+rm Hana_CoreUX-Source/drivers/gpu/msm/kgsl_pwrctrl.c
+cp Hana_CoreUX-EXT/drivers/gpu/msm/kgsl_pwrctrl.c Hana_CoreUX-Source/drivers/gpu/msm/kgsl_pwrctrl.c
 rm Hana_CoreUX-Source/drivers/gpu/ion/Makefile
 cp Hana_CoreUX-EXT/drivers/gpu/ion/Makefile Hana_CoreUX-Source/drivers/gpu/ion/Makefile
 rm Hana_CoreUX-Source/drivers/gpu/ion/msm/Makefile
@@ -137,7 +140,6 @@ cp Hana_CoreUX-EXT/mm/huge_memory.c Hana_CoreUX-Source/mm/huge_memory.c
 rm Hana_CoreUX-Source/net/netfilter/Makefile
 cp Hana_CoreUX-EXT/net/netfilter/Makefile Hana_CoreUX-Source/net/netfilter/Makefile
 cd Hana_CoreUX-Source
-
 echo "
 ###Running GCC Toolchains 5.4.0 (Crosstool-NG Toolchains)"
 
@@ -177,5 +179,4 @@ cd /home/nicklas/Hana_CoreUX-EXT
 echo "Script Complete Successfuly"
 echo "Nicklas Van Dam @ XDA"
 echo "Hana Core UX Kernel Finished"
-echo "Hana Makihatayama"
 echo "========Royal Patraine======"
