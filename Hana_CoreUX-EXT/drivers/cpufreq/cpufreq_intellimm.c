@@ -43,19 +43,19 @@
 #define MIN_FREQUENCY_DOWN_DIFFERENTIAL		(1)
 
 #ifdef CONFIG_ARCH_MSM8974
-#define DEF_POWER_SAVE_FREQUENCY		(1100000)
-#define DEF_TWO_PHASE_FREQUENCY			(1700000)
-#define DBS_INPUT_EVENT_MIN_FREQ		(1574400)
-#define DEF_FREQUENCY_OPTIMAL			(1190400)
-#define DEF_FREQ_DOWN_STEP			(550000)
-#define DEF_FREQ_DOWN_STEP_BARRIER		(1190400)
+#define DEF_POWER_SAVE_FREQUENCY		(810000)
+#define DEF_TWO_PHASE_FREQUENCY			(1782000)
+#define DBS_INPUT_EVENT_MIN_FREQ		(1512000)
+#define DEF_FREQUENCY_OPTIMAL			(1242000)
+#define DEF_FREQ_DOWN_STEP			(594000)
+#define DEF_FREQ_DOWN_STEP_BARRIER		(918000)
 #else
-#define DEF_POWER_SAVE_FREQUENCY		(750000)
-#define DEF_TWO_PHASE_FREQUENCY			(1300000)
-#define DBS_INPUT_EVENT_MIN_FREQ		(1026000)
-#define DEF_FREQUENCY_OPTIMAL			(702000)
-#define DEF_FREQ_DOWN_STEP			(250000)
-#define DEF_FREQ_DOWN_STEP_BARRIER		(702000)
+#define DEF_POWER_SAVE_FREQUENCY		(384000)
+#define DEF_TWO_PHASE_FREQUENCY			(1458000)
+#define DBS_INPUT_EVENT_MIN_FREQ		(918000)
+#define DEF_FREQUENCY_OPTIMAL			(810000)
+#define DEF_FREQ_DOWN_STEP			(192000)
+#define DEF_FREQ_DOWN_STEP_BARRIER		(486000)
 #endif
 
 #define DEF_INPUT_BOOST_DURATION		(6)
@@ -165,7 +165,7 @@ static struct dbs_tuners {
 	.up_threshold_any_cpu_load = DEF_FREQUENCY_UP_THRESHOLD_ANY_CPU,
 	.ignore_nice = 0,
 	.powersave_bias = 0,
-	.optimal_freq_speed = 702000,
+	.optimal_freq_speed = 810000,
 	.shortcut = 0,
 	.io_is_busy = 0,
 	.power_save_freq = DEF_POWER_SAVE_FREQUENCY,
@@ -943,11 +943,12 @@ static void dbs_check_cpu(struct cpu_dbs_info_s *this_dbs_info)
 	for_each_cpu(j, policy->cpus) {
 		cputime64_t cur_wall_time, cur_idle_time, cur_iowait_time;
 		unsigned int idle_time, wall_time, iowait_time;
+		int io_busy = dbs_tuners_ins.io_is_busy;
 		unsigned int cur_load;
 
 		j_dbs_info = &per_cpu(imm_cpu_dbs_info, j);
 
-		cur_idle_time = get_cpu_idle_time(j, &cur_wall_time, dbs_tuners_ins.io_is_busy);
+		cur_idle_time = get_cpu_idle_time(j, &cur_wall_time, io_busy);
 		cur_iowait_time = get_cpu_iowait_time(j, &cur_wall_time);
 
 		wall_time = (unsigned int)
@@ -1349,7 +1350,7 @@ static int cpufreq_governor_dbs(struct cpufreq_policy *policy,
 
 			j_dbs_info->prev_cpu_idle = get_cpu_idle_time(j,
 						&j_dbs_info->prev_cpu_wall,
-						dbs_tuners_ins.io_is_busy);
+						io_busy);
 			if (dbs_tuners_ins.ignore_nice)
 				j_dbs_info->prev_cpu_nice =
 					kcpustat_cpu(j).cpustat[CPUTIME_NICE];

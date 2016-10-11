@@ -26,6 +26,9 @@ cp Hana_CoreUX-EXT/arch/arm/Makefile Hana_CoreUX-Source/arch/arm/Makefile
 rm Hana_CoreUX-Source/arch/arm/boot/compressed/Makefile
 cp Hana_CoreUX-EXT/arch/arm/boot/compressed/Makefile Hana_CoreUX-Source/arch/arm/boot/compressed/Makefile
 cp Hana_CoreUX-EXT/arch/arm/configs/hana_core-ux_nicki_defconfig Hana_CoreUX-Source/arch/arm/configs/hana_core-ux_nicki_defconfig
+cp Hana_CoreUX-EXT/arch/arm/hotplug/Kconfig Hana_CoreUX-Source/arch/arm/hotplug/Kconfig
+cp Hana_CoreUX-EXT/arch/arm/hotplug/Makefile Hana_CoreUX-Source/arch/arm/hotplug/Makefile
+cp Hana_CoreUX-EXT/arch/arm/hotplug/intelli_plug.c Hana_CoreUX-Source/arch/arm/hotplug/intelli_plug.c
 rm Hana_CoreUX-Source/arch/arm/include/asm/xor.h
 cp Hana_CoreUX-EXT/arch/arm/include/asm/xor.h Hana_CoreUX-Source/arch/arm/include/asm/xor.h
 cp Hana_CoreUX-EXT/arch/arm/include/asm/rwsem.h Hana_CoreUX-Source/arch/arm/include/asm/rwsem.h
@@ -56,12 +59,12 @@ cp Hana_CoreUX-EXT/arch/arm/mach-msm/cpufreq.c Hana_CoreUX-Source/arch/arm/mach-
 rm Hana_CoreUX-Source/arch/arm/mach-msm/dma_test.c
 cp Hana_CoreUX-EXT/arch/arm/mach-msm/dma_test.c Hana_CoreUX-Source/arch/arm/mach-msm/dma_test.c
 cp Hana_CoreUX-EXT/arch/arm/mach-msm/fastchg.c Hana_CoreUX-Source/arch/arm/mach-msm/fastchg.c
+rm Hana_CoreUX-Source/arch/arm/mach-msm/msm_rq_stats.c
+cp Hana_CoreUX-EXT/arch/arm/mach-msm/msm_rq_stats.c Hana_CoreUX-Source/arch/arm/mach-msm/msm_rq_stats.c
 rm Hana_CoreUX-Source/arch/arm/mach-msm/Kconfig
 cp Hana_CoreUX-EXT/arch/arm/mach-msm/Kconfig Hana_CoreUX-Source/arch/arm/mach-msm/Kconfig
 rm Hana_CoreUX-Source/arch/arm/mach-msm/Makefile
 cp Hana_CoreUX-EXT/arch/arm/mach-msm/Makefile Hana_CoreUX-Source/arch/arm/mach-msm/Makefile
-rm Hana_CoreUX-Source/arch/arm/mach-msm/include/mach/kgsl.h
-cp Hana_CoreUX-EXT/arch/arm/mach-msm/include/mach/kgsl.h Hana_CoreUX-Source/arch/arm/mach-msm/include/mach/kgsl.h
 rm Hana_CoreUX-Source/arch/arm/mach-msm/lge/mako/board-mako.c
 cp Hana_CoreUX-EXT/arch/arm/mach-msm/lge/mako/board-mako.c Hana_CoreUX-Source/arch/arm/mach-msm/lge/mako/board-mako.c
 rm Hana_CoreUX-Source/block/Kconfig.iosched
@@ -96,8 +99,6 @@ rm Hana_CoreUX-Source/drivers/crypto/msm/qcedev.c
 cp Hana_CoreUX-EXT/drivers/crypto/msm/qcedev.c Hana_CoreUX-Source/drivers/crypto/msm/qcedev.c
 rm Hana_CoreUX-Source/drivers/gpu/Makefile
 cp Hana_CoreUX-EXT/drivers/gpu/Makefile Hana_CoreUX-Source/drivers/gpu/Makefile
-rm Hana_CoreUX-Source/drivers/gpu/msm/kgsl_pwrctrl.c
-cp Hana_CoreUX-EXT/drivers/gpu/msm/kgsl_pwrctrl.c Hana_CoreUX-Source/drivers/gpu/msm/kgsl_pwrctrl.c
 rm Hana_CoreUX-Source/drivers/gpu/ion/Makefile
 cp Hana_CoreUX-EXT/drivers/gpu/ion/Makefile Hana_CoreUX-Source/drivers/gpu/ion/Makefile
 rm Hana_CoreUX-Source/drivers/gpu/ion/msm/Makefile
@@ -126,8 +127,12 @@ rm Hana_CoreUX-Source/include/trace/events/cpufreq_interactive.h
 cp Hana_CoreUX-EXT/include/trace/events/cpufreq_interactive.h Hana_CoreUX-Source/include/trace/events/cpufreq_interactive.h
 rm Hana_CoreUX-Source/init/Kconfig
 cp Hana_CoreUX-EXT/init/Kconfig Hana_CoreUX-Source/init/Kconfig
+rm Hana_CoreUX-Source/kernel/sched/core.c
+cp Hana_CoreUX-EXT/kernel/sched/core.c Hana_CoreUX-Source/kernel/sched/core.c
 rm Hana_CoreUX-Source/kernel/sched/features.h
 cp Hana_CoreUX-EXT/kernel/sched/features.h Hana_CoreUX-Source/kernel/sched/features.h
+rm Hana_CoreUX-Source/kernel/sched/sched.h
+cp Hana_CoreUX-EXT/kernel/sched/sched.h Hana_CoreUX-Source/kernel/sched/sched.h
 rm Hana_CoreUX-Source/kernel/power/Kconfig
 cp Hana_CoreUX-EXT/kernel/power/Kconfig Hana_CoreUX-Source/kernel/power/Kconfig
 rm Hana_CoreUX-Source/kernel/power/Makefile

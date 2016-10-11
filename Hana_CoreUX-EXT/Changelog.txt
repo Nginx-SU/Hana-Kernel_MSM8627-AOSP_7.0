@@ -7,6 +7,9 @@ V1.2.4 BETA RELEASE:
 - Updated I/O Sched default list
 - Fix problem on Intelliactive,Intellimm and Lulzactive when compile
 - Update CPU Governor list
+- Added low cpu clock when change hotplug on new cores (192Mhz)
+- Re-Added Intelli Plug Hotplug drivers and Updated it to v3.9
+- Improved IntelliMM CPU Governor for Nicki
 
 V1.2.4 RC1 BETA RELEASE:
 - Reduce DMESG Log Spam on CPU 

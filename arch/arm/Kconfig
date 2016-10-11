@@ -2309,6 +2309,7 @@ menu "CPU Power Management"
 if ARCH_HAS_CPUFREQ
 
 source "drivers/cpufreq/Kconfig"
+source "arch/arm/hotplug/Kconfig"
 
 config CPU_FREQ_IMX
 	tristate "CPUfreq driver for i.MX CPUs"
