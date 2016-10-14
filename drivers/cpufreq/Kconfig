@@ -134,16 +134,7 @@ config CPU_FREQ_DEFAULT_GOV_ADAPTIVE
 	  you to get a full dynamic cpu frequency capable system by simply
 	  loading your cpufreq low-level hardware driver, using the
 	  'adaptive' governor for latency-sensitive workloads and demanding
-	  performance.
-
-config CPU_FREQ_DEFAULT_GOV_HYPER
-	bool "hyper"
-	select CPU_FREQ_GOV_HYPER
-	help
-	Use the CPUFreq governor 'hyper' as default. This allows
-	you to get a full dynamic cpu frequency capable system by simply
-	loading your cpufreq low-level hardware driver, using the
-	'hyper' governor for latency-sensitive workloads.				  
+	  performance.				  
 
 config CPU_FREQ_DEFAULT_GOV_INTELLIACTIVE
  	bool "intelliactive"
@@ -326,14 +317,6 @@ config CPU_FREQ_GOV_ADAPTIVE
 	  For details, take a look at linux/Documentation/cpu-freq.
 
 	  If in doubt, say N..
-
-config CPU_FREQ_GOV_HYPER
-	tristate "'hyper' cpufreq governor"
-	depends on CPU_FREQ
-	help
-	  'hyper' - A tweaked "ondemand" based smart and smooth optimized governor!
-	
-	   If in doubt, say N.
 
 config CPU_FREQ_GOV_INTELLIACTIVE
  	tristate "'intelliactive' cpufreq policy governor"
