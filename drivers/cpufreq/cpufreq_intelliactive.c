@@ -128,8 +128,13 @@ static int timer_slack_val = DEFAULT_TIMER_SLACK;
  * sync_freq
  */
 static unsigned int up_threshold_any_cpu_load = 70;
+<<<<<<< HEAD
 static unsigned int sync_freq = 1026000;
 static unsigned int up_threshold_any_cpu_freq = 1512000;
+=======
+static unsigned int sync_freq = 1036800;
+static unsigned int up_threshold_any_cpu_freq = 1497600;
+>>>>>>> 00746607c62fcf459bcbfb1cf6bac927ac353730
 
 static int two_phase_freq_array[NR_CPUS] = {[0 ... NR_CPUS-1] = 1728000} ;
 
