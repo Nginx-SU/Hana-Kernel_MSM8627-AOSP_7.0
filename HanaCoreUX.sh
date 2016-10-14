@@ -26,16 +26,12 @@ cp Hana_CoreUX-EXT/arch/arm/Makefile Hana_CoreUX-Source/arch/arm/Makefile
 rm Hana_CoreUX-Source/arch/arm/boot/compressed/Makefile
 cp Hana_CoreUX-EXT/arch/arm/boot/compressed/Makefile Hana_CoreUX-Source/arch/arm/boot/compressed/Makefile
 cp Hana_CoreUX-EXT/arch/arm/configs/hana_core-ux_nicki_defconfig Hana_CoreUX-Source/arch/arm/configs/hana_core-ux_nicki_defconfig
-cp Hana_CoreUX-EXT/arch/arm/hotplug/Kconfig Hana_CoreUX-Source/arch/arm/hotplug/Kconfig
-cp Hana_CoreUX-EXT/arch/arm/hotplug/Makefile Hana_CoreUX-Source/arch/arm/hotplug/Makefile
-cp Hana_CoreUX-EXT/arch/arm/hotplug/intelli_plug.c Hana_CoreUX-Source/arch/arm/hotplug/intelli_plug.c
 rm Hana_CoreUX-Source/arch/arm/include/asm/xor.h
 cp Hana_CoreUX-EXT/arch/arm/include/asm/xor.h Hana_CoreUX-Source/arch/arm/include/asm/xor.h
 cp Hana_CoreUX-EXT/arch/arm/include/asm/rwsem.h Hana_CoreUX-Source/arch/arm/include/asm/rwsem.h
 rm Hana_CoreUX-Source/arch/arm/kernel/Makefile
 cp Hana_CoreUX-EXT/arch/arm/kernel/Makefile Hana_CoreUX-Source/arch/arm/kernel/Makefile
 cp Hana_CoreUX-EXT/arch/arm/kernel/auto_hotplug.c Hana_CoreUX-Source/arch/arm/kernel/auto_hotplug.c
-cp Hana_CoreUX-EXT/arch/arm/kernel/autosmp.c Hana_CoreUX-Source/arch/arm/kernel/autosmp.c
 rm Hana_CoreUX-Source/arch/arm/kernel/head-nommu.S
 cp Hana_CoreUX-EXT/arch/arm/kernel/head-nommu.S Hana_CoreUX-Source/arch/arm/kernel/head-nommu.S
 rm Hana_CoreUX-Source/arch/arm/kernel/head.S
@@ -55,6 +51,7 @@ cp Hana_CoreUX-EXT/arch/arm/mach-msm/acpuclock-8627.c Hana_CoreUX-Source/arch/ar
 rm Hana_CoreUX-Source/arch/arm/mach-msm/acpuclock-krait.c
 cp Hana_CoreUX-EXT/arch/arm/mach-msm/acpuclock-krait.c Hana_CoreUX-Source/arch/arm/mach-msm/acpuclock-krait.c
 cp Hana_CoreUX-EXT/arch/arm/mach-msm/alucard_hotplug.c Hana_CoreUX-Source/arch/arm/mach-msm/alucard_hotplug.c
+rm Hana_CoreUX-Source/arch/arm/mach-msm/cpufreq.c
 cp Hana_CoreUX-EXT/arch/arm/mach-msm/cpufreq.c Hana_CoreUX-Source/arch/arm/mach-msm/cpufreq.c
 rm Hana_CoreUX-Source/arch/arm/mach-msm/dma_test.c
 cp Hana_CoreUX-EXT/arch/arm/mach-msm/dma_test.c Hana_CoreUX-Source/arch/arm/mach-msm/dma_test.c
@@ -88,6 +85,7 @@ rm Hana_CoreUX-Source/drivers/cpufreq/Makefile
 cp Hana_CoreUX-EXT/drivers/cpufreq/Makefile Hana_CoreUX-Source/drivers/cpufreq/Makefile
 cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_adaptive.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_adaptive.c
 cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_alucard.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_alucard.c
+cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_darkness.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_darkness.c
 cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_HYPER.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_HYPER.c
 cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_intelliactive.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_intelliactive.c
 cp Hana_CoreUX-EXT/drivers/cpufreq/cpufreq_intellidemand.c Hana_CoreUX-Source/drivers/cpufreq/cpufreq_intellidemand.c

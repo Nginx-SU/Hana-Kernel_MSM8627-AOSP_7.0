@@ -83,7 +83,6 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      arch/arm/kernel/time.o
   CC      arch/arm/kernel/traps.o
   CC      arch/arm/kernel/auto_hotplug.o
-  CC      arch/arm/kernel/autosmp.o
   CC      arch/arm/kernel/cpuidle.o
   CC      arch/arm/kernel/armksyms.o
   CC      arch/arm/kernel/module.o
@@ -364,8 +363,6 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      arch/arm/mach-msm/cpufreq.o
   LD      arch/arm/mach-msm/built-in.o
   CC [M]  arch/arm/mach-msm/reset_modem.o
-  CC      arch/arm/hotplug/intelli_plug.o
-  LD      arch/arm/hotplug/built-in.o
   CC      arch/arm/perfmon/perf-function-hooks.o
   LD      arch/arm/perfmon/built-in.o
   CC      kernel/fork.o

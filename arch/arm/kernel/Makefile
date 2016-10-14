@@ -20,7 +20,6 @@ obj-y		:= elf.o entry-armv.o entry-common.o irq.o opcodes.o \
 		   setup.o signal.o stacktrace.o sys_arm.o time.o traps.o
 
 obj-$(CONFIG_ARM_AUTO_HOTPLUG)  += auto_hotplug.o
-obj-$(CONFIG_ASMP)		+= autosmp.o
 obj-$(CONFIG_DEPRECATED_PARAM_STRUCT) += compat.o
 
 obj-$(CONFIG_LEDS)		+= leds.o
@@ -88,7 +87,5 @@ obj-$(CONFIG_DEBUG_LL)	+= debug.o
 obj-$(CONFIG_EARLY_PRINTK)	+= early_printk.o
 
 extra-y := $(head-y) init_task.o vmlinux.lds
-
-obj-$(CONFIG_ASMP)		+= autosmp.o
 
 obj-y        += fih_sw_info.o

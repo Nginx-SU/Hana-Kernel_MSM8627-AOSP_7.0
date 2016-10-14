@@ -1,5 +1,11 @@
 Changelog :
 
+V1.2.5 Pre-STABLE RELEASE:
+- Removed Intelli Plug and AutoSMP Hotplug
+- Re-added function "Use RQ Stats for Alucard Hotplug"
+- Improved Intellidemand & Intelliactive CPU Governor
+- Clean Build
+
 V1.2.4 BETA RELEASE:
 - FIX Problem with hotplug not recognized 
 - Added Intellidemand CPU Governor
