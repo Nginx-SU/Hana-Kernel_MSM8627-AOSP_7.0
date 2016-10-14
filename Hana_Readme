@@ -10,9 +10,9 @@ This kernel feature is :
 - Linux Kernel Version 3.4.11
 - Compatibility with AOSP and CM based ROM [Android 6.0+]
 - Added overclock up to 1,7Ghz
-- Added AutoSMP & Alucard Hotplug
+- Added Alucard Hotplug
 - Added custom CPU Governor 
-: Alucard,Intelliactive,IntelliMM,Lionheart,Adaptive,SmartassV2,Intellidemand,HYPER and lulzactive
+: Alucard,Intelliactive,IntelliMM,Lionheart,Adaptive,SmartassV2,Intellidemand,HYPER,lulzactive and Darkness
 - Added custom I/O Sched Governor 
 : zen,sio,sioplus,tripndroid,fifo,fiops and vr
 - Added fast charge feature (Enable By Default)
