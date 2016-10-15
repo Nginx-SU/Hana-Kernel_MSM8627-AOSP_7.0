@@ -26,7 +26,7 @@
 	"lionheart",
 	"lulzactive",
 	"smartass2"
-      ]
+             ]
     },
     {
       "name": "I/O Schedulers",
@@ -67,9 +67,9 @@
       "url": "https://qc3.androidfilehost.com/dl/X7i2oB579vjxi2vqlBylMw/1476753267/529152257862667872/Hana_Core-UX_v1.2.5-nicki.zip",
       "md5sum": "3a653bf42b988157d985846d1db4f233",
       "changelog": [
-	"Removed Intelli Plug and AutoSMP Hotplug"
-	"Added Darkness & Remove HYPER CPU Governor"
-	"Re-added function Use RQ Stats for Alucard Hotplug"
+	"Removed Intelli Plug and AutoSMP Hotplug",
+	"Added Darkness & Remove HYPER CPU Governor",
+	"Re-added function Use RQ Stats for Alucard Hotplug",
 	"Improved Intellidemand & Intelliactive CPU Governor"
       ]
     }
