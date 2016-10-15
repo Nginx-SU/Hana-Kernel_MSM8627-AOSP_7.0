@@ -9,6 +9,20 @@
   "paypal": "paypal.me/NicklasXDA",
   "features": [
     "Build with Crosstool NG Toolchains 5.4.0",
+    "Linux Kernel 3.4.11",
+    "Compatibility with all rom",
+    "Overclocked to 1,7Ghz",
+    "Alucard Hotplug",
+    "Fast USB charge (enable by default)",
+    "Full support for NEON-VFPV4 feature",
+    "Optimize for armv7 device",
+    "Enable Krait Retention for msm8960",
+    "Enable ARM Hibernation function",
+    "Auto hotplug drivers for optimized mpdecision",
+    "Graphite optimization",
+    "Use new hashtable implementation on KSM and HGM",
+    "Improved get cpu idle time on stock governor",
+    "Stability Fixes",
     {
       "name": "CPU Governors",
       "items": [
@@ -44,21 +58,7 @@
         "vr",
         "zen"
       ]
-    },
-    "Linux Kernel 3.4.11",
-    "Compatibility with all rom",
-    "Overclocked to 1,7Ghz",
-    "Alucard Hotplug",
-    "Fast USB charge (enable by default)",
-    "Full support for NEON-VFPV4 feature",
-    "Optimize for armv7 device",
-    "Enable Krait Retention for msm8960",
-    "Enable ARM Hibernation function",
-    "Auto hotplug drivers for optimized mpdecision",
-    "Graphite optimization",
-    "Use new hashtable implementation on KSM and HGM",
-    "Improved get cpu idle time on stock governor",
-    "Stability Fixes"
+    }
   ],
   "downloads": [
     {
