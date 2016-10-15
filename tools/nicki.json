@@ -17,16 +17,16 @@
         "userspace",
         "powersave",
         "performance",
-	"conservative",
+        "conservative",
         "darkness",
         "alucard",
         "intellidemand",
         "intellimm",
-	"intelliactive",
-	"lionheart",
-	"lulzactive",
-	"smartass2"
-             ]
+        "intelliactive",
+        "lionheart",
+        "lulzactive",
+        "smartass2"
+      ]
     },
     {
       "name": "I/O Schedulers",
@@ -36,13 +36,13 @@
         "row",
         "cfq (default)",
         "bfq",
-	"sio",
-	"sioplus",
-	"fifo",
-	"fiops",
-	"tripndroid",
-	"vr",
-	"zen"
+        "sio",
+        "sioplus",
+        "fifo",
+        "fiops",
+        "tripndroid",
+        "vr",
+        "zen"
       ]
     },
     "Linux Kernel 3.4.11",
@@ -63,14 +63,14 @@
   "downloads": [
     {
       "name": "1.2.5",
-      "description": "<b>Only for <i>6.0.X</i> based ROM,<i>Powered by Hana kernel</i></b>",
+      "description": "<b>Only for <i>6.0.X</i> based ROM<i> Powered by Hana kernel</i></b>",
       "url": "https://qc3.androidfilehost.com/dl/X7i2oB579vjxi2vqlBylMw/1476753267/529152257862667872/Hana_Core-UX_v1.2.5-nicki.zip",
       "md5sum": "3a653bf42b988157d985846d1db4f233",
       "changelog": [
-	"Removed Intelli Plug and AutoSMP Hotplug",
-	"Added Darkness & Remove HYPER CPU Governor",
-	"Re-added function Use RQ Stats for Alucard Hotplug",
-	"Improved Intellidemand & Intelliactive CPU Governor"
+        "Removed Intelli Plug and AutoSMP Hotplug",
+        "Added Darkness & Remove HYPER CPU Governor",
+        "Re-added function Use RQ Stats for Alucard Hotplug",
+        "Improved Intellidemand & Intelliactive CPU Governor"
       ]
     }
   ]
