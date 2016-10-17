@@ -1582,7 +1582,7 @@ config ALUCARD_HOTPLUG_USE_RQ_STATS
  	default n
  	help
  	  Alucard-hotplug msm rq statics using
-
+  
 config MSM_CPU_FREQ_SET_MIN_MAX
 	bool "Set Min/Max CPU frequencies."
 	default n
