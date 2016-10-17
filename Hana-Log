@@ -1187,6 +1187,7 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      drivers/input/sensors/bma250.o
   CC      drivers/input/sensors/cm36283.o
   LD      drivers/input/sensors/built-in.o
+  CC      drivers/input/touchscreen/doubletap2wake.o
   CC      drivers/input/touchscreen/cyttsp-i2c-qc.o
   CC      drivers/input/touchscreen/synaptics-rmi/synaptics_dsx_rmi4_i2c.o
   CC      drivers/input/touchscreen/synaptics-rmi/rmi_dev.o
