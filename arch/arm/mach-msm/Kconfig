@@ -1575,22 +1575,14 @@ config ALUCARD_HOTPLUG
  	default y
  	help
  	  Generic Alucard-hotplug cpu hotplug driver for ARM SOCs
-<<<<<<< HEAD
 
-=======
-	  
->>>>>>> c349612f15aca50751fea35f2de099df5deedae5
 config ALUCARD_HOTPLUG_USE_RQ_STATS
  	bool "Enable alucard-hotplug msm rq statistics using"
  	depends on ALUCARD_HOTPLUG && MSM_RUN_QUEUE_STATS
  	default n
  	help
  	  Alucard-hotplug msm rq statics using
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> c349612f15aca50751fea35f2de099df5deedae5
 config MSM_CPU_FREQ_SET_MIN_MAX
 	bool "Set Min/Max CPU frequencies."
 	default n
