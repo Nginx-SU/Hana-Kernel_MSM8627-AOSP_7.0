@@ -10,18 +10,28 @@ This kernel feature is :
 - Linux Kernel Version 3.4.11
 - Compatibility with AOSP and CM based ROM [Android 6.0+]
 - Added overclock up to 1,7Ghz
-- Added Alucard Hotplug
+- Added Double Tap 2 Wake Feature
+- Added CPU Voltage Control
+- Added Overclocked GPU to 500Mhz
+- Added Auto Reboot feature when hold power button
+- Added Alucard Hotplug (Use MSM_RQ_STATS) 
 - Added custom CPU Governor 
-: Alucard,Intelliactive,IntelliMM,Lionheart,Adaptive,SmartassV2,Intellidemand,HYPER,lulzactive and Darkness
+: Alucard,Intelliactive,IntelliMM,Lionheart,Adaptive,SmartassV2,Intellidemand,and lulzactive
 - Added custom I/O Sched Governor 
 : zen,sio,sioplus,tripndroid,fifo,fiops and vr
 - Added fast charge feature (Enable By Default)
 - Compiled using GCC 5.4.0 Crosstool-NG Toolchains (Optimized for armv7 with neon-vfpv4)
 - Add full support NEON VFPV4 feature 
 - Enable Graphite optimization on kernel and GPU
+- Enable Krait Retention for msm8960
+- Enable ARM Hibernation function
+- Improved "get cpu idle time" on stock governor
+- Updated I/O Sched default list
 - Added Auto hotplug drivers for optimized mpdecision
 - Use new hashtable implementation on KSM and HGM
 - Update sync from latest cm13 kernel source build 20160909 (For AoiCore+)
+- Update sync from latest aosp 7.0 kernel source build 20160909 (For HanaCore+)
+- Added low cpu clock when change hotplug on new cores (192Mhz)
 
 More details on changelog for custom build in kernel source
 
@@ -30,7 +40,7 @@ This is kernel tread source
 
 http://forum.xda-developers.com/xperia-m/orig-development/6-0-aoicore-kernel-t3454265
 
-(HanaCoreUX+ Kernel) V1.2.4 BETA RELEASE:
+(HanaCoreUX+ Kernel) V1.2.7 TEST RELEASE:
 Non released version (Private)
 Download Official build (EXPERIMENTAL) 
 https://www.androidfilehost.com/?w=files&flid=120528
