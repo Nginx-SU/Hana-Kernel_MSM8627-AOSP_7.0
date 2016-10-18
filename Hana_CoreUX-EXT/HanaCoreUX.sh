@@ -2,7 +2,7 @@
 echo "
 ######################################################
 #                                                    #
-#           Hana Core UX Kernel Script Builder       #
+#             Hana Core Kernel Script Builder        #
 #                                                    #
 #                Nicklas Van Dam @XDA                #
 #                                                    #
@@ -14,7 +14,7 @@ echo "###Cleaning old build"
 make clean && make mrproper
 
 echo "
-###Extracting Hana Core UX Extension"
+###Extracting Hana Core Extension"
 
 cd /home/nicklas
 rm Hana_CoreUX-Source/Makefile
@@ -25,13 +25,14 @@ rm Hana_CoreUX-Source/arch/arm/Makefile
 cp Hana_CoreUX-EXT/arch/arm/Makefile Hana_CoreUX-Source/arch/arm/Makefile
 rm Hana_CoreUX-Source/arch/arm/boot/compressed/Makefile
 cp Hana_CoreUX-EXT/arch/arm/boot/compressed/Makefile Hana_CoreUX-Source/arch/arm/boot/compressed/Makefile
-cp Hana_CoreUX-EXT/arch/arm/configs/hana_core-ux_nicki_defconfig Hana_CoreUX-Source/arch/arm/configs/hana_core-ux_nicki_defconfig
+cp Hana_CoreUX-EXT/arch/arm/configs/hana_core_nicki_defconfig Hana_CoreUX-Source/arch/arm/configs/hana_core_nicki_defconfig
 rm Hana_CoreUX-Source/arch/arm/include/asm/xor.h
 cp Hana_CoreUX-EXT/arch/arm/include/asm/xor.h Hana_CoreUX-Source/arch/arm/include/asm/xor.h
 cp Hana_CoreUX-EXT/arch/arm/include/asm/rwsem.h Hana_CoreUX-Source/arch/arm/include/asm/rwsem.h
 rm Hana_CoreUX-Source/arch/arm/kernel/Makefile
 cp Hana_CoreUX-EXT/arch/arm/kernel/Makefile Hana_CoreUX-Source/arch/arm/kernel/Makefile
 cp Hana_CoreUX-EXT/arch/arm/kernel/auto_hotplug.c Hana_CoreUX-Source/arch/arm/kernel/auto_hotplug.c
+cp Hana_CoreUX-EXT/arch/arm/kernel/autosmp.c Hana_CoreUX-Source/arch/arm/kernel/autosmp.c
 rm Hana_CoreUX-Source/arch/arm/kernel/head-nommu.S
 cp Hana_CoreUX-EXT/arch/arm/kernel/head-nommu.S Hana_CoreUX-Source/arch/arm/kernel/head-nommu.S
 rm Hana_CoreUX-Source/arch/arm/kernel/head.S
@@ -120,8 +121,6 @@ rm Hana_CoreUX-Source/drivers/gpu/ion/Makefile
 cp Hana_CoreUX-EXT/drivers/gpu/ion/Makefile Hana_CoreUX-Source/drivers/gpu/ion/Makefile
 rm Hana_CoreUX-Source/drivers/gpu/ion/msm/Makefile
 cp Hana_CoreUX-EXT/drivers/gpu/ion/msm/Makefile Hana_CoreUX-Source/drivers/gpu/ion/msm/Makefile
-rm Hana_CoreUX-Source/drivers/thermal/Kconfig
-cp Hana_CoreUX-EXT/drivers/thermal/Kconfig Hana_CoreUX-Source/drivers/thermal/Kconfig
 rm Hana_CoreUX-Source/drivers/staging/android/lowmemorykiller.c
 cp Hana_CoreUX-EXT/drivers/staging/android/lowmemorykiller.c Hana_CoreUX-Source/drivers/staging/android/lowmemorykiller.c
 rm Hana_CoreUX-Source/drivers/usb/otg/msm_otg.c
@@ -146,12 +145,8 @@ rm Hana_CoreUX-Source/include/trace/events/cpufreq_interactive.h
 cp Hana_CoreUX-EXT/include/trace/events/cpufreq_interactive.h Hana_CoreUX-Source/include/trace/events/cpufreq_interactive.h
 rm Hana_CoreUX-Source/init/Kconfig
 cp Hana_CoreUX-EXT/init/Kconfig Hana_CoreUX-Source/init/Kconfig
-rm Hana_CoreUX-Source/kernel/sched/core.c
-cp Hana_CoreUX-EXT/kernel/sched/core.c Hana_CoreUX-Source/kernel/sched/core.c
 rm Hana_CoreUX-Source/kernel/sched/features.h
 cp Hana_CoreUX-EXT/kernel/sched/features.h Hana_CoreUX-Source/kernel/sched/features.h
-rm Hana_CoreUX-Source/kernel/sched/sched.h
-cp Hana_CoreUX-EXT/kernel/sched/sched.h Hana_CoreUX-Source/kernel/sched/sched.h
 rm Hana_CoreUX-Source/kernel/power/Kconfig
 cp Hana_CoreUX-EXT/kernel/power/Kconfig Hana_CoreUX-Source/kernel/power/Kconfig
 rm Hana_CoreUX-Source/kernel/power/Makefile
@@ -171,12 +166,12 @@ export ARCH=arm
 export CROSS_COMPILE=/home/nicklas/crosstool-toolchains-5.4.X/bin/arm-unknown-linux-gnueabihf-
 
 echo "
-###Building Hana Core UX"
+###Building Hana Core"
 
 echo "
 ###Compile kernel process will write on log, for simple interface"
 
-make ARCH=arm hana_core-ux_nicki_defconfig
+make ARCH=arm hana_core_nicki_defconfig
 make ARCH=arm CROSS_COMPILE=/home/nicklas/crosstool-toolchains-5.4.X/bin/arm-unknown-linux-gnueabihf- > Hana-Log
 
 echo "
@@ -187,7 +182,7 @@ cp arch/arm/boot/zImage modules
 find . -name "*.ko" -exec cp {} modules \;
 
 echo "
-## Preparing Hana Core UX"
+## Preparing Hana Core"
 cd /home/nicklas
 mkdir Hana_ouput
 mv Hana_CoreUX-Source/modules Hana_output
@@ -196,11 +191,11 @@ echo "##Cleaning Build"
 cd Hana_CoreUX-Source
 make clean && make mrproper
 
-echo "##Creating Hana_Core_UX-nicki.zip"
+echo "##Creating Hana_Core-nicki.zip"
 cd /home/nicklas/Hana_CoreUX-EXT
 ./HanaCoreUX_builder.sh
 
 echo "Script Complete Successfuly"
 echo "Nicklas Van Dam @ XDA"
-echo "Hana Core UX Kernel Finished"
+echo "Hana Core Kernel Finished"
 echo "========Royal Patraine======"

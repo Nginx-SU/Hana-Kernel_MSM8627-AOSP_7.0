@@ -1,4 +1,4 @@
-# Hana-CoreUX-Kernel_For_Nicki
+# Hana-Core-Kernel_For_Nicki
 
 Hana Core UX Kernel is codename project from Hana Kernel Development. Hana Kernel Development itself have 2 codename in step of development, AoiCore+ and Hana Core UX is still part of Hana Kernel Project. This kernel have main to optimize Xperia M / M Dual device with latest source kernel, many optimization for processor,gpu and much improvement in LMK and KSM manager.
 
@@ -15,6 +15,7 @@ This kernel feature is :
 - Added Overclocked GPU to 500Mhz
 - Added Auto Reboot feature when hold power button
 - Added Alucard Hotplug (Use MSM_RQ_STATS) 
+- Added AutoSMP Hotplug
 - Added custom CPU Governor 
 : Alucard,Intelliactive,IntelliMM,Lionheart,Adaptive,SmartassV2,Intellidemand,and lulzactive
 - Added custom I/O Sched Governor 
@@ -32,6 +33,7 @@ This kernel feature is :
 - Update sync from latest cm13 kernel source build 20160909 (For AoiCore+)
 - Update sync from latest aosp 7.0 kernel source build 20160909 (For HanaCore+)
 - Added low cpu clock when change hotplug on new cores (192Mhz)
+- Fixed I/O Sched list
 
 More details on changelog for custom build in kernel source
 
