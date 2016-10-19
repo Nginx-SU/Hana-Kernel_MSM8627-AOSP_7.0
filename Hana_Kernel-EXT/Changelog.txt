@@ -1,6 +1,8 @@
 Changelog :
 
 V1.2.7 Pre-STABLE RELEASE:
+( Introduce Hana Kernel )
+- Merged Linux Kernel to 3.4.12
 - Added DT2W Feature
 - Added CPU Voltage Control
 - Added OTA Update support from kernel adiutor app

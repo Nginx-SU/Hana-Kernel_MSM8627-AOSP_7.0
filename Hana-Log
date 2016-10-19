@@ -83,6 +83,7 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      arch/arm/kernel/time.o
   CC      arch/arm/kernel/traps.o
   CC      arch/arm/kernel/auto_hotplug.o
+  CC      arch/arm/kernel/autosmp.o
   CC      arch/arm/kernel/cpuidle.o
   CC      arch/arm/kernel/armksyms.o
   CC      arch/arm/kernel/module.o
@@ -139,6 +140,7 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      arch/arm/common/cpaccess.o
   LD      arch/arm/common/built-in.o
   LD      arch/arm/net/built-in.o
+  SHIPPED arch/arm/crypto/aesbs-core.S
   AS      arch/arm/crypto/aesbs-core.o
   CC      arch/arm/crypto/aesbs-glue.o
   AS      arch/arm/crypto/aes-armv4.o
@@ -147,6 +149,7 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      arch/arm/crypto/sha1_neon_glue.o
   AS      arch/arm/crypto/sha1-armv4-large.o
   CC      arch/arm/crypto/sha1_glue.o
+  SHIPPED arch/arm/crypto/sha256-core.S
   AS      arch/arm/crypto/sha256-core.o
   CC      arch/arm/crypto/sha256_glue.o
   CC      arch/arm/crypto/sha256_neon_glue.o
@@ -917,14 +920,14 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      block/deadline-iosched.o
   CC      block/row-iosched.o
   CC      block/cfq-iosched.o
+  CC      block/bfq-iosched.o
   CC      block/sio-iosched.o
   CC      block/sioplus-iosched.o
-  CC      block/bfq-iosched.o
   CC      block/fifo-iosched.o
   CC      block/tripndroid-iosched.o
   CC      block/fiops-iosched.o
-  CC      block/zen-iosched.o
   CC      block/vr-iosched.o
+  CC      block/zen-iosched.o
   LD      block/built-in.o
   LD      drivers/auxdisplay/built-in.o
   CC      drivers/base/core.o
