@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hana Kernel for Xperia M | MSM8926  by Nicklas373</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Hana Kernel for Xperia M | MSM8926 </h1>
+      <h2 class="project-tagline">Hana Kernel is custom kernel for Xperia M that based on AOSP Nougat Source.</h2>
+      <a href="https://github.com/Nicklas373/Hana-Kernel_MSM8627-AOSP_7.0" class="btn">View on GitHub</a>
+      <a href="https://github.com/Nicklas373/Hana-Kernel_MSM8627-AOSP_7.0/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/Nicklas373/Hana-Kernel_MSM8627-AOSP_7.0/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="hana-kernel_for_nicki" class="anchor" href="#hana-kernel_for_nicki" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Hana-Kernel_For_Nicki</h1>
+
+<p>Hana Kernel Development. Hana kernel based on AOSP Nougat source, and included many improvement and optimization on processor,gpu and include some feature for Xperia M / M dual devices that use CyanogenMod 13 as base ROM.</p>
+
+<p>Hana offered kernel stability, smoothness process on cpu and already have full support on NEON-vfpv4.
+This kernel is include several feature to increase performance and ARM is aim for all improvement, Custom governor and custom I/O Scheduler is already included too here.</p>
+
+<p>This kernel need kernel configuration app to control this kernel, so try to find kernel configuration app after flash this kernel.</p>
+
+<p>This kernel feature is :</p>
+
+<ul>
+<li>Linux Kernel Version 3.4.12</li>
+<li>Compatibility with AOSP and CM based ROM [Android 6.0+]</li>
+<li>Added overclock up to 1,7Ghz</li>
+<li>Added Double Tap 2 Wake Feature</li>
+<li>Added CPU Voltage Control</li>
+<li>Added Overclocked GPU to 500Mhz</li>
+<li>Added Auto Reboot feature when hold power button</li>
+<li>Added Alucard Hotplug (Use MSM_RQ_STATS) </li>
+<li>Added AutoSMP Hotplug</li>
+<li>Added custom CPU Governor 
+: Alucard,Intelliactive,IntelliMM,Lionheart,Adaptive,SmartassV2,Intellidemand,and lulzactive</li>
+<li>Added custom I/O Sched Governor 
+: zen,sio,sioplus,tripndroid,fifo,fiops and vr</li>
+<li>Added fast charge feature (Enable By Default)</li>
+<li>Compiled using GCC 5.4.0 Crosstool-NG Toolchains (Optimized for armv7 with neon-vfpv4)</li>
+<li>Add full support NEON VFPV4 feature </li>
+<li>Enable Graphite optimization on kernel and GPU</li>
+<li>Enable Krait Retention for msm8960</li>
+<li>Enable ARM Hibernation function</li>
+<li>Improved "get cpu idle time" on stock governor</li>
+<li>Updated I/O Sched default list</li>
+<li>Added Auto hotplug drivers for optimized mpdecision</li>
+<li>Use new hashtable implementation on KSM and HGM</li>
+<li>Update sync from latest cm13 kernel source build 20160909 (For AoiCore+)</li>
+<li>Update sync from latest aosp 7.0 kernel source build 20160909 (For HanaCore+)</li>
+<li>Added low cpu clock when change hotplug on new cores (192Mhz)</li>
+<li>Fixed I/O Sched list</li>
+</ul>
+
+<p>More details on changelog for custom build in kernel source</p>
+
+<p>This is xda kernel thread source
+(AoiCore+ Kernel) / v1.6.3 [EOL] {XDA-ONLY}
+<a href="http://forum.xda-developers.com/xperia-m/orig-development/6-0-aoicore-kernel-t3454265">http://forum.xda-developers.com/xperia-m/orig-development/6-0-aoicore-kernel-t3454265</a></p>
+
+<p>(HanaCoreUX+ Kernel) V1.2.7 Pre STABLE RELEASE:
+[EOL]
+Non released version (Private)
+Download Official build (EXPERIMENTAL) 
+<a href="https://www.androidfilehost.com/?w=files&amp;flid=120528">https://www.androidfilehost.com/?w=files&amp;flid=120528</a></p>
+
+<p>(Hana Kernel) V1.0 TEST RELEASE:
+Pre Released Version (Private)
+Download Official build (EXPERIMENTAL) </p>
+
+<p>Thanks to :
+Ron Gokhale (<a href="https://github.com/PecanCM" class="user-mention">@PecanCM</a>) [For Kernel Source]
+Alex Rivero (@Alex_Gamer) [Kernel Tester &amp; Troubleshoot]
+Ngxson (@thichthat) [For DT2W Source]</p>
+
+<h1>
+<a id="hana-kernel--makihatayama-hana-2016" class="anchor" href="#hana-kernel--makihatayama-hana-2016" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Hana Kernel | Makihatayama Hana (2016)</h1>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/Nicklas373/Hana-Kernel_MSM8627-AOSP_7.0">Hana Kernel for Xperia M | MSM8926 </a> is maintained by <a href="https://github.com/Nicklas373">Nicklas373</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
