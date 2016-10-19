@@ -48,6 +48,9 @@ static inline void esdhc_set_clock(struct sdhci_host *host, unsigned int clock)
 	int div = 1;
 	u32 temp;
 
+	if (clock == 0)
+ 		goto out;
+
 	temp = sdhci_readl(host, ESDHC_SYSTEM_CONTROL);
 	temp &= ~(ESDHC_CLOCK_IPGEN | ESDHC_CLOCK_HCKEN | ESDHC_CLOCK_PEREN
 		| ESDHC_CLOCK_MASK);

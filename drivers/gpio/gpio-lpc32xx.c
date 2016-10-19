@@ -257,6 +257,7 @@ static int lpc32xx_gpio_dir_input_p012(struct gpio_chip *chip,
 {
 	struct lpc32xx_gpio_chip *group = to_lpc32xx_gpio(chip);
 
+	__set_gpio_level_p012(group, pin, value);
 	__set_gpio_dir_p012(group, pin, 1);
 
 	return 0;
@@ -267,6 +268,7 @@ static int lpc32xx_gpio_dir_input_p3(struct gpio_chip *chip,
 {
 	struct lpc32xx_gpio_chip *group = to_lpc32xx_gpio(chip);
 
+	__set_gpio_level_p3(group, pin, value);
 	__set_gpio_dir_p3(group, pin, 1);
 
 	return 0;
@@ -322,6 +324,9 @@ static int lpc32xx_gpio_dir_output_p3(struct gpio_chip *chip, unsigned pin,
 static int lpc32xx_gpio_dir_out_always(struct gpio_chip *chip, unsigned pin,
 	int value)
 {
+	struct lpc32xx_gpio_chip *group = to_lpc32xx_gpio(chip);
+ 
+ 	__set_gpo_level_p3(group, pin, value);
 	return 0;
 }
 
