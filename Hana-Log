@@ -140,7 +140,6 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      arch/arm/common/cpaccess.o
   LD      arch/arm/common/built-in.o
   LD      arch/arm/net/built-in.o
-  SHIPPED arch/arm/crypto/aesbs-core.S
   AS      arch/arm/crypto/aesbs-core.o
   CC      arch/arm/crypto/aesbs-glue.o
   AS      arch/arm/crypto/aes-armv4.o
@@ -149,7 +148,6 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      arch/arm/crypto/sha1_neon_glue.o
   AS      arch/arm/crypto/sha1-armv4-large.o
   CC      arch/arm/crypto/sha1_glue.o
-  SHIPPED arch/arm/crypto/sha256-core.S
   AS      arch/arm/crypto/sha256-core.o
   CC      arch/arm/crypto/sha256_glue.o
   CC      arch/arm/crypto/sha256_neon_glue.o
