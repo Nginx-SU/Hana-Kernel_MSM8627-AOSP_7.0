@@ -1,5 +1,5 @@
 {
-  "name": "<b><font color=\"#FFFFFF\">Hana Core + Kernel</font></b>",
+  "name": "<b><font color=\"#FFFFFF\">Hana Kernel</font></b>",
   "short_description": "Based on Hana Kernel <b>|</b> For Xperia M",
   "long_description": "Welcome to <b>Hana Core + Kernel</b> This kernel have main to optimize Xperia M / M Dual device with latest source kernel<br><br>many optimization for processor,gpu and much improvement in LMK and KSM manager.<br><a href=\"https://github.com/Nicklas373\">My Github Profile</a>",
   "logo": "https://lh3.googleusercontent.com/zl3NLTLzyMqglAC26Id5wMyTLo5iU5HAby8VmhXd1F2XWPdAWLRAmZOoNL1dR8yRb5vxIJ8OBg=w1366-h768-rw-no",
@@ -9,7 +9,7 @@
   "paypal": "paypal.me/NicklasXDA",
   "features": [
     "Build with Crosstool NG Toolchains 5.4.0",
-    "Linux Kernel 3.4.11",
+    "Linux Kernel 3.4.12",
     "Compatibility with all rom",
     "Overclocked to 1,7Ghz",
     "Alucard Hotplug",
@@ -65,16 +65,10 @@
   ],
   "downloads": [
     {
-      "name": "1.2.7",
-      "description": "<b>Only for <i>6.0.X</i> based ROM<i> Powered by Hana kernel</i></b>",
-      "url": "https://qc3.androidfilehost.com/dl/9wXX7WG5FBu9I6_UePJSqg/1476953113/529152257862668420/Hana_Core-UX_v1.2.7-nicki-signed.zip",
-      "md5sum": "e710ad2d8e57dd6bb20d234d343aa384",
-      "changelog": [
-        "Added DT2W Feature",
-        "Added CPU Voltage Control",
-        "Added OC GPU to 500Mhz",
-        "Added Auto Reboot feature"
-      ]
+      "name": "1.0",
+      "description": "<b>Only for <i>6.0.X</i> based ROM</b>",
+      "url": "https://qc3.androidfilehost.com/dl/6C0HY0nFTYzym9d4vLnhNw/1477115890/312968873555004817/Hana_Kernel_v1.0-nicki-signed.zip",
+      "md5sum": "0f2cd9385e4279689bedee78d505bf1e"
     }
   ]
 }
