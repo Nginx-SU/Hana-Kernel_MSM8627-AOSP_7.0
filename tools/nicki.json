@@ -1,18 +1,19 @@
 {
   "name": "<b><font color=\"#FFFFFF\">Hana Kernel</font></b>",
-  "short_description": "Based on Hana Kernel <b>|</b> For Xperia M",
-  "long_description": "Welcome to <b>Hana Core + Kernel</b> This kernel have main to optimize Xperia M / M Dual device with latest source kernel<br><br>many optimization for processor,gpu and much improvement in LMK and KSM manager.<br><a href=\"https://github.com/Nicklas373\">My Github Profile</a>",
-  "logo": "https://lh3.googleusercontent.com/zl3NLTLzyMqglAC26Id5wMyTLo5iU5HAby8VmhXd1F2XWPdAWLRAmZOoNL1dR8yRb5vxIJ8OBg=w1366-h768-rw-no",
+  "short_description": "Based on AOSP Nougat Source<b>|</b> For Xperia M",
+  "long_description": "Welcome to <b>Hana Kernel</b> Hana kernel based on AOSP Nougat source, and included many improvement and optimization <br><br> on processor,gpu and include some feature for Xperia M / M dual devices that use CyanogenMod 13 as base ROM.<br><a href=\"https://github.com/Nicklas373\">My Github Profile</a>",
+  "logo": "https://raw.githubusercontent.com/Nicklas373/Hana-Kernel_MSM8627-AOSP_7.0/master/sketch-1476956853144.png",
   "xda": "http://forum.xda-developers.com/xperia-m/orig-development/6-0-aoicore-kernel-t3454265",
-  "github": "https://github.com/Nicklas373/Hana-CoreUX-Kernel_MSM8627-AOSP_7.0",
+  "github": "https://github.com/Nicklas373/Hana-Kernel_MSM8627-AOSP_7.0",
   "google_plus": "https://plus.google.com/+DickyHerlambangNicklasCRJ",
   "paypal": "paypal.me/NicklasXDA",
   "features": [
     "Build with Crosstool NG Toolchains 5.4.0",
     "Linux Kernel 3.4.12",
-    "Compatibility with all rom",
+    "Compatibility with all rom [6.0+]",
     "Overclocked to 1,7Ghz",
     "Alucard Hotplug",
+    "AutoSMP Hotplug",
     "Double Tap 2 Wake",
     "CPU Voltage Control",
     "Overclocked GPU to 500Mhz",
@@ -65,10 +66,14 @@
   ],
   "downloads": [
     {
-      "name": "1.0",
+      "name": "1.1",
       "description": "<b>Only for <i>6.0.X</i> based ROM</b>",
-      "url": "https://qc3.androidfilehost.com/dl/6C0HY0nFTYzym9d4vLnhNw/1477115890/312968873555004817/Hana_Kernel_v1.0-nicki-signed.zip",
-      "md5sum": "0f2cd9385e4279689bedee78d505bf1e"
+      "url": "https://qc3.androidfilehost.com/dl/G4FYiXI99Qn5xU7TDH1iVQ/1477194385/312978532265364225/Hana_Kernel_v1.1-nicki-signed.zip",
+      "md5sum": "ffe313dd9156b131631c51995ad77062",
+      "changelog": [
+	      "Improved cpuinit: get rid of __cpuinit",
+	      "Merged Linux Kernel to 3.4.12"
+	      ] 
     }
   ]
 }
