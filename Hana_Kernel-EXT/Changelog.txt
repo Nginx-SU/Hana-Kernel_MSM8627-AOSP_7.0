@@ -1,8 +1,12 @@
 Changelog :
 
-V1.2.7 Pre-STABLE RELEASE:
 ( Introduce Hana Kernel )
+V1.1 (Hana Kernel) TEST RELEASE :
+- Improved cpuinit: get rid of __cpuinit
 - Merged Linux Kernel to 3.4.12
+
+V1.2.7 Pre-STABLE RELEASE:
+- Merged Linux Kernel to 3.4.11
 - Added DT2W Feature
 - Added CPU Voltage Control
 - Added OTA Update support from kernel adiutor app
