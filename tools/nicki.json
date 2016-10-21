@@ -1,16 +1,15 @@
 {
   "name": "<b><font color=\"#FFFFFF\">Hana Kernel</font></b>",
-  "short_description": "Based on AOSP Nougat Source<b>|</b> For Xperia M",
-  "long_description": "Welcome to <b>Hana Kernel</b> Hana kernel based on AOSP Nougat source, and included many improvement and optimization <br><br> on processor,gpu and include some feature for Xperia M / M dual devices that use CyanogenMod 13 as base ROM.<br><a href=\"https://github.com/Nicklas373\">My Github Profile</a>",
-  "logo": "https://raw.githubusercontent.com/Nicklas373/Hana-Kernel_MSM8627-AOSP_7.0/master/sketch-1476956853144.png",
+  "short_description": " Based on AOSP <b>Hana Development</b>",
+  "long_description": "Welcome to <b>Hana Kernel</b>! Hana offered kernel stability, smoothness process on cpu and already have full support on NEON-vfpv4.This kernel is include several feature to increase performance and ARM is aim for all improvement, Custom governor and custom I/O Scheduler is already included too here.<br><a href=\"http://www.github.com/Nicklas373\">My Github Profile</a>",
+  "logo": "https://raw.githubusercontent.com/Nicklas373/Hana-Kernel_MSM8627-AOSP_7.0/37d3656b58e8b590517fe8e7b68bddf581f1b7b8/sketch-1476960393044.png",
   "xda": "http://forum.xda-developers.com/xperia-m/orig-development/6-0-aoicore-kernel-t3454265",
   "github": "https://github.com/Nicklas373/Hana-Kernel_MSM8627-AOSP_7.0",
   "google_plus": "https://plus.google.com/+DickyHerlambangNicklasCRJ",
-  "paypal": "paypal.me/NicklasXDA",
+  "paypal": "https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=9dy1T4gF5jt-hygBQ4zLG23sqycm_l5YaDQC7lA9Lm58K5bsn-CmpAD_EY8&dispatch=5885d80a13c0db1f8e263663d3faee8d4fe1dd75ca3bd4f11d72275b28239088",
   "features": [
     "Build with Crosstool NG Toolchains 5.4.0",
     "Linux Kernel 3.4.12",
-    "Compatibility with all rom [6.0+]",
     "Overclocked to 1,7Ghz",
     "Alucard Hotplug",
     "AutoSMP Hotplug",
@@ -25,8 +24,6 @@
     "Auto hotplug drivers for optimized mpdecision",
     "Graphite optimization",
     "Use new hashtable implementation on KSM and HGM",
-    "Improved get cpu idle time on stock governor",
-    "Stability Fixes",
     {
       "name": "CPU Governors",
       "items": [
@@ -45,7 +42,7 @@
         "lulzactive",
         "smartass2"
       ]
-    },
+   },
     {
       "name": "I/O Schedulers",
       "items": [
