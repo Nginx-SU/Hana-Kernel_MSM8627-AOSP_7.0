@@ -71,8 +71,6 @@ rm Hana_Kernel-Source/arch/arm/mach-msm/Kconfig
 cp Hana_Kernel-EXT/arch/arm/mach-msm/Kconfig Hana_Kernel-Source/arch/arm/mach-msm/Kconfig
 rm Hana_Kernel-Source/arch/arm/mach-msm/Makefile
 cp Hana_Kernel-EXT/arch/arm/mach-msm/Makefile Hana_Kernel-Source/arch/arm/mach-msm/Makefile
-rm Hana_Kernel-Source/arch/arm/mach-msm/lge/mako/board-mako.c
-cp Hana_Kernel-EXT/arch/arm/mach-msm/lge/mako/board-mako.c Hana_Kernel-Source/arch/arm/mach-msm/lge/mako/board-mako.c
 rm Hana_Kernel-Source/block/Kconfig.iosched
 cp Hana_Kernel-EXT/block/Kconfig.iosched Hana_Kernel-Source/block/Kconfig.iosched
 rm Hana_Kernel-Source/block/Makefile
