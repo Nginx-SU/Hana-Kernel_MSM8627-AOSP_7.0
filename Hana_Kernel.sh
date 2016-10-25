@@ -65,8 +65,6 @@ cp Hana_Kernel-EXT/arch/arm/mach-msm/devices-8960.c Hana_Kernel-Source/arch/arm/
 rm Hana_Kernel-Source/arch/arm/mach-msm/dma_test.c
 cp Hana_Kernel-EXT/arch/arm/mach-msm/dma_test.c Hana_Kernel-Source/arch/arm/mach-msm/dma_test.c
 cp Hana_Kernel-EXT/arch/arm/mach-msm/fastchg.c Hana_Kernel-Source/arch/arm/mach-msm/fastchg.c
-rm Hana_Kernel-Source/arch/arm/mach-msm/msm_rq_stats.c
-cp Hana_Kernel-EXT/arch/arm/mach-msm/msm_rq_stats.c Hana_Kernel-Source/arch/arm/mach-msm/msm_rq_stats.c
 rm Hana_Kernel-Source/arch/arm/mach-msm/Kconfig
 cp Hana_Kernel-EXT/arch/arm/mach-msm/Kconfig Hana_Kernel-Source/arch/arm/mach-msm/Kconfig
 rm Hana_Kernel-Source/arch/arm/mach-msm/Makefile
@@ -92,7 +90,6 @@ rm Hana_Kernel-Source/drivers/cpufreq/Makefile
 cp Hana_Kernel-EXT/drivers/cpufreq/Makefile Hana_Kernel-Source/drivers/cpufreq/Makefile
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_adaptive.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_adaptive.c
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_alucard.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_alucard.c
-cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_darkness.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_darkness.c
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_intelliactive.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_intelliactive.c
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_intellidemand.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_intellidemand.c
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_intellimm.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_intellimm.c
@@ -143,6 +140,8 @@ rm Hana_Kernel-Source/include/trace/events/cpufreq_interactive.h
 cp Hana_Kernel-EXT/include/trace/events/cpufreq_interactive.h Hana_Kernel-Source/include/trace/events/cpufreq_interactive.h
 rm Hana_Kernel-Source/init/Kconfig
 cp Hana_Kernel-EXT/init/Kconfig Hana_Kernel-Source/init/Kconfig
+rm Hana_Kernel-Source/lib/int_sqrt.c
+cp Hana_Kernel-EXT/lib/int_sqrt.c Hana_Kernel-Source/lib/int_sqrt.c
 rm Hana_Kernel-Source/kernel/sched/features.h
 cp Hana_Kernel-EXT/kernel/sched/features.h Hana_Kernel-Source/kernel/sched/features.h
 rm Hana_Kernel-Source/kernel/power/Kconfig
@@ -154,6 +153,8 @@ rm Hana_Kernel-Source/mm/ksm.c
 cp Hana_Kernel-EXT/mm/ksm.c Hana_Kernel-Source/mm/ksm.c
 rm Hana_Kernel-Source/mm/huge_memory.c
 cp Hana_Kernel-EXT/mm/huge_memory.c Hana_Kernel-Source/mm/huge_memory.c
+rm Hana_Kernel-Source/mm/slub.c
+cp Hana_Kernel-EXT/mm/slub.c Hana_Kernel-Source/mm/slub.c
 rm Hana_Kernel-Source/net/netfilter/Makefile
 cp Hana_Kernel-EXT/net/netfilter/Makefile Hana_Kernel-Source/net/netfilter/Makefile
 cd Hana_Kernel-Source

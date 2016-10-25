@@ -1,4 +1,4 @@
-# Hana-Core-Kernel_For_Nicki
+# Hana Kernel For Xperia M / M Dual
 
 Hana Kernel Development. Hana kernel based on AOSP Nougat source, and included many improvement and optimization on processor,gpu and include some feature for Xperia M / M dual devices that use CyanogenMod 13 as base ROM.
 
@@ -38,19 +38,23 @@ This kernel feature is :
 
 More details on changelog for custom build in kernel source
 
-This is xda kernel thread source
-(AoiCore+ Kernel) / v1.6.3 [EOL] {XDA-ONLY}
+Hana Kernel XDA Thread
 http://forum.xda-developers.com/xperia-m/orig-development/6-0-aoicore-kernel-t3454265
 
-(HanaCoreUX+ Kernel) V1.2.7 TEST RELEASE:
+(Hana Kernel) V1.0 TEST RELEASE:
+Pre Released Version (Private)
+Download Official build (EXPERIMENTAL) 
+https://www.androidfilehost.com/?fid=312968873555004817
+
+(HanaCoreUX+ Kernel) V1.2.7 Pre STABLE RELEASE:
 [EOL]
 Non released version (Private)
 Download Official build (EXPERIMENTAL) 
 https://www.androidfilehost.com/?w=files&flid=120528
 
-(Hana Kernel) V1.0 / V1.2.7 (CoreUX) TEST RELEASE:
-Pre Released Version (Private)
-Download Official build (EXPERIMENTAL) 
+(AoiCore+ Kernel) / v1.6.3 
+[EOL] {XDA-ONLY}
+http://forum.xda-developers.com/devdb/project/?id=16883#downloads
 
 Thanks to :
 Ron Gokhale (@PecanCM) [For Kernel Source]

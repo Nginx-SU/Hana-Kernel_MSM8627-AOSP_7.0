@@ -1,5 +1,17 @@
 Changelog :
 
+V1.2 RC1 TEST RELEASE :
+- Disable "use msm_rq_stats" for alucard hotplug to avoid error in arm auto hotplug
+- Optimized slub
+- Optimized integer sqrt
+- Revert back Krait Retention feature (Not Compatible)
+- Enable H264 High Profile
+- Optimized cpuinit
+- Set up Min / Max value for cpu
+- Removed Darkness CPU Governor
+- Improved Intellidemand CPU Governor
+- Sync from latest CM14 Source 20161022
+
 ( Introduce Hana Kernel )
 V1.1 (Hana Kernel) TEST RELEASE :
 - Improved cpuinit: get rid of __cpuinit

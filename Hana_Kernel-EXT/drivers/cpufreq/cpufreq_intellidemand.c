@@ -55,8 +55,8 @@
 #define DBS_UI_SAMPLING_TIMEOUT                  (80)
 
 #define DEF_FREQ_STEP                            (25)
-#define DEF_STEP_UP_EARLY_HISPEED                (1512000)
-#define DEF_STEP_UP_INTERIM_HISPEED              (1728000)
+#define DEF_STEP_UP_EARLY_HISPEED                (1458000)
+#define DEF_STEP_UP_INTERIM_HISPEED              (1512000)
 #define DEF_SAMPLING_EARLY_HISPEED_FACTOR        (2)
 #define DEF_SAMPLING_INTERIM_HISPEED_FACTOR      (3)
 
@@ -87,8 +87,8 @@ static freq_table_idx pre_freq_idx[SUP_CORE_NUM] = {};
 
 #if defined(SMART_UP_SLOW_UP_AT_HIGH_FREQ)
 
-#define SUP_SLOW_UP_FREQUENCY                   (1242000)
-#define SUP_HIGH_SLOW_UP_FREQUENCY       	(1458000)
+#define SUP_SLOW_UP_FREQUENCY                   (918000)
+#define SUP_HIGH_SLOW_UP_FREQUENCY       	(1242000)
 #define SUP_SLOW_UP_LOAD                  	(80)
 
 typedef struct {
@@ -244,8 +244,8 @@ static struct dbs_tuners {
         .up_threshold_any_cpu_load = DEF_FREQUENCY_UP_THRESHOLD,
         .ignore_nice = 0,
         .powersave_bias = 1,
-        .sync_freq = 1458000,
-        .optimal_freq = 1242000,
+        .sync_freq = 1242000,
+        .optimal_freq = 1026000,
         //20130711 smart_up 
         .smart_up = SMART_UP_PLUS,
         .smart_slow_up_load = SUP_SLOW_UP_LOAD,
@@ -761,7 +761,7 @@ static ssize_t store_ignore_nice_load(struct kobject *a, struct attribute *b,
                 struct cpu_dbs_info_s *dbs_info;
                 dbs_info = &per_cpu(od_cpu_dbs_info, j);
                 dbs_info->prev_cpu_idle = get_cpu_idle_time(j,
-                                                &dbs_info->prev_cpu_wall, 0);
+                                                &dbs_info->prev_cpu_wall, dbs_tuners_ins.io_is_busy);
                 if (dbs_tuners_ins.ignore_nice)
                         dbs_info->prev_cpu_nice = kcpustat_cpu(j).cpustat[CPUTIME_NICE];
 
@@ -1323,7 +1323,7 @@ static void dbs_check_cpu(struct cpu_dbs_info_s *this_dbs_info)
 
                 j_dbs_info = &per_cpu(od_cpu_dbs_info, j);
 
-                cur_idle_time = get_cpu_idle_time(j, &cur_wall_time, 0);
+                cur_idle_time = get_cpu_idle_time(j, &cur_wall_time, dbs_tuners_ins.io_is_busy);
                 cur_iowait_time = get_cpu_iowait_time(j, &cur_wall_time);
 
                 wall_time = (unsigned int)
@@ -1852,7 +1852,7 @@ static void dbs_refresh_callback(struct work_struct *work)
                         policy->cur = policy->max;
 
                 this_dbs_info->prev_cpu_idle = get_cpu_idle_time(cpu,
-                                &this_dbs_info->prev_cpu_wall, 0);
+                                &this_dbs_info->prev_cpu_wall, dbs_tuners_ins.io_is_busy);
         }
 
 bail_incorrect_governor:
@@ -2100,7 +2100,7 @@ static int cpufreq_governor_dbs(struct cpufreq_policy *policy,
                         j_dbs_info->cur_policy = policy;
 
                         j_dbs_info->prev_cpu_idle = get_cpu_idle_time(j,
-                                                &j_dbs_info->prev_cpu_wall, 0);
+                                                &j_dbs_info->prev_cpu_wall, dbs_tuners_ins.io_is_busy);
                         if (dbs_tuners_ins.ignore_nice)
                                 j_dbs_info->prev_cpu_nice =
                                                 kcpustat_cpu(j).cpustat[CPUTIME_NICE];
@@ -2250,7 +2250,7 @@ static int cpufreq_gov_dbs_up_task(void *data)
                         
                         dbs_tuners_ins.powersave_bias = 0;
                         dbs_freq_increase(policy, input_event_min_freq);
-                        this_dbs_info->prev_cpu_idle = get_cpu_idle_time(cpu, &this_dbs_info->prev_cpu_wall, 0);
+                        this_dbs_info->prev_cpu_idle = get_cpu_idle_time(cpu, &this_dbs_info->prev_cpu_wall, dbs_tuners_ins.io_is_busy);
                 }
 
                 mutex_unlock(&this_dbs_info->timer_mutex);
