@@ -8,25 +8,33 @@
  *
  * A very rough approximation to the sqrt() function.
  */
-unsigned long int_sqrt(unsigned long x)
+inline unsigned long int_sqrt(unsigned long x)
 {
-	unsigned long op, res, one;
+	register unsigned long tmp;
+ 	register unsigned long place;
+ 	register unsigned long root = 0;
+ 
+ 	if (x <= 1)
+ 		return x;
 
-	op = x;
-	res = 0;
+ 	place = 1UL << (BITS_PER_LONG - 2);
+ 	
+ 	do{
+ 		place >>= 2;
+	}while(place > x);
 
-	one = 1UL << (BITS_PER_LONG - 2);
-	while (one > op)
-		one >>= 2;
+	do {
+ 		tmp = root + place;
+		root >>= 1;
 
-	while (one != 0) {
-		if (op >= res + one) {
-			op = op - (res + one);
-			res = res +  2 * one;
+	if (x >= tmp) 
+ 		{
+ 			x -= tmp;
+ 			root += place;
 		}
-		res /= 2;
-		one /= 4;
-	}
-	return res;
+ 		place >>= 2;
+	}while (place != 0);
+
+	return root;
 }
 EXPORT_SYMBOL(int_sqrt);
