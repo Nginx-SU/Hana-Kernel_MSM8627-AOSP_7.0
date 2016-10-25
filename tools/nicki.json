@@ -33,7 +33,6 @@
         "powersave",
         "performance",
         "conservative",
-        "darkness",
         "alucard",
         "intellidemand",
         "intellimm",
@@ -63,13 +62,21 @@
   ],
   "downloads": [
     {
-      "name": "1.1",
+      "name": "1.2-RC1",
       "description": "<b>Only for <i>6.0.X</i> based ROM</b>",
-      "url": "https://qc3.androidfilehost.com/dl/G4FYiXI99Qn5xU7TDH1iVQ/1477194385/312978532265364225/Hana_Kernel_v1.1-nicki-signed.zip",
-      "md5sum": "ffe313dd9156b131631c51995ad77062",
+      "url": "http://qc4.androidfilehost.com/dl/kB0Bk2U_KKW2Yvc1UBOtiA/1477640541/529152257862669952/Hana_Kernel_v1.2-RC1-nicki-signed.zip",
+      "md5sum": "7c17750a908d0392c89cc213f5492d5b",
       "changelog": [
-	      "Improved cpuinit: get rid of __cpuinit",
-	      "Merged Linux Kernel to 3.4.12"
+	      "Disable (use msm_rq_stats) for alucard hotplug",
+	      "Optimized slub",
+	      "Optimized integer sqrt",
+	      "Revert back Krait Retention",
+	      "Enable H264 High Profile",
+	      "Optimized cpuinit",
+              "Set up Min / Max value for cpu",
+              "Removed Darkness CPU Governor",
+              "Improved Intellidemand CPU Governor",
+              "Sync from latest CM14 Source 20161022"
 	      ] 
     }
   ]

@@ -1,6 +1,6 @@
 # Hana Kernel For Xperia M / M Dual
 
-Hana Kernel Development. Hana kernel based on AOSP Nougat source, and included many improvement and optimization on processor,gpu and include some feature for Xperia M / M dual devices that use CyanogenMod 13 as base ROM.
+Hana Kernel Development. Hana kernel based on AOSP Nougat source, and included many improvement and optimization on processor,gpu and include some feature for Xperia M / M dual devices that use Marshmallow as base ROM.
 
 Hana offered kernel stability, smoothness process on cpu and already have full support on NEON-vfpv4.
 This kernel is include several feature to increase performance and ARM is aim for all improvement, Custom governor and custom I/O Scheduler is already included too here.
@@ -15,7 +15,7 @@ This kernel feature is :
 - Added CPU Voltage Control
 - Added Overclocked GPU to 500Mhz
 - Added Auto Reboot feature when hold power button
-- Added Alucard Hotplug (Use MSM_RQ_STATS) 
+- Added Alucard Hotplug 
 - Added AutoSMP Hotplug
 - Added custom CPU Governor 
 : Alucard,Intelliactive,IntelliMM,Lionheart,Adaptive,SmartassV2,Intellidemand,and lulzactive
@@ -31,8 +31,7 @@ This kernel feature is :
 - Updated I/O Sched default list
 - Added Auto hotplug drivers for optimized mpdecision
 - Use new hashtable implementation on KSM and HGM
-- Update sync from latest cm13 kernel source build 20160909 (For AoiCore+)
-- Update sync from latest aosp 7.0 kernel source build 20160909 (For HanaCore+)
+- Update sync from latest aosp 7.0 kernel source build 20161022 (For HanaCore+)
 - Added low cpu clock when change hotplug on new cores (192Mhz)
 - Fixed I/O Sched list
 
@@ -41,10 +40,10 @@ More details on changelog for custom build in kernel source
 Hana Kernel XDA Thread
 http://forum.xda-developers.com/xperia-m/orig-development/6-0-aoicore-kernel-t3454265
 
-(Hana Kernel) V1.0 TEST RELEASE:
+(Hana Kernel) V1.2 RC1 TEST RELEASE:
 Pre Released Version (Private)
 Download Official build (EXPERIMENTAL) 
-https://www.androidfilehost.com/?fid=312968873555004817
+https://www.androidfilehost.com/?fid=529152257862669952
 
 (HanaCoreUX+ Kernel) V1.2.7 Pre STABLE RELEASE:
 [EOL]
