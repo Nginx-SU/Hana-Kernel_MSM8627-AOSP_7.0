@@ -1026,7 +1026,7 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      drivers/cpufreq/cpufreq_intelliactive.o
   CC      drivers/cpufreq/cpufreq_lulzactive.o
   CC      drivers/cpufreq/cpufreq_intellimm.o
-  CC      drivers/cpufreq/cpufreq_intellidemand.o
+  CC      drivers/cpufreq/cpufreq_uberdemand.o
   CC      drivers/cpufreq/freq_table.o
   CC      drivers/cpufreq/cpufreq_gov_msm.o
   LD      drivers/cpufreq/built-in.o
