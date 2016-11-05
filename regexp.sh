@@ -12,51 +12,41 @@ echo "
 
 echo "###Running first regexp init"
 
-find -name "*.c" | xargs sed -i "s/^__cpuinit //g" > first-log
+find -name "*.c" | xargs sed -i "s/^__cpuinit //g"
 
 echo "##Done"
 
+echo
 "###Running second regexp init"
 
-find arch/ -name "*.h" | xargs sed -i "s/ __cpuinit//g" > second-log
+find arch/ -name "*.h" | xargs sed -i "s/ __cpuinit//g"
 
 echo "##Done"
 
+echo
 "###Running third regexp init"
 
-find -name "*.c" | xargs sed -i "s/ __cpuinit$//g" > third-log
+find -name "*.c" | xargs sed -i "s/ __cpuinit$//g"
 
 echo "##Done"
 
 "###Running fourth regexp init"
 
-find -name "*.c" | xargs sed -i "s/ __cpuinitdata//g" > fourth-log
+find -name "*.c" | xargs sed -i "s/ __cpuinitdata//g"
 
 echo "##Done"
 
+echo
 "###Running fifth regexp init"
 
-find -name "*.c" | xargs sed -i "s/ __cpuexit / /g" > fifth-log
+find -name "*.c" | xargs sed -i "s/ __cpuexit / /g"
 
 echo "##Done"
 
+echo
 "###Running sixth regexp init"
 
-find -name "*.c" | xargs sed -i "s/ __cpuinit / /g" > sixth-log
-
-echo "##Done"
-
-echo "##Creating log & Move it too log folder"
-
-mkdir regexp_log
-
-mv first-log regexp_log/1_log
-mv second-log regexp_log/2_log
-mv third-log regexp_log/3_log
-mv fourth-log regexp_log/4_log
-mv fifth-log regexp_log/5_log
-mv sixth-log regexp_log/6_log
-
+find -name "*.c" | xargs sed -i "s/ __cpuinit / /g"
 echo "##Done"
 
 echo "##Regexp process complete"
