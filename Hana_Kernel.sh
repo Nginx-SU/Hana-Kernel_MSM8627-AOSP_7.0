@@ -31,7 +31,6 @@ cp Hana_Kernel-EXT/arch/arm/include/asm/xor.h Hana_Kernel-Source/arch/arm/includ
 cp Hana_Kernel-EXT/arch/arm/include/asm/rwsem.h Hana_Kernel-Source/arch/arm/include/asm/rwsem.h
 rm Hana_Kernel-Source/arch/arm/kernel/Makefile
 cp Hana_Kernel-EXT/arch/arm/kernel/Makefile Hana_Kernel-Source/arch/arm/kernel/Makefile
-cp Hana_Kernel-EXT/arch/arm/kernel/auto_hotplug.c Hana_Kernel-Source/arch/arm/kernel/auto_hotplug.c
 cp Hana_Kernel-EXT/arch/arm/kernel/autosmp.c Hana_Kernel-Source/arch/arm/kernel/autosmp.c
 rm Hana_Kernel-Source/arch/arm/kernel/head-nommu.S
 cp Hana_Kernel-EXT/arch/arm/kernel/head-nommu.S Hana_Kernel-Source/arch/arm/kernel/head-nommu.S
