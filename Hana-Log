@@ -82,7 +82,6 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      arch/arm/kernel/sys_arm.o
   CC      arch/arm/kernel/time.o
   CC      arch/arm/kernel/traps.o
-  CC      arch/arm/kernel/auto_hotplug.o
   CC      arch/arm/kernel/autosmp.o
   CC      arch/arm/kernel/cpuidle.o
   CC      arch/arm/kernel/armksyms.o
@@ -166,6 +165,7 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      arch/arm/mach-msm/clock-dummy.o
   CC      arch/arm/mach-msm/modem_notifier.o
   CC      arch/arm/mach-msm/subsystem_map.o
+  CC      arch/arm/mach-msm/msm_mpdecision.o
   CC      arch/arm/mach-msm/nohlt.o
   CC      arch/arm/mach-msm/clock-debug.o
   CC      arch/arm/mach-msm/acpuclock.o
@@ -346,7 +346,6 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      arch/arm/mach-msm/gpiomux.o
   CC      arch/arm/mach-msm/msm_dcvs_scm.o
   CC      arch/arm/mach-msm/msm_dcvs.o
-  CC      arch/arm/mach-msm/msm_mpdecision.o
   CC      arch/arm/mach-msm/msm_rq_stats.o
   CC      arch/arm/mach-msm/msm_show_resume_irq.o
   CC      arch/arm/mach-msm/restart.o
@@ -1905,7 +1904,7 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      drivers/thermal/thermal_sys.o
   CC      drivers/thermal/msm8960_tsens.o
   CC      drivers/thermal/pm8xxx-tm.o
-  CC      drivers/thermal/msm_thermal.o
+  CC      drivers/thermal/intelli/msm_thermal.o
   LD      drivers/thermal/built-in.o
   CC      drivers/tty/tty_io.o
   CC      drivers/tty/n_tty.o

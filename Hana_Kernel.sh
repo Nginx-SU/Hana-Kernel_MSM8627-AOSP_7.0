@@ -70,6 +70,8 @@ rm Hana_Kernel-Source/arch/arm/mach-msm/Kconfig
 cp Hana_Kernel-EXT/arch/arm/mach-msm/Kconfig Hana_Kernel-Source/arch/arm/mach-msm/Kconfig
 rm Hana_Kernel-Source/arch/arm/mach-msm/Makefile
 cp Hana_Kernel-EXT/arch/arm/mach-msm/Makefile Hana_Kernel-Source/arch/arm/mach-msm/Makefile
+rm Hana_Kernel-Source/arch/arm/mach-msm/msm_mpdecision.c
+cp Hana_Kernel-EXT/arch/arm/mach-msm/msm_mpdecision.c Hana_Kernel-Source/arch/arm/mach-msm/msm_mpdecision.c
 rm Hana_Kernel-Source/arch/arm/mach-msm/msm_rq_stats.c
 cp Hana_Kernel-EXT/arch/arm/mach-msm/msm_rq_stats.c Hana_Kernel-Source/arch/arm/mach-msm/msm_rq_stats.c
 rm Hana_Kernel-Source/block/Kconfig.iosched
@@ -169,10 +171,10 @@ rm Hana_Kernel-Source/net/netfilter/Makefile
 cp Hana_Kernel-EXT/net/netfilter/Makefile Hana_Kernel-Source/net/netfilter/Makefile
 cd Hana_Kernel-Source
 echo "
-###Running GCC Toolchains 5.3.1 (UBERTC Toolchains)"
+###Running GCC Toolchains 5.4.0 (Crosstool-NG Toolchains)"
 
 export ARCH=arm
-export CROSS_COMPILE=/home/nicklas/UBERTC/bin/arm-eabi-
+export CROSS_COMPILE=/home/nicklas/crosstool-toolchains-5.4.X/bin/arm-unknown-linux-gnueabihf-
 
 echo "
 ###Building Hana Kernel"
@@ -181,7 +183,8 @@ echo "
 ###Compile kernel process will write on log, for simple interface"
 
 make ARCH=arm hana_kernel_nicki_defconfig
-make ARCH=arm CROSS_COMPILE=/home/nicklas/UBERTC/bin/arm-eabi- > Hana-Log
+make ARCH=arm CROSS_COMPILE=/home/nicklas/crosstool-toolchains-5.4.X/bin/arm-unknown-linux-gnueabihf- > Hana-Log
+
 echo "
 ##Creating Modules kernel"
 
