@@ -31,8 +31,6 @@ cp Hana_Kernel-EXT/arch/arm/include/asm/xor.h Hana_Kernel-Source/arch/arm/includ
 cp Hana_Kernel-EXT/arch/arm/include/asm/rwsem.h Hana_Kernel-Source/arch/arm/include/asm/rwsem.h
 rm Hana_Kernel-Source/arch/arm/kernel/Makefile
 cp Hana_Kernel-EXT/arch/arm/kernel/Makefile Hana_Kernel-Source/arch/arm/kernel/Makefile
-cp Hana_Kernel-EXT/arch/arm/kernel/auto_hotplug.c Hana_Kernel-Source/arch/arm/kernel/auto_hotplug.c
-cp Hana_Kernel-EXT/arch/arm/kernel/autosmp.c Hana_Kernel-Source/arch/arm/kernel/autosmp.c
 rm Hana_Kernel-Source/arch/arm/kernel/head-nommu.S
 cp Hana_Kernel-EXT/arch/arm/kernel/head-nommu.S Hana_Kernel-Source/arch/arm/kernel/head-nommu.S
 rm Hana_Kernel-Source/arch/arm/kernel/head.S
@@ -51,7 +49,8 @@ rm Hana_Kernel-Source/arch/arm/mach-msm/acpuclock-8627.c
 cp Hana_Kernel-EXT/arch/arm/mach-msm/acpuclock-8627.c Hana_Kernel-Source/arch/arm/mach-msm/acpuclock-8627.c
 rm Hana_Kernel-Source/arch/arm/mach-msm/acpuclock-krait.c
 cp Hana_Kernel-EXT/arch/arm/mach-msm/acpuclock-krait.c Hana_Kernel-Source/arch/arm/mach-msm/acpuclock-krait.c
-cp Hana_Kernel-EXT/arch/arm/mach-msm/alucard_hotplug.c Hana_Kernel-Source/arch/arm/mach-msm/alucard_hotplug.c
+rm Hana_Kernel-Source/arch/arm/mach-msm/board-8930.c
+cp Hana_Kernel-EXT/arch/arm/mach-msm/board-8930.c Hana_Kernel-Source/arch/arm/mach-msm/board-8930.c
 rm Hana_Kernel-Source/arch/arm/mach-msm/board-8930-gpu.c
 cp Hana_Kernel-EXT/arch/arm/mach-msm/board-8930-gpu.c Hana_Kernel-Source/arch/arm/mach-msm/board-8930-gpu.c
 rm Hana_Kernel-Source/arch/arm/mach-msm/board-8930-regulator-pm8038.c
@@ -69,6 +68,10 @@ rm Hana_Kernel-Source/arch/arm/mach-msm/Kconfig
 cp Hana_Kernel-EXT/arch/arm/mach-msm/Kconfig Hana_Kernel-Source/arch/arm/mach-msm/Kconfig
 rm Hana_Kernel-Source/arch/arm/mach-msm/Makefile
 cp Hana_Kernel-EXT/arch/arm/mach-msm/Makefile Hana_Kernel-Source/arch/arm/mach-msm/Makefile
+rm Hana_Kernel-Source/arch/arm/mach-msm/msm_mpdecision.c
+cp Hana_Kernel-EXT/arch/arm/mach-msm/msm_mpdecision.c Hana_Kernel-Source/arch/arm/mach-msm/msm_mpdecision.c
+rm Hana_Kernel-Source/arch/arm/mach-msm/msm_rq_stats.c
+cp Hana_Kernel-EXT/arch/arm/mach-msm/msm_rq_stats.c Hana_Kernel-Source/arch/arm/mach-msm/msm_rq_stats.c
 rm Hana_Kernel-Source/block/Kconfig.iosched
 cp Hana_Kernel-EXT/block/Kconfig.iosched Hana_Kernel-Source/block/Kconfig.iosched
 rm Hana_Kernel-Source/block/Makefile
@@ -91,11 +94,11 @@ cp Hana_Kernel-EXT/drivers/cpufreq/Makefile Hana_Kernel-Source/drivers/cpufreq/M
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_adaptive.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_adaptive.c
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_alucard.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_alucard.c
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_intelliactive.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_intelliactive.c
-cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_intellidemand.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_intellidemand.c
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_intellimm.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_intellimm.c
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_lionheart.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_lionheart.c
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_lulzactive.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_lulzactive.c
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_smartass2.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_smartass2.c
+cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_uberdemand.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_uberdemand.c
 rm Hana_Kernel-Source/drivers/crypto/msm/qcedev.c
 cp Hana_Kernel-EXT/drivers/crypto/msm/qcedev.c Hana_Kernel-Source/drivers/crypto/msm/qcedev.c
 rm Hana_Kernel-Source/drivers/input/misc/pmic8xxx-pwrkey.c
@@ -116,6 +119,11 @@ rm Hana_Kernel-Source/drivers/gpu/ion/Makefile
 cp Hana_Kernel-EXT/drivers/gpu/ion/Makefile Hana_Kernel-Source/drivers/gpu/ion/Makefile
 rm Hana_Kernel-Source/drivers/gpu/ion/msm/Makefile
 cp Hana_Kernel-EXT/drivers/gpu/ion/msm/Makefile Hana_Kernel-Source/drivers/gpu/ion/msm/Makefile
+rm Hana_Kernel-Source/drivers/thermal/Kconfig
+cp Hana_Kernel-EXT/drivers/thermal/Kconfig Hana_Kernel-Source/drivers/thermal/Kconfig
+rm Hana_Kernel-Source/drivers/thermal/Makefile
+cp Hana_Kernel-EXT/drivers/thermal/Makefile Hana_Kernel-Source/drivers/thermal/Makefile
+cp Hana_Kernel-EXT/drivers/thermal/intelli/msm_thermal.c Hana_Kernel-Source/drivers/thermal/intelli/msm_thermal.c
 rm Hana_Kernel-Source/drivers/staging/android/lowmemorykiller.c
 cp Hana_Kernel-EXT/drivers/staging/android/lowmemorykiller.c Hana_Kernel-Source/drivers/staging/android/lowmemorykiller.c
 rm Hana_Kernel-Source/drivers/usb/otg/msm_otg.c
@@ -132,6 +140,8 @@ cp Hana_Kernel-EXT/include/linux/compiler-gcc5.h Hana_Kernel-Source/include/linu
 rm Hana_Kernel-Source/include/linux/cpufreq.h
 cp Hana_Kernel-EXT/include/linux/cpufreq.h Hana_Kernel-Source/include/linux/cpufreq.h
 cp Hana_Kernel-EXT/include/linux/fastchg.h Hana_Kernel-Source/include/linux/fastchg.h
+rm Hana_Kernel-Source/include/linux/msm_thermal.h
+cp Hana_Kernel-EXT/include/linux/msm_thermal.h Hana_Kernel-Source/include/linux/msm_thermal.h
 cp Hana_Kernel-EXT/include/linux/suspend.h Hana_Kernel-Source/include/linux/suspend.h
 cp Hana_Kernel-EXT/include/linux/quickwakeup.h Hana_Kernel-Source/include/linux/quickwakeup.h
 cp Hana_Kernel-EXT/include/linux/input/doubletap2wake.h Hana_Kernel-Source/include/linux/input/doubletap2wake.h

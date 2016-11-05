@@ -1,16 +1,21 @@
 Changelog :
 
-V1.2 RC1 TEST RELEASE :
-- Disable "use msm_rq_stats" for alucard hotplug to avoid error in arm auto hotplug
+V1.2 TEST RELEASE :
+- Merged Linux Kernel to 3.4.13
 - Optimized slub
 - Optimized integer sqrt
 - Revert back Krait Retention feature (Not Compatible)
 - Enable H264 High Profile
 - Optimized cpuinit
-- Set up Min / Max value for cpu
 - Removed Darkness CPU Governor
-- Improved Intellidemand CPU Governor
-- Sync from latest CM14 Source 20161022
+- Removed Intellidemand and Added Uberdemand Governor
+- Added add cur_load_maxfreq to msm_rq_stats
+- Deleted AutoSMP and Alucard Hotplug
+- Added MSM MPDecision / Briked Hotplug 
+- Improve Graphite Optimization Algorithm
+- Added Intelli Thermal 
+- Disable ARM Auto Hotplug feature (Avoid error on stock mpdecision)
+- Sync from latest AOSP Source 20161022
 
 ( Introduce Hana Kernel )
 V1.1 (Hana Kernel) TEST RELEASE :

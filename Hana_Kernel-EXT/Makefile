@@ -1,6 +1,6 @@
 VERSION = 3
 PATCHLEVEL = 4
-SUBLEVEL = 12
+SUBLEVEL = 13
 EXTRAVERSION =
 NAME = Saber-toothed Squirrel
 
@@ -354,12 +354,15 @@ CHECKFLAGS     := -D__linux__ -Dlinux -D__STDC__ -Dunix -D__unix__ \
 		  -Wbitwise -Wno-return-void $(CF)
 
 
-KERNELFLAGS  = -Ofast -DNDEBUG -munaligned-access -fgcse-lm -fgcse-sm -fsingle-precision-constant -fforce-addr -fsched-spec-load -mtune=cortex-a7 -marm -mfpu=neon-vfpv4 -ftree-vectorize -fpredictive-commoning -ffast-math -floop-nest-optimize $(GRAPHITE_FLAGS)
+KERNELFLAGS  = -pipe -Ofast -DNDEBUG -munaligned-access -fgcse-lm -fgcse-sm -fsingle-precision-constant -fforce-addr -fsched-spec-load -mtune=cortex-a7 -marm -mfpu=neon-vfpv4 -ftree-vectorize -fpredictive-commoning -ffast-math -floop-nest-optimize -fgcse-after-reload -fgcse-las -funroll-loops -ftree-loop-im -ftree-loop-ivcanon -fivopts -fmodulo-sched -floop-parallelize-all -ftree-loop-linear -floop-interchange -floop-strip-mine -floop-block -floop-flatten -frename-registers -fira-loop-pressure -std=gnu89 
+ifdef CONFIG_CC_GRAPHITE_OPTIMIZATION
+KERNELFLAGS    += $(GRAPHITE_FLAGS)
+endif
 MODFLAGS        = -DMODULE $(KERNELFLAGS)
 CFLAGS_MODULE   = $(MODFLAGS) -fno-pic
 AFLAGS_MODULE   = $(MODFLAGS)
-LDFLAGS_MODULE  = -T $(srctree)/scripts/module-common.lds
-CFLAGS_KERNEL   = $(KERNELFLAGS)
+CFLAGS_KERNEL   = $(KERNELFLAGS) -fpredictive-commoning
+GRAPHITE_FLAGS  = -fgraphite -fgraphite-identity -floop-flatten -floop-parallelize-all -ftree-loop-linear -floop-interchange -floop-strip-mine -floop-block
 AFLAGS_KERNEL   = $(KERNELFLAGS)
 CFLAGS_GCOV     = -fprofile-arcs -ftest-coverage
 
@@ -378,21 +381,17 @@ KBUILD_CFLAGS   := -Wall -DNDEBUG -Wundef -Wstrict-prototypes -Wno-trigraphs -Wn
 		   -Wno-implicit-function-declaration \
 		   -Wno-sequence-point \
                    -fno-delete-null-pointer-checks \
- 		   -fpredictive-commoning -fgcse-after-reload \
-		   -ftree-vectorize \
-                   -fmodulo-sched -fmodulo-sched-allow-regmoves \
-		   -mtune=cortex-a7 -mfpu=neon-vfpv4 \
-		   -std=gnu89
+ 		   $(KERNEL_FLAGS)
 
 ifdef CONFIG_CC_GRAPHITE_OPTIMIZATION
-KBUILD_CFLAGS   += -fgraphite -floop-flatten -floop-parallelize-all -ftree-loop-linear -floop-interchange -floop-strip-mine -floop-block
+KBUILD_CFLAGS   += $(GRAPHITE_FLAGS)
 endif
 
-KBUILD_AFLAGS_KERNEL := 
-KBUILD_CFLAGS_KERNEL := 
+KBUILD_AFLAGS_KERNEL := $(KERNEL_FLAGS)
+KBUILD_CFLAGS_KERNEL := $(KERNEL_FLAGS)
 KBUILD_AFLAGS   := -D__ASSEMBLY__
 KBUILD_AFLAGS_MODULE  := -DMODULE
-KBUILD_CFLAGS_MODULE  := -DMODULE 
+KBUILD_CFLAGS_MODULE  := -DMODULE -mtune=cortex-a7 -mfpu=neon-vfpv4
 KBUILD_LDFLAGS_MODULE := -T $(srctree)/scripts/module-common.lds
 
 # Read KERNELRELEASE from include/config/kernel.release (if it exists)
@@ -580,7 +579,7 @@ all: vmlinux
 ifdef CONFIG_CC_OPTIMIZE_FOR_SIZE
 KBUILD_CFLAGS	+= -Os $(call cc-disable-warning,maybe-uninitialized,)
 else
-KBUILD_CFLAGS	+= -Ofast -fmodulo-sched -fmodulo-sched-allow-regmoves -fno-tree-vectorize -fno-inline-functions
+KBUILD_CFLAGS	+= -Ofast -g0 -fmodulo-sched -fmodulo-sched-allow-regmoves -fno-tree-vectorize -Wno-array-bounds -fivopts -fno-inline-functions
 endif
 
 # conserve stack if available
@@ -616,7 +615,7 @@ endif
 endif
 
 ifdef CONFIG_DEBUG_INFO
-KBUILD_CFLAGS	+= -gdwarf-2
+KBUILD_CFLAGS	+= -g
 KBUILD_AFLAGS	+= -gdwarf-2
 endif
 
@@ -1247,7 +1246,7 @@ rpm: include/config/kernel.release FORCE
 # ---------------------------------------------------------------------------
 
 boards := $(wildcard $(srctree)/arch/$(SRCARCH)/configs/*_defconfig)
-boards := $(notdir $(boards))
+boards := $(sort $(boards))
 board-dirs := $(dir $(wildcard $(srctree)/arch/$(SRCARCH)/configs/*/*_defconfig))
 board-dirs := $(sort $(notdir $(board-dirs:/=)))
 
