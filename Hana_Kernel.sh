@@ -161,10 +161,10 @@ rm Hana_Kernel-Source/net/netfilter/Makefile
 cp Hana_Kernel-EXT/net/netfilter/Makefile Hana_Kernel-Source/net/netfilter/Makefile
 cd Hana_Kernel-Source
 echo "
-###Running GCC Toolchains 5.4.0 (Crosstool-NG Toolchains)"
+###Running GCC Toolchains 5.3.1 (UBERTC Toolchains)"
 
 export ARCH=arm
-export CROSS_COMPILE=/home/nicklas/crosstool-toolchains-5.4.X/bin/arm-unknown-linux-gnueabihf-
+export CROSS_COMPILE=/home/nicklas/UBERTC/bin/arm-eabi-
 
 echo "
 ###Building Hana Kernel"
@@ -173,7 +173,7 @@ echo "
 ###Compile kernel process will write on log, for simple interface"
 
 make ARCH=arm hana_kernel_nicki_defconfig
-make ARCH=arm CROSS_COMPILE=/home/nicklas/crosstool-toolchains-5.4.X/bin/arm-unknown-linux-gnueabihf- > Hana-Log
+make ARCH=arm CROSS_COMPILE=/home/nicklas/UBERTC/bin/arm-eabi- > Hana-Log
 echo "
 ##Creating Modules kernel"
 
