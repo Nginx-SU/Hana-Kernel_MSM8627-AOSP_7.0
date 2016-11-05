@@ -1585,12 +1585,6 @@ config MSM_MPDEC_INPUTBOOST_CPUMIN
  	default n
  	help
  	  This pushes the cpu min speed to predefined values on input events.
- 
-config ALUCARD_HOTPLUG
- 	bool "Enable alucard-hotplug cpu hotplug driver"
- 	default y
- 	help
- 	  Generic Alucard-hotplug cpu hotplug driver for ARM SOCs
   
 config MSM_CPU_FREQ_SET_MIN_MAX
 	bool "Set Min/Max CPU frequencies."
@@ -1610,13 +1604,6 @@ config MSM_CPU_FREQ_MIN
 	default 245760
 
 endif # CPU_FREQ_MSM
-
-config ALUCARD_HOTPLUG_USE_RQ_STATS
- 	bool "Enable alucard-hotplug msm rq statistics using"
- 	depends on ALUCARD_HOTPLUG && MSM_RUN_QUEUE_STATS
- 	default n
- 	help
- 	  Alucard-hotplug msm rq statics using
   
 config MSM_AVS_HW
 	bool "Enable Adaptive Voltage Scaling (AVS)"

@@ -31,7 +31,6 @@ cp Hana_Kernel-EXT/arch/arm/include/asm/xor.h Hana_Kernel-Source/arch/arm/includ
 cp Hana_Kernel-EXT/arch/arm/include/asm/rwsem.h Hana_Kernel-Source/arch/arm/include/asm/rwsem.h
 rm Hana_Kernel-Source/arch/arm/kernel/Makefile
 cp Hana_Kernel-EXT/arch/arm/kernel/Makefile Hana_Kernel-Source/arch/arm/kernel/Makefile
-cp Hana_Kernel-EXT/arch/arm/kernel/autosmp.c Hana_Kernel-Source/arch/arm/kernel/autosmp.c
 rm Hana_Kernel-Source/arch/arm/kernel/head-nommu.S
 cp Hana_Kernel-EXT/arch/arm/kernel/head-nommu.S Hana_Kernel-Source/arch/arm/kernel/head-nommu.S
 rm Hana_Kernel-Source/arch/arm/kernel/head.S
@@ -50,7 +49,6 @@ rm Hana_Kernel-Source/arch/arm/mach-msm/acpuclock-8627.c
 cp Hana_Kernel-EXT/arch/arm/mach-msm/acpuclock-8627.c Hana_Kernel-Source/arch/arm/mach-msm/acpuclock-8627.c
 rm Hana_Kernel-Source/arch/arm/mach-msm/acpuclock-krait.c
 cp Hana_Kernel-EXT/arch/arm/mach-msm/acpuclock-krait.c Hana_Kernel-Source/arch/arm/mach-msm/acpuclock-krait.c
-cp Hana_Kernel-EXT/arch/arm/mach-msm/alucard_hotplug.c Hana_Kernel-Source/arch/arm/mach-msm/alucard_hotplug.c
 rm Hana_Kernel-Source/arch/arm/mach-msm/board-8930.c
 cp Hana_Kernel-EXT/arch/arm/mach-msm/board-8930.c Hana_Kernel-Source/arch/arm/mach-msm/board-8930.c
 rm Hana_Kernel-Source/arch/arm/mach-msm/board-8930-gpu.c
