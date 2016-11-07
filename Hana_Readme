@@ -8,7 +8,7 @@ This kernel is include several feature to increase performance and ARM is aim fo
 This kernel need kernel configuration app to control this kernel, so try to find kernel configuration app after flash this kernel.
 
 This kernel feature is :
-- Linux Kernel Version 3.4.12
+- Linux Kernel Version 3.4.13
 - Compatibility with AOSP and CM based ROM [Android 6.0+]
 - Added overclock up to 1,7Ghz
 - Added Double Tap 2 Wake Feature
@@ -18,14 +18,13 @@ This kernel feature is :
 - Added MSM MPDecision Hotplug
 - Added Intelli Thermal 
 - Added custom CPU Governor 
-: Alucard,Intelliactive,IntelliMM,Lionheart,Adaptive,SmartassV2,Uberdemand,and lulzactive
+: Alucard,Intelliactive,IntelliMM,Lionheart,Adaptive,SmartassV2,Uberdemand,Smartmx and lulzactive
 - Added custom I/O Sched Governor 
 : zen,sio,sioplus,tripndroid,fifo,fiops and vr
 - Added fast charge feature (Enable By Default)
 - Compiled using GCC 5.4.0 Crosstool-NG Toolchains (Optimized for armv7 with neon-vfpv4)
 - Add full support NEON VFPV4 feature 
 - Enable Graphite optimization on kernel and GPU
-- Enable Krait Retention for msm8960
 - Enable ARM Hibernation function
 - Improved "get cpu idle time" on stock governor
 - Updated I/O Sched default list
@@ -40,10 +39,10 @@ More details on changelog for custom build in kernel source
 Hana Kernel XDA Thread
 http://forum.xda-developers.com/xperia-m/orig-development/6-0-aoicore-kernel-t3454265
 
-(Hana Kernel) V1.2 TEST RELEASE:
+(Hana Kernel) V1.2 Stable RELEASE:
 Pre Released Version (Private)
 Download Official build (EXPERIMENTAL) 
-https://www.androidfilehost.com/?fid=385035244224394621
+https://www.androidfilehost.com/?fid=457095661767112431
 
 (HanaCoreUX+ Kernel) V1.2.7 Pre STABLE RELEASE:
 [EOL]

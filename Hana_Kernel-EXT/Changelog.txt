@@ -1,20 +1,24 @@
 Changelog :
 
-V1.2 TEST RELEASE :
+V1.2 Stable RELEASE :
 - Merged Linux Kernel to 3.4.13
 - Optimized slub
 - Optimized integer sqrt
 - Revert back Krait Retention feature (Not Compatible)
 - Enable H264 High Profile
 - Optimized cpuinit
-- Removed Darkness CPU Governor
-- Removed Intellidemand and Added Uberdemand Governor
+- Removed Darkness & Intellidemand CPU Governor 
+- Added Uberdemand & Smartmax CPU Governor
 - Added add cur_load_maxfreq to msm_rq_stats
 - Deleted AutoSMP and Alucard Hotplug
 - Added MSM MPDecision / Briked Hotplug 
 - Improve Graphite Optimization Algorithm
-- Added Intelli Thermal 
-- Disable ARM Auto Hotplug feature (Avoid error on stock mpdecision)
+- Added Intelli Thermal Engine
+- Removed ARM Auto Hotplug feature (Avoid error on stock mpdecision)
+- Improved CPU latency code
+- Enable -Ofast Optimization for compile
+- Improved gcc wrapper for gcc 5
+- Update patch for GCC 5.4.0 (Crosstool-NG)
 - Sync from latest AOSP Source 20161022
 
 ( Introduce Hana Kernel )

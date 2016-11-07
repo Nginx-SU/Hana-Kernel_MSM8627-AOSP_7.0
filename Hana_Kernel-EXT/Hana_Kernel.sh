@@ -89,6 +89,8 @@ rm Hana_Kernel-Source/drivers/cpufreq/Kconfig
 cp Hana_Kernel-EXT/drivers/cpufreq/Kconfig Hana_Kernel-Source/drivers/cpufreq/Kconfig
 rm Hana_Kernel-Source/drivers/cpufreq/cpufreq.c
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq.c Hana_Kernel-Source/drivers/cpufreq/cpufreq.c
+rm Hana_Kernel-Source/drivers/cpufreq/cpufreq_stats.c
+cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_stats.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_stats.c
 rm Hana_Kernel-Source/drivers/cpufreq/Makefile
 cp Hana_Kernel-EXT/drivers/cpufreq/Makefile Hana_Kernel-Source/drivers/cpufreq/Makefile
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_adaptive.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_adaptive.c
@@ -99,6 +101,7 @@ cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_lionheart.c Hana_Kernel-Source/driver
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_lulzactive.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_lulzactive.c
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_smartass2.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_smartass2.c
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_uberdemand.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_uberdemand.c
+cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_smartmax.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_smartmax.c
 rm Hana_Kernel-Source/drivers/crypto/msm/qcedev.c
 cp Hana_Kernel-EXT/drivers/crypto/msm/qcedev.c Hana_Kernel-Source/drivers/crypto/msm/qcedev.c
 rm Hana_Kernel-Source/drivers/input/misc/pmic8xxx-pwrkey.c
@@ -172,7 +175,7 @@ echo "
 ###Running GCC Toolchains 5.4.0 (Crosstool-NG Toolchains)"
 
 export ARCH=arm
-export CROSS_COMPILE=/home/nicklas/crosstool-toolchains-5.4.X/bin/arm-unknown-linux-gnueabihf-
+export CROSS_COMPILE=/home/nicklas/Crosstool-NG_Toolchains-5.4.X/bin/arm-unknown-linux-gnueabihf-
 
 echo "
 ###Building Hana Kernel"
@@ -181,7 +184,7 @@ echo "
 ###Compile kernel process will write on log, for simple interface"
 
 make ARCH=arm hana_kernel_nicki_defconfig
-make ARCH=arm CROSS_COMPILE=/home/nicklas/crosstool-toolchains-5.4.X/bin/arm-unknown-linux-gnueabihf- > Hana-Log
+make ARCH=arm CROSS_COMPILE=/home/nicklas/Crosstool-NG_Toolchains-5.4.X/bin/arm-unknown-linux-gnueabihf- > Hana-Log
 
 echo "
 ##Creating Modules kernel"
