@@ -1740,6 +1740,14 @@ config ARM_AUTO_HOTPLUG
  	!CPU_FREQ_GOV_HOTPLUG && !MSM_MPDEC
  	default y
 
+config ASMP
+ 	bool "Multi-core automatic hotplug support"
+ 	depends on SMP
+ 	default n
+ 	help
+ 	  Automatically hotplugs the multiple cpu cores on and off
+ 	  based on cpu load and suspend state
+   
 config LOCAL_TIMERS
 	bool "Use local timer interrupts"
 	depends on SMP
