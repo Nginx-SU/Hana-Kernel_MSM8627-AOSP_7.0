@@ -184,7 +184,7 @@ echo "
 ###Compile kernel process will write on log, for simple interface"
 
 make ARCH=arm hana_kernel_nicki_defconfig
-make ARCH=arm CROSS_COMPILE=/home/nicklas/Crosstool-NG_Toolchains-5.4.X/bin/arm-unknown-linux-gnueabihf- > Hana-Log
+make -j5 ARCH=arm > Hana-Log
 
 echo "
 ##Creating Modules kernel"
