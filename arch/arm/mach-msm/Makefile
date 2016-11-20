@@ -395,6 +395,4 @@ obj-$(CONFIG_ARCH_RANDOM) += early_random.o
 
 obj-$(CONFIG_HAS_MACH_MEMUTILS) += memutils/
 
-obj-$(CONFIG_ALUCARD_HOTPLUG) += alucard_hotplug.o
-
 obj-$(CONFIG_CPU_FREQ_MSM) += cpufreq.o
