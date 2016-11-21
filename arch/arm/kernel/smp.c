@@ -272,12 +272,12 @@ asmlinkage void secondary_start_kernel(void)
 	 * Give the platform a chance to do its own initialisation.
 	 */
 	platform_secondary_init(cpu);
-	
-	smp_store_cpu_info(cpu);
 
 	notify_cpu_starting(cpu);
 
 	calibrate_delay();
+
+	smp_store_cpu_info(cpu);
 
 	/*
 	 * OK, now it's safe to let the boot CPU continue.  Wait for

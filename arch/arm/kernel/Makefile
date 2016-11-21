@@ -87,4 +87,6 @@ obj-$(CONFIG_EARLY_PRINTK)	+= early_printk.o
 
 extra-y := $(head-y) init_task.o vmlinux.lds
 
+obj-$(CONFIG_ASMP)		+= autosmp.o
+
 obj-y        += fih_sw_info.o
