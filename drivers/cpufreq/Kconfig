@@ -159,31 +159,14 @@ config CPU_FREQ_DEFAULT_GOV_INTELLIMM
           Use the CPUFreq governor 'intelliminmax' as default. This is
           governor will use only 3 different frequencies, idle, UI and max
 
-config CPU_FREQ_DEFAULT_GOV_UBERDEMAND
-	bool "uberdemand"
-	select CPU_FREQ_GOV_UBERDEMAND
-	select CPU_FREQ_GOV_PERFORMANCE
-	help
-	  Use the CPUFreq governor 'ondemand' as default. This allows
-	  you to get a full dynamic frequency capable system by simply
-	  loading your cpufreq low-level hardware driver.
-	  Be aware that not all cpufreq drivers support the ondemand
-	  governor. If unsure have a look at the help section of the
-	  driver. Fallback governor will be the performance governor.
-	  uberdemand has built in a second phase profile.
 
-config CPU_FREQ_DEFAULT_GOV_SMARTMAX
-         bool "smartmax"
-         select CPU_FREQ_GOV_SMARTMAX
-         help
-           Use the CPUFreq governor 'smartmax' as default
-
-config CPU_FREQ_DEFAULT_GOV_PEGASUSQ
-	bool "pegasusq"
-	select CPU_FREQ_GOV_PEGASUSQ
+config CPU_FREQ_DEFAULT_GOV_INTELLIDEMAND
+	bool "intellidemand"
+	select CPU_FREQ_GOV_INTELLIDEMAND
 	help
-	Use the CPUFreq governor 'pegasusq' as default.
- 
+	  Use the CPUFreq governor 'intellidemand' as default. This is
+	  based on Ondemand with browsing detection based on GPU loading
+
 endchoice
 
 config CPU_FREQ_GOV_PERFORMANCE
@@ -369,27 +352,24 @@ config CPU_FREQ_GOV_INTELLIMM
 
           If in doubt, say N.
 
-config CPU_FREQ_GOV_UBERDEMAND
-	tristate "'uberdemand' cpufreq policy governor"
+config CPU_FREQ_GOV_INTELLIDEMAND
+	tristate "'intellidemand' cpufreq policy governor"
+	default y
 	select CPU_FREQ_TABLE
 	help
-	  'uberdemand' - This driver adds a dynamic cpufreq policy governor.
+	  'intellidemand' - This driver adds a dynamic cpufreq policy governor.
 	  The governor does a periodic polling and
 	  changes frequency based on the CPU utilization.
 	  The support for this governor depends on CPU capability to
 	  do fast frequency switching (i.e, very low latency frequency
-	  transitions).
+	  transitions). with browsing detection based on GPU loading
 
-config CPU_FREQ_GOV_UBERDEMAND_SECOND_PHASE_FREQ
-	int "'uberdemand' Second Phase Frequency"
-	default 1728000
-	depends on CPU_FREQ_GOV_UBERDEMAND
+	  To compile this driver as a module, choose M here: the
+	  module will be called cpufreq_ondemand.
 
-config CPU_FREQ_GOV_SMARTMAX
-        tristate "'smartmax' cpufreq policy governor"
-        select CPU_FREQ_TABLE
-        help
-          'smartmax' combined ondemand and smartass2
+	  For details, take a look at linux/Documentation/cpu-freq.
+
+	  If in doubt, say N.
 
 config CPU_FREQ_GOV_PEGASUSQ
 	tristate "'pegasusq' cpufreq policy governor"
