@@ -68,8 +68,6 @@ rm Hana_Kernel-Source/arch/arm/mach-msm/Kconfig
 cp Hana_Kernel-EXT/arch/arm/mach-msm/Kconfig Hana_Kernel-Source/arch/arm/mach-msm/Kconfig
 rm Hana_Kernel-Source/arch/arm/mach-msm/Makefile
 cp Hana_Kernel-EXT/arch/arm/mach-msm/Makefile Hana_Kernel-Source/arch/arm/mach-msm/Makefile
-rm Hana_Kernel-Source/arch/arm/mach-msm/msm_mpdecision.c
-cp Hana_Kernel-EXT/arch/arm/mach-msm/msm_mpdecision.c Hana_Kernel-Source/arch/arm/mach-msm/msm_mpdecision.c
 rm Hana_Kernel-Source/arch/arm/mach-msm/msm_rq_stats.c
 cp Hana_Kernel-EXT/arch/arm/mach-msm/msm_rq_stats.c Hana_Kernel-Source/arch/arm/mach-msm/msm_rq_stats.c
 rm Hana_Kernel-Source/block/Kconfig.iosched
@@ -98,10 +96,10 @@ cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_alucard.c Hana_Kernel-Source/drivers/
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_intelliactive.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_intelliactive.c
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_intellimm.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_intellimm.c
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_lionheart.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_lionheart.c
-cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_lulzactive.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_lulzactive.c
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_smartass2.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_smartass2.c
-cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_uberdemand.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_uberdemand.c
-cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_smartmax.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_smartmax.c
+cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_intellidemand.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_intellidemand.c
+cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_pegasusq.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_pegasusq.c
+cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_HYPER.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_HYPER.c
 rm Hana_Kernel-Source/drivers/crypto/msm/qcedev.c
 cp Hana_Kernel-EXT/drivers/crypto/msm/qcedev.c Hana_Kernel-Source/drivers/crypto/msm/qcedev.c
 rm Hana_Kernel-Source/drivers/input/misc/pmic8xxx-pwrkey.c
@@ -127,6 +125,7 @@ cp Hana_Kernel-EXT/drivers/thermal/Kconfig Hana_Kernel-Source/drivers/thermal/Kc
 rm Hana_Kernel-Source/drivers/thermal/Makefile
 cp Hana_Kernel-EXT/drivers/thermal/Makefile Hana_Kernel-Source/drivers/thermal/Makefile
 cp Hana_Kernel-EXT/drivers/thermal/intelli/msm_thermal.c Hana_Kernel-Source/drivers/thermal/intelli/msm_thermal.c
+cp Hana_Kernel-EXT/drivers/thermal/intelli/msm_thermal_v2.c Hana_Kernel-Source/drivers/thermal/intelli/msm_thermal_v2.c
 rm Hana_Kernel-Source/drivers/staging/android/lowmemorykiller.c
 cp Hana_Kernel-EXT/drivers/staging/android/lowmemorykiller.c Hana_Kernel-Source/drivers/staging/android/lowmemorykiller.c
 rm Hana_Kernel-Source/drivers/usb/otg/msm_otg.c
@@ -184,7 +183,7 @@ echo "
 ###Compile kernel process will write on log, for simple interface"
 
 make ARCH=arm hana_kernel_nicki_defconfig
-make ARCH=arm CROSS_COMPILE=/home/nicklas/Crosstool-NG_Toolchains-5.4.X/bin/arm-unknown-linux-gnueabihf- > Hana-Log
+make -j5 ARCH=arm > Hana-Log
 
 echo "
 ##Creating Modules kernel"

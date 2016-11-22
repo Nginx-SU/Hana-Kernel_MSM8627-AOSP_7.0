@@ -9,7 +9,7 @@
   "paypal": "https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=9dy1T4gF5jt-hygBQ4zLG23sqycm_l5YaDQC7lA9Lm58K5bsn-CmpAD_EY8&dispatch=5885d80a13c0db1f8e263663d3faee8d4fe1dd75ca3bd4f11d72275b28239088",
   "features": [
     "Build with Crosstool NG Toolchains 5.4.0",
-    "Linux Kernel 3.4.13",
+    "Linux Kernel 3.4.14",
     "Overclocked to 1,7Ghz",
     "MSM MPDecision Hotplug",
     "Intelli Thermal Engine",
@@ -36,9 +36,8 @@
         "intellimm",
         "intelliactive",
         "lionheart",
-        "lulzactive",
-        "smartass2",
-        "smartmax"
+        "HYPER",
+        "smartass2"
       ]
    },
     {
@@ -61,21 +60,21 @@
   ],
   "downloads": [
     {
-      "name": "1.2-Stable-Build",
+      "name": "1.2.1-TEST-Build",
       "description": "<b>Only for <i>6.0.X</i> based ROM</b>",
-      "url": "https://fl1.androidfilehost.com/dl/boCuhS6D_U3xQwhPw_NoFw/1478795008/457095661767112431/Hana_Kernel_v1.2-nicki-signed.zip",
-      "md5sum": "8df0b94c01e211ddbb32a6b7b5431200",
+      "url": "http://qc4.androidfilehost.com/dl/DYCa7vE2ygBm3Xy7XTW0Vw/1480046578/457095661767117765/Hana_Kernel_v1.2.1-nicki-signed.zip",
       "changelog": [
-	"Removed Darkness & Intellidemand CPU Governor", 
-        "Added Uberdemand & Smartmax CPU Governor",
-        "Deleted AutoSMP and Alucard Hotplug",
-        "Added MSM MPDecision Hotplug", 
-        "Improve Graphite Optimization Algorithm",
-        "Added Intelli Thermal Engine",
-        "Removed ARM Auto Hotplug feature (Avoid error on stock mpdecision)",
-        "Improved CPU latency code",
-        "Enable -Ofast Optimization for compile",
-        "Improved gcc wrapper for gcc 5"
+	"Merged Linux Kernel to 3.4.14",
+	"Added Frandom Module",
+	"Misc fixes for Intelli Thermal",
+	"Improve Utilization for Threshold CPU",
+	"Added PegasusQ,HYPER & Intellidemand CPU Governor",
+	"Removed Lulzactive & Smartmax CPU Governor",
+	"Added MSM Turbo Boost for CPU",
+	"Re-Tuning Alucard & Intelliactive CPU Governor",
+	"Improved Topology Algorithm",
+	"Improved Stability Kernel",
+	"Sync from latest AOSP Source 20161119"
 	      ] 
     }
   ]

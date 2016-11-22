@@ -1,5 +1,18 @@
 Changelog :
 
+V1.2.1 TEST RELEASE :
+- Merged Linux Kernel to 3.4.14
+- Added Frandom Module
+- Misc fixes for Intelli Thermal
+- Improve Utilization for Threshold CPU
+- Added PegasusQ,HYPER & Intellidemand CPU Governor
+- Removed Lulzactive & Smartmax CPU Governor
+- Added MSM Turbo Boost for CPU
+- Re-Tuning Alucard & Intelliactive CPU Governor
+- Improved Topology Algorithm
+- Improved Stability Kernel
+- Sync from latest AOSP Source 20161119
+
 V1.2 Stable RELEASE :
 - Merged Linux Kernel to 3.4.13
 - Optimized slub
