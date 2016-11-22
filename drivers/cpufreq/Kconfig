@@ -159,6 +159,9 @@ config CPU_FREQ_DEFAULT_GOV_INTELLIMM
           Use the CPUFreq governor 'intelliminmax' as default. This is
           governor will use only 3 different frequencies, idle, UI and max
 
+config CPU_FREQ_DEFAULT_GOV_PEGASUSQ
+ 	bool "pegasusq"
+ 	select CPU_FREQ_GOV_PEGASUSQ
 
 config CPU_FREQ_DEFAULT_GOV_INTELLIDEMAND
 	bool "intellidemand"

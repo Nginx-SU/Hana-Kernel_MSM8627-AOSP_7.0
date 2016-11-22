@@ -66,7 +66,7 @@
       "url": "https://fl1.androidfilehost.com/dl/boCuhS6D_U3xQwhPw_NoFw/1478795008/457095661767112431/Hana_Kernel_v1.2-nicki-signed.zip",
       "md5sum": "8df0b94c01e211ddbb32a6b7b5431200",
       "changelog": [
-	      "Removed Darkness & Intellidemand CPU Governor", 
+	"Removed Darkness & Intellidemand CPU Governor", 
         "Added Uberdemand & Smartmax CPU Governor",
         "Deleted AutoSMP and Alucard Hotplug",
         "Added MSM MPDecision Hotplug", 
