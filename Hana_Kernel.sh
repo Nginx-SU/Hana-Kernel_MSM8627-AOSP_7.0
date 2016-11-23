@@ -195,7 +195,7 @@ find . -name "*.ko" -exec cp {} modules \;
 echo "
 ## Preparing Hana Kernel"
 cd /home/nicklas
-mkdir Hana_ouput
+mkdir Hana_output
 mv Hana_Kernel-Source/modules Hana_output
 
 echo "##Cleaning Build"
