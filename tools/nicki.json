@@ -62,7 +62,7 @@
     {
       "name": "1.2.1",
       "description": "<b>Only for <i>6.0.X</i> based ROM</b>",
-      "url": "http://qc4.androidfilehost.com/dl/DYCa7vE2ygBm3Xy7XTW0Vw/1480046578/457095661767117765/Hana_Kernel_v1.2.1-nicki-signed.zip",
+      "url": "https://va1.androidfilehost.com/dl/3Rwyxn3KsRIZ8LCdYHvKwg/1480404171/457095661767117765/Hana_Kernel_v1.2.1-nicki-signed.zip",
       "changelog": [
 	"Merged Linux Kernel to 3.4.14",
 	"Added Frandom Module",
