@@ -42,9 +42,12 @@ struct notifier_block cpu_hotplug;
 struct notifier_block freq_policy;
 
 struct cpu_load_data {
-	cputime64_t prev_cpu_idle;
- 	cputime64_t prev_cpu_wall;
- 	cputime64_t prev_cpu_iowait;
+	u64 prev_cpu_idle;
+ 	u64 prev_cpu_wall;
+ 	u64 prev_cpu_iowait;
+#ifdef ALUCARD_HOTPLUG_USE_RQ_STATS
+	unsigned int cpu_load;
+#endif
 	unsigned int avg_load_maxfreq;
 	unsigned int cur_load_maxfreq;
 	unsigned int samples;
@@ -104,6 +107,10 @@ static int update_average_load(unsigned int freq, unsigned int cpu)
 	/* Calculate the scaled load across CPU */
 	load_at_max_freq = (cur_load * freq) / pcpu->policy_max;
 
+#ifdef ALUCARD_HOTPLUG_USE_RQ_STATS
+	pcpu->cpu_load = cur_load;
+#endif
+
 	if (!pcpu->avg_load_maxfreq) {
 		/* This is the first sample in this window*/
 		pcpu->avg_load_maxfreq = load_at_max_freq;
@@ -143,6 +150,22 @@ static unsigned int report_load_at_max_freq(void)
 	return total_load;
 }
 
+unsigned int report_avg_load_cpu(unsigned int cpu)
+{
+ 	struct cpu_load_data *pcpu= &per_cpu(cpuload, cpu);
+ 
+ 	return pcpu->cur_load_maxfreq;
+}
+ 
+#ifdef ALUCARD_HOTPLUG_USE_RQ_STATS
+unsigned int report_cpu_load(unsigned int cpu)
+{
+ 	struct cpu_load_data *pcpu = &per_cpu(cpuload, cpu);
+ 
+ 	return pcpu->cpu_load;
+}
+#endif
+
 static int cpufreq_transition_handler(struct notifier_block *nb,
 			unsigned long val, void *data)
 {
@@ -177,6 +200,9 @@ static int cpu_hotplug_handler(struct notifier_block *nb,
 	case CPU_ONLINE_FROZEN:
 		this_cpu->avg_load_maxfreq = 0;
 	}
+#ifdef ALUCARD_HOTPLUG_USE_RQ_STATS
+ 		this_cpu->cpu_load = 0;
+#endif
 	return NOTIFY_OK;
 }
 
@@ -225,23 +251,6 @@ static ssize_t hotplug_disable_show(struct kobject *kobj,
 }
 
 static struct kobj_attribute hotplug_disabled_attr = __ATTR_RO(hotplug_disable);
-#ifdef CONFIG_MSM_MPDEC
-unsigned int get_rq_info(void)
-{
- 	unsigned long flags = 0;
-         unsigned int rq = 0;
- 
-         spin_lock_irqsave(&rq_lock, flags);
- 
-         rq = rq_info.rq_avg;
-         rq_info.rq_avg = 0;
-
-         spin_unlock_irqrestore(&rq_lock, flags);
- 
-         return rq;
-}
-EXPORT_SYMBOL(get_rq_info);
-#endif
 
 static void def_work_fn(struct work_struct *work)
 {
