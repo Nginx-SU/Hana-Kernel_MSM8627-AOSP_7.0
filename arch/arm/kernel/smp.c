@@ -327,7 +327,7 @@ void __init smp_prepare_cpus(unsigned int max_cpus)
 {
 	unsigned int ncores = num_possible_cpus();
 
-	__init_cpu_topology();
+	init_cpu_topology();
 
 	smp_store_cpu_info(smp_processor_id());
 
