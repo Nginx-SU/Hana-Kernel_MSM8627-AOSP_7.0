@@ -1587,7 +1587,7 @@ config MSM_CPU_FREQ_SET_MIN_MAX
 config MSM_CPU_FREQ_MAX
 	int "Max CPU Frequency"
 	depends on MSM_CPU_FREQ_SET_MIN_MAX
-	default 1728000
+	default 1782000
 
 config MSM_CPU_FREQ_MIN
 	int "Min CPU Frequency"
@@ -1595,15 +1595,6 @@ config MSM_CPU_FREQ_MIN
 	default 192000
 
 endif # CPU_FREQ_MSM
-  
-config TURBO_BOOST
- 	bool "Enable CPU Turbo boost option"
- 	depends on CPU_OVERCLOCK
- 	default y
- 	help
- 	  This option allows overclocking of 2 cores to higher clock rate
- 	  than stock maximum.  When more than 2 cores are active, the clock
- 	  is limited to stock max speeds
 
 config ALUCARD_HOTPLUG_USE_RQ_STATS
  	bool "Enable alucard-hotplug msm rq statistics using"
