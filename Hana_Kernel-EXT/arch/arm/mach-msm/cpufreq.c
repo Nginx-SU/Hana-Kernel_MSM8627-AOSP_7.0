@@ -60,10 +60,6 @@ struct cpu_freq {
 
 static DEFINE_PER_CPU(struct cpu_freq, cpu_freq_info);
 
-#ifdef CONFIG_TURBO_BOOST
-extern int msm_turbo(int);
-#endif
-
 static int set_cpu_freq(struct cpufreq_policy *policy, unsigned int new_freq)
 {
 	int ret = 0;
@@ -84,10 +80,6 @@ static int set_cpu_freq(struct cpufreq_policy *policy, unsigned int new_freq)
 			pr_debug("min: limiting freq to %d\n", new_freq);
 		}
 	}
-
-#ifdef CONFIG_TURBO_BOOST
- 	new_freq = msm_turbo(new_freq);
-#endif
 
 	freqs.old = policy->cur;
 	freqs.new = new_freq;
@@ -345,6 +337,7 @@ static int msm_cpufreq_init(struct cpufreq_policy *policy)
 
 static int msm_cpufreq_cpu_callback(struct notifier_block *nfb,
 		unsigned long action, void *hcpu)
+
 {
 	unsigned int cpu = (unsigned long)hcpu;
 

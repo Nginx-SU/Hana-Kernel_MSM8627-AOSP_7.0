@@ -15,10 +15,9 @@ This kernel feature is :
 - Added CPU Voltage Control
 - Added Overclocked GPU to 500Mhz
 - Added Auto Reboot feature when hold power button
-- Added MSM MPDecision Hotplug
-- Added Intelli Thermal 
+- Added Alucard & AutoSMP Hotplug Manager
 - Added custom CPU Governor 
-: Alucard,Intelliactive,IntelliMM,Lionheart,Adaptive,SmartassV2,HYPER & Intellidemand
+: Alucard,Intelliactive,IntelliMM,Lionheart,Adaptive,SmartassV2,HYPER,Cyan & Bioshock
 - Added custom I/O Sched Governor 
 : zen,sio,sioplus,tripndroid,fifo,fiops and vr
 - Added fast charge feature (Enable By Default)
@@ -29,17 +28,17 @@ This kernel feature is :
 - Improved "get cpu idle time" on stock governor
 - Updated I/O Sched default list
 - Use new hashtable implementation on KSM and HGM
-- Sync from latest AOSP Source 20161119
+- Sync from latest AOSP Source 20161125
 
 More details on changelog for custom build in kernel source
 
 Hana Kernel XDA Thread
 http://forum.xda-developers.com/xperia-m/orig-development/6-0-aoicore-kernel-t3454265
 
-(Hana Kernel) V1.2.1 Stable RELEASE:
+(Hana Kernel) V1.2.3 BETA RELEASE:
 Pre Released Version (Private)
 Download Official build (EXPERIMENTAL) 
-https://www.androidfilehost.com/?fid=457095661767117765
+https://www.androidfilehost.com/?fid=457095661767120666
 
 (HanaCoreUX+ Kernel) V1.2.7 Pre STABLE RELEASE:
 [EOL]

@@ -1,12 +1,13 @@
 Changelog :
 
-V1.2.3 ALPHA RELEASE :
+V1.2.3 BETA RELEASE :
 - Removed MSM Turbo Boost
 - Misc Fixes for msm_rq_stats 
 - Reconfigure Intellidemand CPU Governor
 - Reconfigure Alucard CPU & Hotplug Governor
 - Fix for other custom governor
 - Revert commit "Improved Topology Algorithm"
+- Removed SavagedZen & Added Bioshock & Cyan CPU Governor
 
 V1.2.2 ALPHA RELEASE :
 - Re-added Alucard Hotplug with use MSM_RQ_STATS

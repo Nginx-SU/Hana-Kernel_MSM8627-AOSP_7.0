@@ -1571,24 +1571,15 @@ config CPU_VOLTAGE_TABLE
  
 if CPU_FREQ_MSM
 
-config MSM_MPDEC
- 	bool "Enable kernel based mpdecision"
- 	depends on MSM_SMP
- 	default n
+config ALUCARD_HOTPLUG
+ 	bool "Enable alucard-hotplug cpu hotplug driver"
+ 	default y
  	help
- 	  This enables kernel based multi core control.
- 	  (up/down hotplug based on load)
-
-config MSM_MPDEC_INPUTBOOST_CPUMIN
- 	bool "Enable kernel based mpdecision"
- 	depends on MSM_MPDEC
- 	default n
- 	help
- 	  This pushes the cpu min speed to predefined values on input events.
+ 	  Generic Alucard-hotplug cpu hotplug driver for ARM SOCs
   
 config MSM_CPU_FREQ_SET_MIN_MAX
 	bool "Set Min/Max CPU frequencies."
-	default n
+	default y
 	help
 	  Allow setting min and max CPU frequencies. Sysfs can be used
 	  to override these values.
@@ -1596,7 +1587,7 @@ config MSM_CPU_FREQ_SET_MIN_MAX
 config MSM_CPU_FREQ_MAX
 	int "Max CPU Frequency"
 	depends on MSM_CPU_FREQ_SET_MIN_MAX
-	default 1728000
+	default 1782000
 
 config MSM_CPU_FREQ_MIN
 	int "Min CPU Frequency"
@@ -1604,15 +1595,13 @@ config MSM_CPU_FREQ_MIN
 	default 192000
 
 endif # CPU_FREQ_MSM
-  
-config TURBO_BOOST
- 	bool "Enable CPU Turbo boost option"
- 	depends on CPU_OVERCLOCK
- 	default y
+
+config ALUCARD_HOTPLUG_USE_RQ_STATS
+ 	bool "Enable alucard-hotplug msm rq statistics using"
+ 	depends on ALUCARD_HOTPLUG && MSM_RUN_QUEUE_STATS
+ 	default n
  	help
- 	  This option allows overclocking of 2 cores to higher clock rate
- 	  than stock maximum.  When more than 2 cores are active, the clock
- 	  is limited to stock max speeds
+ 	  Alucard-hotplug msm rq statics using
 
 config MSM_AVS_HW
 	bool "Enable Adaptive Voltage Scaling (AVS)"

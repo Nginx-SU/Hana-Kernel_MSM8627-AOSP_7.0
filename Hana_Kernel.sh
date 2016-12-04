@@ -99,8 +99,9 @@ cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_intellimm.c Hana_Kernel-Source/driver
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_lionheart.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_lionheart.c
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_smartass2.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_smartass2.c
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_savagedzen.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_savagedzen.c
-cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_intellidemand.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_intellidemand.c
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_HYPER.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_HYPER.c
+cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_bioshock.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_bioshock.c
+cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_cyan.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_cyan.c
 rm Hana_Kernel-Source/drivers/crypto/msm/qcedev.c
 cp Hana_Kernel-EXT/drivers/crypto/msm/qcedev.c Hana_Kernel-Source/drivers/crypto/msm/qcedev.c
 rm Hana_Kernel-Source/drivers/input/misc/pmic8xxx-pwrkey.c

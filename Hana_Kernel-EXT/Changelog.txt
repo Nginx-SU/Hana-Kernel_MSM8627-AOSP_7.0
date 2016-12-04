@@ -1,5 +1,24 @@
 Changelog :
 
+V1.2.3 BETA RELEASE :
+- Removed MSM Turbo Boost
+- Misc Fixes for msm_rq_stats 
+- Reconfigure Intellidemand CPU Governor
+- Reconfigure Alucard CPU & Hotplug Governor
+- Fix for other custom governor
+- Revert commit "Improved Topology Algorithm"
+- Removed SavagedZen & Added Bioshock & Cyan CPU Governor
+
+V1.2.2 ALPHA RELEASE :
+- Re-added Alucard Hotplug with use MSM_RQ_STATS
+- Re-added AutoSMP Hotplug & ARM Auto Hotplug
+- Removed MSM MPDecision Hotplug (Fix error only online 1 core when use some freq (ex : 1.35Ghz))
+- Removed PegasusQ CPU Governor
+- Added SavagedZen CPU Governor
+- Major fix for custom cpu governor
+- Removed Intelli Thermal (Temporary) [Try to fix Overheating Issue]
+- Sync from latest CM14.1 Source 20161128
+
 V1.2.1 TEST RELEASE :
 - Merged Linux Kernel to 3.4.14
 - Added Frandom Module
