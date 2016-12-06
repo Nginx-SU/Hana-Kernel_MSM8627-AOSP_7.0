@@ -1241,7 +1241,7 @@ static void cs_free(struct hda_codec *codec)
 	struct cs_spec *spec = codec->spec;
 	kfree(spec->capture_bind[0]);
 	kfree(spec->capture_bind[1]);
-	kfree(codec->spec);
+	cs_free(codec);
 }
 
 static void cs_unsol_event(struct hda_codec *codec, unsigned int res)
@@ -1427,7 +1427,7 @@ static int patch_cs420x(struct hda_codec *codec)
 	return 0;
 
  error:
-	kfree(codec->spec);
+	cs_free(codec);
 	codec->spec = NULL;
 	return err;
 }
@@ -1984,7 +1984,7 @@ static int patch_cs4210(struct hda_codec *codec)
 	return 0;
 
  error:
-	kfree(codec->spec);
+	cs_free(codec);
 	codec->spec = NULL;
 	return err;
 }
@@ -2009,7 +2009,7 @@ static int patch_cs4213(struct hda_codec *codec)
 	return 0;
 
  error:
-	kfree(codec->spec);
+	cs_free(codec);
 	codec->spec = NULL;
 	return err;
 }

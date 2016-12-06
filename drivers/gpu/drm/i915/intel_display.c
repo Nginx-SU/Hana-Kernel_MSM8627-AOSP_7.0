@@ -5011,7 +5011,7 @@ static bool intel_choose_pipe_bpp_dither(struct drm_crtc *crtc,
 		}
 	}
 
-	if (mode->private_flags & INTEL_MODE_DP_FORCE_6BPC) {
+	if (adjusted_mode->private_flags & INTEL_MODE_DP_FORCE_6BPC) {
 		DRM_DEBUG_KMS("Dithering DP to 6bpc\n");
 		display_bpc = 6;
 	}
@@ -5782,7 +5782,7 @@ static int ironlake_crtc_mode_set(struct drm_crtc *crtc,
 	/* determine panel color depth */
 	temp = I915_READ(PIPECONF(pipe));
 	temp &= ~PIPE_BPC_MASK;
-	dither = intel_choose_pipe_bpp_dither(crtc, &pipe_bpp, mode);
+	dither = intel_choose_pipe_bpp_dither(crtc, &pipe_bpp, adjusted_mode);
 	switch (pipe_bpp) {
 	case 18:
 		temp |= PIPE_6BPC;
