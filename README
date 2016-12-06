@@ -8,7 +8,7 @@ This kernel is include several feature to increase performance and ARM is aim fo
 This kernel need kernel configuration app to control this kernel, so try to find kernel configuration app after flash this kernel.
 
 This kernel feature is :
-- Linux Kernel Version 3.4.14
+- Linux Kernel Version 3.4.15
 - Compatibility with AOSP and CM based ROM [Android 6.0+]
 - Added overclock up to 1,7Ghz
 - Added Double Tap 2 Wake Feature
@@ -38,7 +38,7 @@ http://forum.xda-developers.com/xperia-m/orig-development/6-0-aoicore-kernel-t34
 (Hana Kernel) V1.2.3 BETA RELEASE:
 Pre Released Version (Private)
 Download Official build (EXPERIMENTAL) 
-https://www.androidfilehost.com/?fid=457095661767120666
+https://www.androidfilehost.com/?fid=529152257862686908
 
 (HanaCoreUX+ Kernel) V1.2.7 Pre STABLE RELEASE:
 [EOL]

@@ -9,7 +9,7 @@
   "paypal": "https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=9dy1T4gF5jt-hygBQ4zLG23sqycm_l5YaDQC7lA9Lm58K5bsn-CmpAD_EY8&dispatch=5885d80a13c0db1f8e263663d3faee8d4fe1dd75ca3bd4f11d72275b28239088",
   "features": [
     "Build with Crosstool NG Toolchains 5.4.0",
-    "Linux Kernel 3.4.14",
+    "Linux Kernel 3.4.15",
     "Overclocked to 1,7Ghz",
     "Alucard & AutoSMP Hotplug",
     "Double Tap 2 Wake",
@@ -60,11 +60,12 @@
   ],
   "downloads": [
     {
-      "name": "Hana Kernel v1.2.3 (BETA)",
+      "name": "Hana Kernel v1.2.3",
       "description": "<b>Only for <i>6.0.X</i> based ROM</b>",
-      "url": "http://qc4.androidfilehost.com/dl/RVjN8--Q2V8y7Qejh3yjow/1481077582/457095661767120666/Hana_Kernel_v1.2.3-nicki-signed.zip",
-      "md5sum": "53b64b0e8f667eaefca9f65f50c98e54",
+      "url": "https://de1.androidfilehost.com/dl/1GLA7EaC7r1q7-_bO6uVfg/1481244271/529152257862686908/Hana_Kernel_v1.2.3-nicki-signed.zip",
+      "md5sum": "837988026795062d793bbe640aa584e1",
       "changelog": [
+	"Merged Linux Kernel 3.4.15",
 	"Re-added Alucard Hotplug with use MSM_RQ_STATS",
 	"Re-added AutoSMP Hotplug & ARM Auto Hotplug",
 	"Removed MSM MPDecision Hotplug (Fix error only online 1 core when use some freq (ex : 1.35Ghz))",
