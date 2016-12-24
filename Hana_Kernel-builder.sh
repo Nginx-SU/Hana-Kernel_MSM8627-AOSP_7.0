@@ -26,8 +26,8 @@ cd /home/nicklas
 echo "###Sign Hana Kernel..."
 mv Hana_Kernel-nicki.zip Hana_Kernel-EXT/Hana_Signer/Hana_Kernel_v1.0-nicki.zip
 cd Hana_Kernel-EXT/Hana_Signer
-java -jar signapk.jar signature-key.Nicklas@XDA.x509.pem signature-key.Nicklas@XDA.pk8 Hana_Kernel_v1.0-nicki.zip Hana_Kernel_v1.2.3-nicki-signed.zip
-mv Hana_Kernel_v1.2.3-nicki-signed.zip /home/nicklas
+java -jar signapk.jar signature-key.Nicklas@XDA.x509.pem signature-key.Nicklas@XDA.pk8 Hana_Kernel_v1.0-nicki.zip Hana_Kernel_v1.2.3.1-nicki-signed.zip
+mv Hana_Kernel_v1.2.3.1-nicki-signed.zip /home/nicklas
 rm Hana_Kernel_v1.0-nicki.zip
 cd /home/nicklas
 rm -rvf Hana_output

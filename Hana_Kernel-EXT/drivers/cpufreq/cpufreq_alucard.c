@@ -139,20 +139,12 @@ static ssize_t show_##file_name##_##num_core		\
 
 show_pcpu_param(pump_inc_step_at_min_freq, 1);
 show_pcpu_param(pump_inc_step_at_min_freq, 2);
-show_pcpu_param(pump_inc_step_at_min_freq, 3);
-show_pcpu_param(pump_inc_step_at_min_freq, 4);
 show_pcpu_param(pump_inc_step, 1);
 show_pcpu_param(pump_inc_step, 2);
-show_pcpu_param(pump_inc_step, 3);
-show_pcpu_param(pump_inc_step, 4);
 show_pcpu_param(pump_dec_step_at_min_freq, 1);
 show_pcpu_param(pump_dec_step_at_min_freq, 2);
-show_pcpu_param(pump_dec_step_at_min_freq, 3);
-show_pcpu_param(pump_dec_step_at_min_freq, 4);
 show_pcpu_param(pump_dec_step, 1);
 show_pcpu_param(pump_dec_step, 2);
-show_pcpu_param(pump_dec_step, 3);
-show_pcpu_param(pump_dec_step, 4);
 
 #define store_pcpu_param(file_name, num_core)		\
 static ssize_t store_##file_name##_##num_core		\
@@ -205,37 +197,21 @@ static ssize_t store_##file_name##_##num_core		\
 
 store_pcpu_pump_param(pump_inc_step_at_min_freq, 1);
 store_pcpu_pump_param(pump_inc_step_at_min_freq, 2);
-store_pcpu_pump_param(pump_inc_step_at_min_freq, 3);
-store_pcpu_pump_param(pump_inc_step_at_min_freq, 4);
 store_pcpu_pump_param(pump_inc_step, 1);
 store_pcpu_pump_param(pump_inc_step, 2);
-store_pcpu_pump_param(pump_inc_step, 3);
-store_pcpu_pump_param(pump_inc_step, 4);
 store_pcpu_pump_param(pump_dec_step_at_min_freq, 1);
 store_pcpu_pump_param(pump_dec_step_at_min_freq, 2);
-store_pcpu_pump_param(pump_dec_step_at_min_freq, 3);
-store_pcpu_pump_param(pump_dec_step_at_min_freq, 4);
 store_pcpu_pump_param(pump_dec_step, 1);
 store_pcpu_pump_param(pump_dec_step, 2);
-store_pcpu_pump_param(pump_dec_step, 3);
-store_pcpu_pump_param(pump_dec_step, 4);
 
 define_one_global_rw(pump_inc_step_at_min_freq_1);
 define_one_global_rw(pump_inc_step_at_min_freq_2);
-define_one_global_rw(pump_inc_step_at_min_freq_3);
-define_one_global_rw(pump_inc_step_at_min_freq_4);
 define_one_global_rw(pump_inc_step_1);
 define_one_global_rw(pump_inc_step_2);
-define_one_global_rw(pump_inc_step_3);
-define_one_global_rw(pump_inc_step_4);
 define_one_global_rw(pump_dec_step_at_min_freq_1);
 define_one_global_rw(pump_dec_step_at_min_freq_2);
-define_one_global_rw(pump_dec_step_at_min_freq_3);
-define_one_global_rw(pump_dec_step_at_min_freq_4);
 define_one_global_rw(pump_dec_step_1);
 define_one_global_rw(pump_dec_step_2);
-define_one_global_rw(pump_dec_step_3);
-define_one_global_rw(pump_dec_step_4);
 
 /* sampling_rate */
 static ssize_t store_sampling_rate(struct kobject *a, struct attribute *b,
@@ -423,20 +399,12 @@ static struct attribute *alucard_attributes[] = {
 	&freq_responsiveness.attr,
 	&pump_inc_step_at_min_freq_1.attr,
 	&pump_inc_step_at_min_freq_2.attr,
-	&pump_inc_step_at_min_freq_3.attr,
-	&pump_inc_step_at_min_freq_4.attr,
 	&pump_inc_step_1.attr,
 	&pump_inc_step_2.attr,
-	&pump_inc_step_3.attr,
-	&pump_inc_step_4.attr,
 	&pump_dec_step_at_min_freq_1.attr,
 	&pump_dec_step_at_min_freq_2.attr,
-	&pump_dec_step_at_min_freq_3.attr,
-	&pump_dec_step_at_min_freq_4.attr,
 	&pump_dec_step_1.attr,
 	&pump_dec_step_2.attr,
-	&pump_dec_step_3.attr,
-	&pump_dec_step_4.attr,
 	&cpus_up_rate.attr,
 	&cpus_down_rate.attr,
 	NULL

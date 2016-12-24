@@ -60,24 +60,15 @@
   ],
   "downloads": [
     {
-      "name": "Hana Kernel v1.2.3",
+      "name": "Hana Kernel v1.2.3.1",
       "description": "<b>Only for <i>6.0.X</i> based ROM</b>",
-      "url": "https://de1.androidfilehost.com/dl/1GLA7EaC7r1q7-_bO6uVfg/1481244271/529152257862686908/Hana_Kernel_v1.2.3-nicki-signed.zip",
-      "md5sum": "837988026795062d793bbe640aa584e1",
+      "url": "https://qc0.uploads.androidfilehost.com/dl/FxXRNh_96PoyhL3WffSiSg/1482825386/745425885120695516/Hana_Kernel_v1.2.3.1-nicki-signed.zip",
+      "md5sum": "e029d3fcc581ac8fc1e2d2601f7a9e1f",
       "changelog": [
-	"Merged Linux Kernel 3.4.15",
-	"Re-added Alucard Hotplug with use MSM_RQ_STATS",
-	"Re-added AutoSMP Hotplug & ARM Auto Hotplug",
-	"Removed MSM MPDecision Hotplug (Fix error only online 1 core when use some freq (ex : 1.35Ghz))",
- 	"Removed PegasusQ, Intellidemand, & SavagedZen CPU Governor",
-	"Major fix for custom cpu governor",
-	"Removed Intelli Thermal",
-	"Removed MSM Turbo Boost",
-	"Misc Fixes for msm_rq_stats",
-	"Reconfigure Alucard CPU & Hotplug Governor",
-	"Fix for other custom governor",
-	"Revert commit (Improved Topology Algorithm)",
-	"Added Bioshock & Cyan CPU Governor"
+ 	"Removed ARM Auto Hotplug (Not needed and try to optimize custom hotplug)",
+ 	"Optimized Alucard Hotplug & CPU Governor for dual core device",
+ 	"Misc Fixes",
+ 	"Update sync from latest AOSP Source 20161220"
 	      ] 
     }
   ]
