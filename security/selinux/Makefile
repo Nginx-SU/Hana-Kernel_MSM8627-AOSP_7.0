@@ -15,6 +15,7 @@ selinux-$(CONFIG_NETLABEL) += netlabel.o
 
 ccflags-y := -Isecurity/selinux -Isecurity/selinux/include
 
+
 $(addprefix $(obj)/,$(selinux-y)): $(obj)/flask.h
 
 quiet_cmd_flask = GEN     $(obj)/flask.h $(obj)/av_permissions.h
