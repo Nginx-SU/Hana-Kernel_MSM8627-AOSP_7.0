@@ -636,9 +636,6 @@ asmlinkage void __init start_kernel(void)
 
 	ftrace_init();
 
-	if (efi_enabled)
- 		efi_free_boot_services();
-
 	/* Do the rest non-__init'ed, we're now alive */
 	rest_init();
 }
