@@ -921,6 +921,7 @@ static int __dwc3_gadget_kick_transfer(struct dwc3_ep *dep, u16 cmd_param,
 	ret = dwc3_send_gadget_ep_cmd(dwc, dep->number, cmd, &params);
 	if (ret < 0) {
 		dev_dbg(dwc->dev, "failed to send STARTTRANSFER command\n");
+		dep->flags &= ~DWC3_EP_BUSY;
 
 		/*
 		 * FIXME we need to iterate over the list of requests
