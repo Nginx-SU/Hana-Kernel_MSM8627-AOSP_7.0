@@ -1,0 +1,8 @@
+title: Hana Kernel for Xperia M | MSM8627
+description: Hana Kernel is custom kernel for Xperia M that based on AOSP Nougat Source.
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-cayman
+
+gems:
+  - jekyll-mentions
