@@ -1,3 +1,5 @@
+![Hana Kernel Logo](https://img.xda-cdn.com/obVtyoToPS7po1U_8_SC-2ZWILQ=/https%3A%2F%2Flh3.googleusercontent.com%2FdJ6gvVjERqxce4UD7hTgmdjKNVNMDjiCrOtzvjm8pSsBOVRUAsuvpK4cKnIz3MEIpJTV6OeEoA%3Dw1366-h768-rw-no)
+
 # Hana Kernel For Xperia M / M Dual
 
 Hana Kernel Development. Hana kernel based on AOSP Nougat source, and included many improvement and optimization on processor,gpu and include some feature for Xperia M / M dual devices that use Marshmallow as base ROM.
