@@ -9,7 +9,7 @@
   "paypal": "https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=9dy1T4gF5jt-hygBQ4zLG23sqycm_l5YaDQC7lA9Lm58K5bsn-CmpAD_EY8&dispatch=5885d80a13c0db1f8e263663d3faee8d4fe1dd75ca3bd4f11d72275b28239088",
   "features": [
     "Build with Crosstool NG Toolchains 5.4.0",
-    "Linux Kernel 3.4.15",
+    "Linux Kernel 3.4.17",
     "Overclocked to 1,7Ghz",
     "Alucard & AutoSMP Hotplug",
     "Double Tap 2 Wake",
@@ -60,11 +60,12 @@
   ],
   "downloads": [
     {
-      "name": "Hana Kernel v1.2.3.1",
+      "name": "Hana Kernel v1.2.4",
       "description": "<b>Only for <i>6.0.X</i> based ROM</b>",
-      "url": "https://qc0.uploads.androidfilehost.com/dl/FxXRNh_96PoyhL3WffSiSg/1482825386/745425885120695516/Hana_Kernel_v1.2.3.1-nicki-signed.zip",
-      "md5sum": "e029d3fcc581ac8fc1e2d2601f7a9e1f",
+      "url": "https://tx1.androidfilehost.com/dl/rAYSjpAIWWy6iAntds0nZQ/1483044042/745425885120696011/Hana_Kernel_v1.2.4-nicki-signed.zip",
+      "md5sum": "49a1dc42c418363a6f96c9244cbf7360",
       "changelog": [
+	"Merged Linux 3.4.17",
  	"Removed ARM Auto Hotplug (Not needed and try to optimize custom hotplug)",
  	"Optimized Alucard Hotplug & CPU Governor for dual core device",
  	"Misc Fixes",

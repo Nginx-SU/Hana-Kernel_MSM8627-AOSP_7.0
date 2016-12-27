@@ -8,7 +8,7 @@ This kernel is include several feature to increase performance and ARM is aim fo
 This kernel need kernel configuration app to control this kernel, so try to find kernel configuration app after flash this kernel.
 
 This kernel feature is :
-- Linux Kernel Version 3.4.15
+- Linux Kernel Version 3.4.17
 - Compatibility with AOSP and CM based ROM [Android 6.0+]
 - Added overclock up to 1,7Ghz
 - Added Double Tap 2 Wake Feature
@@ -28,17 +28,17 @@ This kernel feature is :
 - Improved "get cpu idle time" on stock governor
 - Updated I/O Sched default list
 - Use new hashtable implementation on KSM and HGM
-- Sync from latest AOSP Source 20161125
+- Sync from latest AOSP Source 20161220
 
 More details on changelog for custom build in kernel source
 
 Hana Kernel XDA Thread
 http://forum.xda-developers.com/xperia-m/orig-development/6-0-aoicore-kernel-t3454265
 
-(Hana Kernel) V1.2.3.1 STABLE RELEASE:
+(Hana Kernel) V1.2.4 STABLE RELEASE:
 Pre Released Version (Private)
 Download Official build (EXPERIMENTAL) 
-https://www.androidfilehost.com/?fid=745425885120695516
+https://www.androidfilehost.com/?fid=745425885120696011
 
 (HanaCoreUX+ Kernel) V1.2.7 Pre STABLE RELEASE:
 [EOL]
