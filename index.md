@@ -19,9 +19,9 @@ This kernel feature is :
 - Added Auto Reboot feature when hold power button
 - Added Alucard & AutoSMP Hotplug Manager
 - Added custom CPU Governor 
-= Alucard,Intelliactive,IntelliMM,Lionheart,Adaptive,SmartassV2,HYPER,Cyan & Bioshock
+(Alucard,Intelliactive,IntelliMM,Lionheart,Adaptive,SmartassV2,HYPER,Cyan & Bioshock)
 - Added custom I/O Sched Governor 
-= zen,sio,sioplus,tripndroid,fifo,fiops and vr
+(zen,sio,sioplus,tripndroid,fifo,fiops and vr)
 - Added fast charge feature (Enable By Default)
 - Compiled using GCC 5.4.0 Crosstool-NG Toolchains (Optimized for armv7 with neon-vfpv4)
 - Add full support NEON VFPV4 feature 
