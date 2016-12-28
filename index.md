@@ -19,9 +19,9 @@ This kernel feature is :
 - Added Auto Reboot feature when hold power button
 - Added Alucard & AutoSMP Hotplug Manager
 - Added custom CPU Governor 
-: Alucard,Intelliactive,IntelliMM,Lionheart,Adaptive,SmartassV2,HYPER,Cyan & Bioshock
+= Alucard,Intelliactive,IntelliMM,Lionheart,Adaptive,SmartassV2,HYPER,Cyan & Bioshock
 - Added custom I/O Sched Governor 
-: zen,sio,sioplus,tripndroid,fifo,fiops and vr
+= zen,sio,sioplus,tripndroid,fifo,fiops and vr
 - Added fast charge feature (Enable By Default)
 - Compiled using GCC 5.4.0 Crosstool-NG Toolchains (Optimized for armv7 with neon-vfpv4)
 - Add full support NEON VFPV4 feature 
@@ -37,12 +37,12 @@ More details on changelog for custom build in kernel source
 Hana Kernel XDA Thread
 http://forum.xda-developers.com/xperia-m/orig-development/6-0-aoicore-kernel-t3454265
 
-(Hana Kernel) V1.2.4 STABLE RELEASE:
+(Hana Kernel) V1.2.4 STABLE RELEASE
 Pre Released Version (Private)
 Download Official build (EXPERIMENTAL) 
 https://www.androidfilehost.com/?fid=745425885120696011
 
-(HanaCoreUX+ Kernel) V1.2.7 Pre STABLE RELEASE:
+(HanaCoreUX+ Kernel) V1.2.7 Pre STABLE RELEASE
 [EOL]
 Non released version (Private)
 Download Official build (EXPERIMENTAL) 
