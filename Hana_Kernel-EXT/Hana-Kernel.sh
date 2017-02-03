@@ -1,12 +1,13 @@
 #!/bin/bash
+
 echo "
 ######################################################
 #                                                    #
-#             Hana Kernel Script Builder             #
+#             Amakura Kernel Script Builder          #
 #                                                    #
 #                Nicklas Van Dam @XDA                #
 #                                                    #
-#	           Royal Patraine		     #
+#	      Hana / 花 Kernel Development	     #
 ######################################################"
 
 echo "###Cleaning old build"
@@ -16,7 +17,9 @@ make clean && make mrproper
 echo "
 ###Extracting Hana Kernel Extension"
 
-cd /home/nicklas
+###### Remove and Replace to Hana Modified Files
+
+cd /home/Hana
 rm Hana_Kernel-Source/Makefile
 cp Hana_Kernel-EXT/Makefile Hana_Kernel-Source/Makefile
 rm Hana_Kernel-Source/arch/arm/Kconfig
@@ -31,6 +34,7 @@ cp Hana_Kernel-EXT/arch/arm/include/asm/xor.h Hana_Kernel-Source/arch/arm/includ
 cp Hana_Kernel-EXT/arch/arm/include/asm/rwsem.h Hana_Kernel-Source/arch/arm/include/asm/rwsem.h
 rm Hana_Kernel-Source/arch/arm/kernel/Makefile
 cp Hana_Kernel-EXT/arch/arm/kernel/autosmp.c Hana_Kernel-Source/arch/arm/kernel/autosmp.c
+cp Hana_Kernel-EXT/arch/arm/kernel/auto_hotplug.c Hana_Kernel-Source/arch/arm/kernel/auto_hotplug.c
 cp Hana_Kernel-EXT/arch/arm/kernel/Makefile Hana_Kernel-Source/arch/arm/kernel/Makefile
 rm Hana_Kernel-Source/arch/arm/kernel/head-nommu.S
 cp Hana_Kernel-EXT/arch/arm/kernel/head-nommu.S Hana_Kernel-Source/arch/arm/kernel/head-nommu.S
@@ -83,6 +87,9 @@ cp Hana_Kernel-EXT/block/vr-iosched.c Hana_Kernel-Source/block/vr-iosched.c
 cp Hana_Kernel-EXT/block/zen-iosched.c Hana_Kernel-Source/block/zen-iosched.c 
 rm Hana_Kernel-Source/drivers/char/random.c
 cp Hana_Kernel-EXT/drivers/char/random.c Hana_Kernel-Source/drivers/char/random.c
+rm Hana_Kernel-Source/drivers/char/Makefile
+cp Hana_Kernel-EXT/drivers/char/Makefile Hana_Kernel-Source/drivers/char/Makefile
+cp Hana_Kernel-EXT/drivers/char/frandom.c Hana_Kernel-Source/drivers/char/frandom.c
 rm Hana_Kernel-Source/drivers/cpufreq/Kconfig
 cp Hana_Kernel-EXT/drivers/cpufreq/Kconfig Hana_Kernel-Source/drivers/cpufreq/Kconfig
 rm Hana_Kernel-Source/drivers/cpufreq/cpufreq.c
@@ -96,11 +103,10 @@ cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_alucard.c Hana_Kernel-Source/drivers/
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_intelliactive.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_intelliactive.c
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_intellimm.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_intellimm.c
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_lionheart.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_lionheart.c
-cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_smartass2.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_smartass2.c
-cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_savagedzen.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_savagedzen.c
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_HYPER.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_HYPER.c
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_bioshock.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_bioshock.c
 cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_cyan.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_cyan.c
+cp Hana_Kernel-EXT/drivers/cpufreq/cpufreq_sakuractive.c Hana_Kernel-Source/drivers/cpufreq/cpufreq_sakuractive.c
 rm Hana_Kernel-Source/drivers/crypto/msm/qcedev.c
 cp Hana_Kernel-EXT/drivers/crypto/msm/qcedev.c Hana_Kernel-Source/drivers/crypto/msm/qcedev.c
 rm Hana_Kernel-Source/drivers/input/misc/pmic8xxx-pwrkey.c
@@ -161,43 +167,51 @@ cp Hana_Kernel-EXT/mm/slub.c Hana_Kernel-Source/mm/slub.c
 rm Hana_Kernel-Source/net/netfilter/Makefile
 cp Hana_Kernel-EXT/net/netfilter/Makefile Hana_Kernel-Source/net/netfilter/Makefile
 cd Hana_Kernel-Source
+
 echo "
 ###Running GCC Toolchains 5.4.0 (Crosstool-NG Toolchains)"
-
 export ARCH=arm
-export CROSS_COMPILE=/home/nicklas/Crosstool-NG_Toolchains-5.4.X/bin/arm-unknown-linux-gnueabihf-
+export CROSS_COMPILE=/home/Hana/Crosstool-NG_Toolchains-5.4.X/bin/arm-unknown-linux-gnueabihf-
 
 echo "
 ###Building Hana Kernel"
-
-echo "
-###Compile kernel process will write on log, for simple interface"
-
 make ARCH=arm hana_kernel_nicki_defconfig
-make -j5 ARCH=arm > Hana-Log
+make ARCH=arm CROSS_COMPILE=/home/Hana/Crosstool-NG_Toolchains-5.4.X/bin/arm-unknown-linux-gnueabihf- > Hana-Log 
 
 echo "
-##Creating Modules kernel"
-
+##Creating Temporary Modules kernel"
 mkdir modules
 cp arch/arm/boot/zImage modules
 find . -name "*.ko" -exec cp {} modules \;
-
-echo "
-## Preparing Hana Kernel"
-cd /home/nicklas
-mkdir Hana_output
-mv Hana_Kernel-Source/modules Hana_output
-
-echo "##Cleaning Build"
-cd Hana_Kernel-Source
-make clean && make mrproper
+cd /home/Hana
+mv Hana_Kernel-Source/modules Hana_Kernel-EXT/TEMP
 
 echo "##Creating Hana Kernel"
-cd /home/nicklas/Hana_Kernel-EXT
-./Hana_Kernel-builder.sh
+cp Hana_Kernel-EXT/TEMP/Pre-built_ZIP/Template/Hana_Kernel.zip Hana_Kernel-EXT/TEMP/Pre-built_ZIP/ZIP/Hana_Kernel.zip
+cd /home/Hana/Hana_Kernel-EXT/TEMP/Pre-built_ZIP/ZIP
+unzip Hana_Kernel.zip
+cd /home/Hana
+mv Hana_Kernel-EXT/TEMP/modules/zImage Hana_Kernel-EXT/TEMP/Pre-built_ZIP/ZIP/tmp/kernel/boot.img-zImage
+mv Hana_Kernel-EXT/TEMP/modules Hana_Kernel-EXT/TEMP/Pre-built_ZIP/ZIP/system/lib
+cd /home/Hana/Hana_Kernel-EXT/TEMP/Pre-built_ZIP/ZIP
+rm Hana_Kernel.zip
+zip -r Hana_Kernel *
+rm -rfv META-INF
+rm -rfv system 
+rm -rfv tmp
+cd /home/Hana/Hana_Kernel-EXT/TEMP/Pre-built_ZIP/ZIP
+mv Hana_Kernel.zip /home/Hana/Hana_Kernel-EXT/TEMP/Pre-built_ZIP/Sign/Hana_Kernel.zip
+cd /home/Hana/Hana_Kernel-EXT/TEMP/Pre-built_ZIP/Sign
+java -jar signapk.jar signature-key.Nicklas@XDA.x509.pem signature-key.Nicklas@XDA.pk8 Hana_Kernel.zip Hana_Kernel_v1.2.5-TEST-nicki-signed.zip
+mv Hana_Kernel_v1.2.5-TEST-nicki-signed.zip /home/Hana/Result/Build/TEST/Hana_Kernel_v1.2.5-TEST-nicki-signed.zip
+rm Hana_Kernel.zip
 
-echo "Script Complete Successfuly"
+echo "##Cleaning Build"
+cd /home/Hana/Hana_Kernel-Source
+make clean && make mrproper
+
+echo "Kernel Build Completed"
 echo "Nicklas Van Dam @ XDA"
-echo "Hana Kernel Finished"
 echo "======Makihatayama Hana======"
+echo "======Amakura Mayu==========="
+echo "Hana / 花 Kernel Development"
