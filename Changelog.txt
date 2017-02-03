@@ -1,5 +1,16 @@
 Changelog :
 
+V1.2.5 TEST RELEASE :
+- Re-Added ARM Auto Hotplug  (To Fix error on core 1 that can't stuck at user frequency)
+- Re-Configure Alucard Hotplug (To fix error when set core more than 1GHz)
+- Added new CPU Governor (Sakuractive) and remove Smartass2 CPU Governor
+- Misc change for CPU Voltage Point
+- Re-Configure Android LMK for low RAM device
+- Re-Configure Frandom module to move to built-in feature
+- Re-Built Hana Kernel Builder script from base (optimize some script)
+- Increase Stability for kernel 
+- Sync from latest LineageOS kernel 20170131
+
 V1.2.4 STABLE RELEASE :
 - Merged Linux Kernel to 3.4.17
 - Removed ARM Auto Hotplug (Not needed and try to optimize custom hotplug)

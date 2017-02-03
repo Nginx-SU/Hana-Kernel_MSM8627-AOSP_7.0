@@ -1,6 +1,6 @@
 # Hana Kernel For Xperia M / M Dual
 
-Hana Kernel Development. Hana kernel based on AOSP Nougat source, and included many improvement and optimization on processor,gpu and include some feature for Xperia M / M dual devices that use Marshmallow as base ROM.
+Hana Kernel Development. Hana kernel based on Lineage OS source, and included many improvement and optimization on processor,gpu and include some feature for Xperia M / M dual devices that use Marshmallow as base ROM.
 
 Hana offered kernel stability, smoothness process on cpu and already have full support on NEON-vfpv4.
 This kernel is include several feature to increase performance and ARM is aim for all improvement, Custom governor and custom I/O Scheduler is already included too here.
@@ -17,7 +17,7 @@ This kernel feature is :
 - Added Auto Reboot feature when hold power button
 - Added Alucard & AutoSMP Hotplug Manager
 - Added custom CPU Governor 
-: Alucard,Intelliactive,IntelliMM,Lionheart,Adaptive,SmartassV2,HYPER,Cyan & Bioshock
+: Alucard,Intelliactive,IntelliMM,Lionheart,Adaptive,HYPER,Cyan,Bioshock & Sakuractive
 - Added custom I/O Sched Governor 
 : zen,sio,sioplus,tripndroid,fifo,fiops and vr
 - Added fast charge feature (Enable By Default)
@@ -28,14 +28,14 @@ This kernel feature is :
 - Improved "get cpu idle time" on stock governor
 - Updated I/O Sched default list
 - Use new hashtable implementation on KSM and HGM
-- Sync from latest AOSP Source 20161220
+- Sync from latest LineageOS Kernel Source 20170131
 
 More details on changelog for custom build in kernel source
 
 Hana Kernel XDA Thread
 http://forum.xda-developers.com/xperia-m/orig-development/6-0-aoicore-kernel-t3454265
 
-(Hana Kernel) V1.2.4 STABLE RELEASE:
+(Hana Kernel) V1.2.5 TEST RELEASE:
 Pre Released Version (Private)
 Download Official build (EXPERIMENTAL) 
 https://www.androidfilehost.com/?fid=745425885120696011
@@ -56,3 +56,4 @@ Alex Rivero (@Alex_Gamer) [Kernel Tester & Troubleshoot]
 Ngxson (@thichthat) [For DT2W Source]
 
 # Hana Kernel | Makihatayama Hana (2016)
+# Amakura Mayu | Hana / |花| Kernel Development (2017)
