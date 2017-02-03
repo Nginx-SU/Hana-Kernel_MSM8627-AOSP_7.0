@@ -228,7 +228,7 @@ struct netlink_callback {
 	int			(*done)(struct netlink_callback *cb);
 	void			*data;
 	/* the module that dump function belong to */
- 	struct module		*module;
+	struct module		*module;
 	u16			family;
 	u16			min_dump_alloc;
 	unsigned int		prev_seq, seq;
@@ -261,16 +261,16 @@ struct netlink_dump_control {
 };
 
 extern int __netlink_dump_start(struct sock *ssk, struct sk_buff *skb,
- 				const struct nlmsghdr *nlh,
- 				struct netlink_dump_control *control);
+				const struct nlmsghdr *nlh,
+				struct netlink_dump_control *control);
 static inline int netlink_dump_start(struct sock *ssk, struct sk_buff *skb,
- 				     const struct nlmsghdr *nlh,
- 				     struct netlink_dump_control *control)
+				     const struct nlmsghdr *nlh,
+				     struct netlink_dump_control *control)
 {
- 	if (!control->module)
- 		control->module = THIS_MODULE;
- 
- 	return __netlink_dump_start(ssk, skb, nlh, control);
+	if (!control->module)
+		control->module = THIS_MODULE;
+
+	return __netlink_dump_start(ssk, skb, nlh, control);
 }
 
 

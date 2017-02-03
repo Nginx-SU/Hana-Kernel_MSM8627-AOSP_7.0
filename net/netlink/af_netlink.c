@@ -156,9 +156,9 @@ static void netlink_sock_destruct(struct sock *sk)
 	if (nlk->cb) {
 		if (nlk->cb->done)
 			nlk->cb->done(nlk->cb);
-		netlink_destroy_callback(nlk->cb);
 
 		module_put(nlk->cb->module);
+		netlink_destroy_callback(nlk->cb);
 	}
 
 	skb_queue_purge(&sk->sk_receive_queue);
@@ -1683,6 +1683,7 @@ static int netlink_dump(struct sock *sk)
 	struct netlink_callback *cb;
 	struct sk_buff *skb = NULL;
 	struct nlmsghdr *nlh;
+	struct module *module;
 	int len, err = -ENOBUFS;
 	int alloc_size;
 
@@ -1728,9 +1729,10 @@ static int netlink_dump(struct sock *sk)
 	if (cb->done)
 		cb->done(cb);
 	nlk->cb = NULL;
+	module = cb->module;
 	mutex_unlock(nlk->cb_mutex);
 
-	module_put(cb->module);
+	module_put(module);
 	netlink_destroy_callback(cb);
 	return 0;
 
@@ -1741,8 +1743,8 @@ errout_skb:
 }
 
 int __netlink_dump_start(struct sock *ssk, struct sk_buff *skb,
- 			 const struct nlmsghdr *nlh,
- 			 struct netlink_dump_control *control)
+			 const struct nlmsghdr *nlh,
+			 struct netlink_dump_control *control)
 {
 	struct netlink_callback *cb;
 	struct sock *sk;
@@ -1775,15 +1777,15 @@ int __netlink_dump_start(struct sock *ssk, struct sk_buff *skb,
 		mutex_unlock(nlk->cb_mutex);
 		netlink_destroy_callback(cb);
 		ret = -EBUSY;
- 		goto out;
+		goto out;
 	}
 	/* add reference of module which cb->dump belongs to */
- 	if (!try_module_get(cb->module)) {
- 		mutex_unlock(nlk->cb_mutex);
- 		netlink_destroy_callback(cb);
- 		ret = -EPROTONOSUPPORT;
- 		goto out;
- 	}
+	if (!try_module_get(cb->module)) {
+		mutex_unlock(nlk->cb_mutex);
+		netlink_destroy_callback(cb);
+		ret = -EPROTONOSUPPORT;
+		goto out;
+	}
 
 	nlk->cb = cb;
 	mutex_unlock(nlk->cb_mutex);
