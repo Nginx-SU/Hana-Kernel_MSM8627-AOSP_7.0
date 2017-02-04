@@ -9,9 +9,10 @@
   "paypal": "https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=9dy1T4gF5jt-hygBQ4zLG23sqycm_l5YaDQC7lA9Lm58K5bsn-CmpAD_EY8&dispatch=5885d80a13c0db1f8e263663d3faee8d4fe1dd75ca3bd4f11d72275b28239088",
   "features": [
     "Build with Crosstool NG Toolchains 5.4.0",
-    "Linux Kernel 3.4.17",
+    "Linux Kernel 3.4.18",
     "Overclocked to 1,7Ghz",
     "Alucard & AutoSMP Hotplug",
+    "ARM Auto Hotplug",
     "Double Tap 2 Wake",
     "CPU Voltage Control",
     "Overclocked GPU to 500Mhz",
@@ -37,7 +38,7 @@
         "intelliactive",
         "lionheart",
         "HYPER",
-        "smartass2"
+        "sakuractive"
       ]
    },
     {
@@ -60,16 +61,21 @@
   ],
   "downloads": [
     {
-      "name": "Hana Kernel v1.2.4",
-      "description": "<b>Only for <i>6.0.X</i> based ROM</b>",
-      "url": "https://tx1.androidfilehost.com/dl/rAYSjpAIWWy6iAntds0nZQ/1483044042/745425885120696011/Hana_Kernel_v1.2.4-nicki-signed.zip",
-      "md5sum": "49a1dc42c418363a6f96c9244cbf7360",
+      "name": "Hana Kernel v1.2.5 TEST",
+      "description": "<b>Only for <i>6.0.X</i> based ROM</b>,(EXPERIMENTAL)",
+      "url": "https://qc3.androidfilehost.com/dl/RmRxov-9WYGUCTgkrBOnjQ/1486421310/673368273298928605/Hana_Kernel_v1.2.5-TEST-nicki-signed.zip",
+      "md5sum": "38f3ca4e11cf78ce095b41a0030244d8",
       "changelog": [
-	"Merged Linux 3.4.17",
- 	"Removed ARM Auto Hotplug (Not needed and try to optimize custom hotplug)",
- 	"Optimized Alucard Hotplug & CPU Governor for dual core device",
- 	"Misc Fixes",
- 	"Update sync from latest AOSP Source 20161220"
+	"Merge Linux 3.4.18",
+	"Re-Added ARM Auto Hotplug",
+	"Re-Configure Alucard Hotplug",
+	"Added new CPU Governor (Sakuractive) and remove Smartass2",
+	"Misc change for CPU Voltage Point",
+	"Re-Configure Android LMK for low RAM device",
+	"Re-Configure Frandom module to move to built-in feature",
+	"Re-Built Hana Kernel Builder script from base (optimize some script)",
+	"Increase Stability for kernel", 
+	"Sync from latest LineageOS kernel 20170131"
 	      ] 
     }
   ]
