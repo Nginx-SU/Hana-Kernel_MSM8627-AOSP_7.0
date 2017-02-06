@@ -452,6 +452,8 @@ show_one(scaling_max_freq, max);
 show_one(scaling_cur_freq, cur);
 show_one(cpu_utilization, util);
 show_one(util_threshold, util_thres);
+show_one(policy_min_freq, user_policy.min);
+show_one(policy_max_freq, user_policy.max);
 
 static int __cpufreq_set_policy(struct cpufreq_policy *data,
 				struct cpufreq_policy *policy);
@@ -764,6 +766,8 @@ cpufreq_freq_attr_rw(scaling_min_freq);
 cpufreq_freq_attr_rw(scaling_max_freq);
 cpufreq_freq_attr_rw(scaling_governor);
 cpufreq_freq_attr_rw(scaling_setspeed);
+cpufreq_freq_attr_ro(policy_min_freq);
+cpufreq_freq_attr_ro(policy_max_freq);
 define_one_global_rw(vdd_levels);
 
 static struct attribute *default_attrs[] = {
@@ -780,6 +784,8 @@ static struct attribute *default_attrs[] = {
 	&scaling_driver.attr,
 	&scaling_available_governors.attr,
 	&scaling_setspeed.attr,
+	&policy_min_freq.attr,
+ 	&policy_max_freq.attr,
 	NULL
 };
 
@@ -1698,12 +1704,19 @@ int __cpufreq_driver_target(struct cpufreq_policy *policy,
 			    unsigned int relation)
 {
 	int retval = -EINVAL;
+	unsigned int old_target_freq = target_freq;
 
 	if (cpufreq_disabled())
 		return -ENODEV;
 
-	pr_debug("target for CPU %u: %u kHz, relation %u\n", policy->cpu,
-		target_freq, relation);
+	/* Make sure that target_freq is within supported range */
+ 	if (target_freq > policy->max)
+ 		target_freq = policy->max;
+ 	if (target_freq < policy->min)
+ 		target_freq = policy->min;
+ 
+ 	pr_debug("target for CPU %u: %u kHz, relation %u, requested %u kHz\n",
+ 			policy->cpu, target_freq, relation, old_target_freq);
 	if (cpu_online(policy->cpu) && cpufreq_driver->target)
 		retval = cpufreq_driver->target(policy, target_freq, relation);
 
