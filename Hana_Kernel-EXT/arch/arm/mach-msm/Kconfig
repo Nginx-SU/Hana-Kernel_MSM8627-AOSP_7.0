@@ -1579,7 +1579,7 @@ config ALUCARD_HOTPLUG
   
 config MSM_CPU_FREQ_SET_MIN_MAX
 	bool "Set Min/Max CPU frequencies."
-	default y
+	default n
 	help
 	  Allow setting min and max CPU frequencies. Sysfs can be used
 	  to override these values.
@@ -1592,7 +1592,7 @@ config MSM_CPU_FREQ_MAX
 config MSM_CPU_FREQ_MIN
 	int "Min CPU Frequency"
 	depends on MSM_CPU_FREQ_SET_MIN_MAX
-	default 192000
+	default 384000
 
 endif # CPU_FREQ_MSM
 

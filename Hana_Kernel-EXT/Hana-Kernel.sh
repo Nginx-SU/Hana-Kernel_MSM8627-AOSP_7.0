@@ -202,8 +202,8 @@ rm -rfv tmp
 cd /home/Hana/Hana_Kernel-EXT/TEMP/Pre-built_ZIP/ZIP
 mv Hana_Kernel.zip /home/Hana/Hana_Kernel-EXT/TEMP/Pre-built_ZIP/Sign/Hana_Kernel.zip
 cd /home/Hana/Hana_Kernel-EXT/TEMP/Pre-built_ZIP/Sign
-java -jar signapk.jar signature-key.Nicklas@XDA.x509.pem signature-key.Nicklas@XDA.pk8 Hana_Kernel.zip Hana_Kernel_v1.2.5-TEST-nicki-signed.zip
-mv Hana_Kernel_v1.2.5-TEST-nicki-signed.zip /home/Hana/Result/Build/TEST/Hana_Kernel_v1.2.5-TEST-nicki-signed.zip
+java -jar signapk.jar signature-key.Nicklas@XDA.x509.pem signature-key.Nicklas@XDA.pk8 Hana_Kernel.zip Hana_Kernel_v1.2.5-nicki-signed.zip
+mv Hana_Kernel_v1.2.5-nicki-signed.zip /home/Hana/Result/Build/Stable/Hana_Kernel_v1.2.5-nicki-signed.zip
 rm Hana_Kernel.zip
 
 echo "##Cleaning Build"

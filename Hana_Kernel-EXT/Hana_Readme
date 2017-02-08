@@ -9,7 +9,7 @@ This kernel need kernel configuration app to control this kernel, so try to find
 
 This kernel feature is :
 - Linux Kernel Version 3.4.17
-- Compatibility with AOSP and CM based ROM [Android 6.0+]
+- Compatibility with AOSP,CM And LineageOS based ROM [Android 6.0+]
 - Added overclock up to 1,7Ghz
 - Added Double Tap 2 Wake Feature
 - Added CPU Voltage Control
@@ -28,17 +28,17 @@ This kernel feature is :
 - Improved "get cpu idle time" on stock governor
 - Updated I/O Sched default list
 - Use new hashtable implementation on KSM and HGM
-- Sync from latest LineageOS Kernel Source 20170131
+- Sync from latest LineageOS Kernel Source 20170206
 
 More details on changelog for custom build in kernel source
 
 Hana Kernel XDA Thread
 http://forum.xda-developers.com/xperia-m/orig-development/6-0-aoicore-kernel-t3454265
 
-(Hana Kernel) V1.2.5 TEST RELEASE:
+(Hana Kernel) V1.2.5 Stable RELEASE:
 Pre Released Version (Private)
 Download Official build (EXPERIMENTAL) 
-https://www.androidfilehost.com/?fid=745425885120696011
+https://www.androidfilehost.com/?fid=673368273298929516
 
 (HanaCoreUX+ Kernel) V1.2.7 Pre STABLE RELEASE:
 [EOL]

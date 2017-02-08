@@ -1,5 +1,10 @@
 Changelog :
 
+V1.2.5 Stable RELEASE:
+- Merge Linux Kernel 3.4.18
+- Misc fixes for ARM Auto Hotplug
+- Sync from latest Lineage OS source kernel 20170206
+
 V1.2.5 TEST RELEASE :
 - Re-Added ARM Auto Hotplug  (To Fix error on core 1 that can't stuck at user frequency)
 - Re-Configure Alucard Hotplug (To fix error when set core more than 1GHz)
@@ -9,7 +14,7 @@ V1.2.5 TEST RELEASE :
 - Re-Configure Frandom module to move to built-in feature
 - Re-Built Hana Kernel Builder script from base (optimize some script)
 - Increase Stability for kernel 
-- Sync from latest LineageOS kernel 20170131
+- Sync from latest LineageOS kernel 20170118
 
 V1.2.4 STABLE RELEASE :
 - Merged Linux Kernel to 3.4.17

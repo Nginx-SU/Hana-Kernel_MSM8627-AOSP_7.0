@@ -61,10 +61,10 @@
   ],
   "downloads": [
     {
-      "name": "Hana Kernel v1.2.5 TEST",
+      "name": "Hana Kernel v1.2.5",
       "description": "<b>Only for <i>6.0.X</i> based ROM</b>,(EXPERIMENTAL)",
-      "url": "https://qc3.androidfilehost.com/dl/RmRxov-9WYGUCTgkrBOnjQ/1486421310/673368273298928605/Hana_Kernel_v1.2.5-TEST-nicki-signed.zip",
-      "md5sum": "38f3ca4e11cf78ce095b41a0030244d8",
+      "url": "http://tx2.androidfilehost.com/dl/-zTkIxG8YiD8G7wP_Xgj2g/1486764173/673368273298929516/Hana_Kernel_v1.2.5-nicki-signed.zip",
+      "md5sum": "5f1c13f0409449089fbc753fe37c19e0",
       "changelog": [
 	"Merge Linux 3.4.18",
 	"Re-Added ARM Auto Hotplug",
@@ -75,7 +75,7 @@
 	"Re-Configure Frandom module to move to built-in feature",
 	"Re-Built Hana Kernel Builder script from base (optimize some script)",
 	"Increase Stability for kernel", 
-	"Sync from latest LineageOS kernel 20170131"
+	"Sync from latest LineageOS kernel 20170206"
 	      ] 
     }
   ]

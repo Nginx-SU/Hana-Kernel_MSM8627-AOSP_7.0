@@ -8,7 +8,6 @@ V1.2.5 TEST RELEASE :
 - Re-Configure Android LMK for low RAM device
 - Re-Configure Frandom module to move to built-in feature
 - Re-Built Hana Kernel Builder script from base (optimize some script)
-- Increase Stability for kernel 
 - Sync from latest LineageOS kernel 20170131
 
 V1.2.4 STABLE RELEASE :
