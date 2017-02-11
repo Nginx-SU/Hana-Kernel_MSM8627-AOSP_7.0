@@ -193,7 +193,7 @@ SUBARCH := $(shell uname -m | sed -e s/i.86/i386/ -e s/sun4u/sparc64/ \
 # Note: Some architectures assign CROSS_COMPILE in their arch/*/Makefile
 export KBUILD_BUILDHOST := $(SUBARCH)
 ARCH		= arm
-CROSS_COMPILE	= /home/Hana/Crosstool-NG_Toolchains-5.4.X/bin/arm-unknown-linux-gnueabihf-
+CROSS_COMPILE	= /home/Hana/Crosstool-NG_Toolchains-6.2.1/bin/arm-unknown-linux-gnueabihf-
 # Architecture as present in compile.h
 UTS_MACHINE 	:= $(ARCH)
 SRCARCH 	:= $(ARCH)
@@ -376,13 +376,15 @@ LINUXINCLUDE    := -I$(srctree)/arch/$(hdr-arch)/include \
 
 KBUILD_CPPFLAGS := -D__KERNEL__
 
-KBUILD_CFLAGS   := -Wall -DNDEBUG -Wundef -Wstrict-prototypes -Wno-trigraphs -Wno-sizeof-pointer-memaccess -Wno-discarded-array-qualifiers -Wno-maybe-uninitialized -Wno-logical-not-parentheses -Wno-array-bounds \
+KBUILD_CFLAGS   := -Wall -DNDEBUG -Wundef -Wstrict-prototypes -Wno-trigraphs -Wno-sizeof-pointer-memaccess -Wno-discarded-array-qualifiers -Wno-maybe-uninitialized -Wno-logical-not-parentheses -Wno-array-bounds -Wno-unused-const-variable \
                    -fno-strict-aliasing -fno-common \
                    -Wno-format-security \
+		   -Wno-misleading-indentation \
 		   -Wno-implicit-function-declaration \
 		   -Wno-sequence-point \
                    -fno-delete-null-pointer-checks \
  		   $(KERNEL_FLAGS)
+
 
 ifdef CONFIG_CC_GRAPHITE_OPTIMIZATION
 KBUILD_CFLAGS   += $(GRAPHITE_FLAGS)

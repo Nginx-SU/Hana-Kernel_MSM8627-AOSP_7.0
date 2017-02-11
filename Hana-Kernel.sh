@@ -169,14 +169,14 @@ cp Hana_Kernel-EXT/net/netfilter/Makefile Hana_Kernel-Source/net/netfilter/Makef
 cd Hana_Kernel-Source
 
 echo "
-###Running GCC Toolchains 5.4.0 (Crosstool-NG Toolchains)"
+###Running GCC Toolchains 6.2.1 (Crosstool-NG Toolchains)"
 export ARCH=arm
-export CROSS_COMPILE=/home/Hana/Crosstool-NG_Toolchains-5.4.X/bin/arm-unknown-linux-gnueabihf-
+export CROSS_COMPILE=/home/Hana/Crosstool-NG_Toolchains-6.2.1/bin/arm-unknown-linux-gnueabihf-
 
 echo "
 ###Building Hana Kernel"
 make ARCH=arm hana_kernel_nicki_defconfig
-make ARCH=arm CROSS_COMPILE=/home/Hana/Crosstool-NG_Toolchains-5.4.X/bin/arm-unknown-linux-gnueabihf- > Hana-Log 
+make ARCH=arm CROSS_COMPILE=/home/Hana/Crosstool-NG_Toolchains-6.2.1/bin/arm-unknown-linux-gnueabihf- > Hana-Log 
 
 echo "
 ##Creating Temporary Modules kernel"
@@ -202,8 +202,8 @@ rm -rfv tmp
 cd /home/Hana/Hana_Kernel-EXT/TEMP/Pre-built_ZIP/ZIP
 mv Hana_Kernel.zip /home/Hana/Hana_Kernel-EXT/TEMP/Pre-built_ZIP/Sign/Hana_Kernel.zip
 cd /home/Hana/Hana_Kernel-EXT/TEMP/Pre-built_ZIP/Sign
-java -jar signapk.jar signature-key.Nicklas@XDA.x509.pem signature-key.Nicklas@XDA.pk8 Hana_Kernel.zip Hana_Kernel_v1.2.5-TEST-nicki-signed.zip
-mv Hana_Kernel_v1.2.5-TEST-nicki-signed.zip /home/Hana/Result/Build/TEST/Hana_Kernel_v1.2.5-TEST-nicki-signed.zip
+java -jar signapk.jar signature-key.Nicklas@XDA.x509.pem signature-key.Nicklas@XDA.pk8 Hana_Kernel.zip Hana_Kernel_v1.2.5.2-TEST-nicki-signed.zip
+mv Hana_Kernel_v1.2.5.2-TEST-nicki-signed.zip /home/Hana/Result/Build/TEST/Hana_Kernel_v1.2.5.2-TEST-nicki-signed.zip
 rm Hana_Kernel.zip
 
 echo "##Cleaning Build"
