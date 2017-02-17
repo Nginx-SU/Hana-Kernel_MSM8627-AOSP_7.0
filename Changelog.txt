@@ -1,4 +1,9 @@
 Changelog :
+[EOL]
+(This source kernel has stopped from development and move to another source kernel)
+
+NEW SOURCE KERNEL :
+https://github.com/Nicklas373/android_kernel_sony_msm8x27-2
 
 V1.2.5 Stable RELEASE:
 - Merge Linux Kernel 3.4.18

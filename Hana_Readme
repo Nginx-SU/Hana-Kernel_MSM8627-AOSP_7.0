@@ -1,5 +1,11 @@
 # Hana Kernel For Xperia M / M Dual
 
+[EOL]
+(This source kernel has stopped from development and move to another source kernel)
+
+NEW SOURCE KERNEL :
+https://github.com/Nicklas373/android_kernel_sony_msm8x27-2
+
 Hana Kernel Development. Hana kernel based on Lineage OS source, and included many improvement and optimization on processor,gpu and include some feature for Xperia M / M dual devices that use Marshmallow as base ROM.
 
 Hana offered kernel stability, smoothness process on cpu and already have full support on NEON-vfpv4.
@@ -36,6 +42,7 @@ Hana Kernel XDA Thread
 http://forum.xda-developers.com/xperia-m/orig-development/6-0-aoicore-kernel-t3454265
 
 (Hana Kernel) V1.2.5 Stable RELEASE:
+[EOL]
 Pre Released Version (Private)
 Download Official build (EXPERIMENTAL) 
 https://www.androidfilehost.com/?fid=673368273298929516
