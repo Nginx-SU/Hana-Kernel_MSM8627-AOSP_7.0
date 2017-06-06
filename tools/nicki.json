@@ -1,10 +1,10 @@
 {
   "name": "<b><font color=\"#FFFFFF\">Hana Kernel</font></b>",
-  "short_description": " Based on LineageOS <b>Project HANA</b>",
+  "short_description": " Based on LineageOS <b>Hana Kernel</b>",
   "long_description": "Welcome to <b>Hana Kernel</b>! Hana offered kernel stability, smoothness process on cpu. Keep on stock and less modified to keep stability and optimal performance, and included with NEON-VFPV4 optimized for GPU performance.<br><a href=\"http://www.github.com/Nicklas373\">My Github Profile</a>",
   "logo": "https://raw.githubusercontent.com/Nicklas373/Hana-Kernel_MSM8627-AOSP_7.0/master/Hana_Kernel_Logo-Icon.png",
   "xda": "http://forum.xda-developers.com/xperia-m/orig-development/6-0-aoicore-kernel-t3454265",
-  "github": "https://github.com/Nicklas373/android_kernel_sony_msm8x27-2",
+  "github": "https://github.com/Nicklas373/Hana-Kernel_MSM8627-Lineage_14.1",
   "google_plus": "https://plus.google.com/+DickyHerlambangNicklasCRJ",
   "paypal": "https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=9dy1T4gF5jt-hygBQ4zLG23sqycm_l5YaDQC7lA9Lm58K5bsn-CmpAD_EY8&dispatch=5885d80a13c0db1f8e263663d3faee8d4fe1dd75ca3bd4f11d72275b28239088",
   "features": [
@@ -13,12 +13,11 @@
     "Double Tap 2 Wake Feature",
     "CPU Voltage Control",
     "Overclocked GPU to 500Mhz",
-    "Auto Reboot feature when hold power button",
     "Fast charge feature", 
-    "Compiled using GCC 6.2.0 Crosstool-NG Toolchains",  
-    "Added NEON-VFPV4 optimization for kernel",
-    "Added Graphite Optimization",
-    "Compiled with Ofast for kernel module",
+    "Compiled using GCC 5.4.1 Linaro Toolchains",
+    "Added Graphite Optimizations",
+    "Compiled with O3 for kernel module",
+    "Dynamic Fsync feature by default",
     "Sync from latest LineageOS Kernel Source 20170209",
     {
       "name": "CPU Governors",
@@ -30,13 +29,10 @@
         "performance",
         "conservative",
         "alucard",
-        "bioshock",
-	"cyan",
         "intellimm",
         "intelliactive",
         "lionheart",
-        "HYPER",
-	"wheatley"
+        "HYPER"
       ]
    },
     {
@@ -59,25 +55,19 @@
   ],
   "downloads": [
     {
-      "name": "Hana Kernel v1.3.6",
+      "name": "Hana Kernel v1.4.0",
       "description": "<b>Only for <i>6.0.X</i> based ROM</b>",
-      "url": "https://de1.androidfilehost.com/dl/FaB2t6ZhLsSuQGVusuPRmA/1493515015/673368273298950565/Hana_Kernel-nicki-signed-v.1.3.6.zip",
-      "md5sum": "fc9c595dc81c9f7fd76a7199e1e691f2",
+      "url": "http://qc4.androidfilehost.com/dl/tC0Poh62KtqRxNvanQVpFw/1496972948/673368273298961205/Hana_Kernel-nicki-v.1.4.0.zip",
+      "md5sum": "efc1fe06787f6e01ea984d58ba8dc059",
       "changelog": [
-	"1.3.6 YUME RELEASE: (Project HANA)"
-	"Added Intelli Thermal (Re-adapt and re-place stock thermal)",
-	"Added MSM Hotplug",
-	"Reconfigure all hotplug manager",
-	"Update Thermal Engine",
-	"Disable Stock MPDecision",
-	"Misc fixes for kernel module",
-	"1.3.3 AMANE RELEASE: (Project HANA)",
-	"Added Alucard Hotplug", 
-	"Change to Permissive for SE Linux Status",
-	"Fix Lionheart and Optimax governor and optimize it",
-	"Added CPU Limit driver",
-	"Optimize built-in mpdecision",
-	"Added Frandom module"
+	"V1.4.0 UMI RELEASE :",
+	"Revert back hard float and change to soft float for GPU",
+	"Update CPU and Voltage Table",
+	"Revert Optimizations for Cortex A15 (Applied in toolchains only)",
+	"Optimize I/0 Sched governor",
+	"Change Lulzactive to Lionheart CPU Governor",
+	"Optimize DT2W",
+	"Optimize in stock thermal"
 	      ] 
     }
   ]
