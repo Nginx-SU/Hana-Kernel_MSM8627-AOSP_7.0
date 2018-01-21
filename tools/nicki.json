@@ -28,7 +28,10 @@
         "intellimm",
         "intelliactive",
         "lionheart",
-        "Adaptive"
+        "Adaptive",
+	"Hyper",
+	"Blu Active",
+	"Smartass2"
       ]
    },
     {
@@ -45,7 +48,8 @@
         "fiops",
         "tripndroid",
         "vr",
-        "zen"
+        "zen",
+	"maple"
       ]
    },
      {
@@ -69,26 +73,24 @@
   ],
   "downloads": [
     {
-      "name": "Mimori kernel (Second Build)",
+      "name": "Mimori kernel (Five Build)",
       "description": "<b>Only for <i>6.0.X</i> based ROM</b>",
-      "url": "https://github.com/Nicklas373/Mimori-Kernel_MSM8227_LineageOS_14.1/blob/master/Build/Mimori_Kernel-nicki-signed.zip?raw=true",
+      "url": "https://raw.githubusercontent.com/Nicklas373/Mimori-Kernel_MSM8227_LineageOS_14.1/Matsuura/Build/Mimori_Kernel-nicki-signed_v5.zip",
       "changelog": [
-	"Second Build (20170817):",
-	"Set kernel as permissive",
-	"Enabling 972Mhz to fix slow response on boot and skipped frequency on system",
-	"Added Custom TCP Congestion",
-	"Added CPU Voltage Control",
-	"Added DT2W Vibration Support",
-	"Added USB Fastcharge v1",
-	"Adapted Some CPU Governor with CPU Freq Table",
-	"First Build (20170816):",
-	"INITIAL BUILD",
-	"Included Custom CPU Governor",
-  	"CPU Overclocked to 1.458Mhz",
-  	"Using NEON Optimized as VFP",
-  	"DT2W Feature",
-  	"CPU Optimization Algorithm",
-  	"Custom I/O Sched"
+	"Five Build (20171002):",
+	"Introduce IMAGINE Codename",
+	"Upstream Linux Kernel to 3.4.113 based on git.kernel.org",
+	"Revert change of F2FS (back to old source)",
+	"Revert some optimization change",
+	"Added Maple I/O Sched",
+	"I/O Sched Optimization for SIO and ZEN",
+	"Enable Interface Of Software CRC",
+	"Misc CPU Optimization",
+	"Added some sched optimization",
+	"Disabled USB Fastcharge v1",
+	"Reverting Permissive, Back to Enforcing",
+	"Added Blu Active CPU Governor",
+	"Added Support for Neon VFPv4 With Hard Floating"
 	      ] 
     }
   ]
