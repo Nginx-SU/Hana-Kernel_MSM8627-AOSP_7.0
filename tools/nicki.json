@@ -1,20 +1,30 @@
 {
   "name": "<b><font color=\"#FFFFFF\">Mimori Kernel</font></b>",
   "short_description": " Based on LineageOS <b>Project Mimori</b>",
-  "long_description": "Welcome to <b>Mimori Kernel</b>Mimori Kernel, Simple, Optimized and Based on Lineage OS 14.1 (Nougat) kernel source. Private kernel build for xperia m, THIS IS PREVIEW BUILD FROM HANA KERNEL<br><a href=\"http://www.github.com/Nicklas373\">My Github Profile</a>",
+  "long_description": "Welcome to <b>Mimori Kernel</b> Stable, Optimized and Based on Lineage OS 14.1 (Nougat) kernel source.<br><a href=\"http://www.github.com/Nicklas373\">My Github Profile</a>",
   "logo": "https://raw.githubusercontent.com/Nicklas373/Hana-Kernel_MSM8627-AOSP_7.0/master/new-logo.jpg",
   "xda": "http://forum.xda-developers.com/xperia-m/orig-development/6-0-aoicore-kernel-t3454265",
   "github": "https://github.com/Nicklas373/Mimori-Kernel_MSM8227_LineageOS_14.1",
   "google_plus": "https://plus.google.com/+DickyHerlambangNicklasCRJ",
   "paypal": "https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=9dy1T4gF5jt-hygBQ4zLG23sqycm_l5YaDQC7lA9Lm58K5bsn-CmpAD_EY8&dispatch=5885d80a13c0db1f8e263663d3faee8d4fe1dd75ca3bd4f11d72275b28239088",
   "features": [
+    "Linux Kernel v3.4.113",
     "Compatibility with AOSP,CM And LineageOS based ROM [Android 6.0+]",
     "Overclock up to 1,458Mhz",
     "Double Tap 2 Wake Feature (Incl. Vibration)",
     "CPU Voltage Control",
-    "Fastcharge v1", 
-    "Compiled using GCC 4.9.X Google GCC Toolchains",
-    "Sync from latest LineageOS Kernel Source 20170701",
+    "Implement Power Efficient Workqueues",
+    "Dynamic management of dirty page writebacks",
+    "Frandom Support",
+    "Dynamic Fsync 2.0",
+    "Entropy Tweaks",
+    "NEON VFPv4 Optimized (hard)",
+    "Intelli Plug v4.0",
+    "Intelli Thermal v1.0",
+    "F2FS & EXFAT File System Support",
+    "USB Keyboard Support",
+    "Compiled using GCC 5.4.X HyperToolchains",
+    "Sync from latest LineageOS Kernel Source 20171106",
     {
       "name": "CPU Governors",
       "items": [
@@ -73,24 +83,22 @@
   ],
   "downloads": [
     {
-      "name": "Mimori kernel (Five Build)",
+      "name": "Mimori kernel (Sixth Build)",
       "description": "<b>Only for <i>6.0.X</i> based ROM</b>",
-      "url": "https://raw.githubusercontent.com/Nicklas373/Mimori-Kernel_MSM8227_LineageOS_14.1/Matsuura/Build/Mimori_Kernel-nicki-signed_v5.zip",
+      "url": "https://raw.githubusercontent.com/Nicklas373/Mimori-Kernel_MSM8227_LineageOS_14.1/stable/Build/Mimori-Kernel-nicki-signed_v6.zip",
       "changelog": [
-	"Five Build (20171002):",
-	"Introduce IMAGINE Codename",
-	"Upstream Linux Kernel to 3.4.113 based on git.kernel.org",
-	"Revert change of F2FS (back to old source)",
-	"Revert some optimization change",
-	"Added Maple I/O Sched",
-	"I/O Sched Optimization for SIO and ZEN",
-	"Enable Interface Of Software CRC",
+	"Sixth Build (20180122):",
+	"Updated Kernel Security Patch to 20171106 (Based on MSM8960T Source)",
+	"Change GCC to GCC 5.4.X Hyper Toolchains",
+	"Misc fixes with intelli thermal",
+	"Applied last patch with 3.4.113",
+	"Applied security patch with (KRACKS attacks)",
+	"Removed sdcardfs drivers (not used by device)",
 	"Misc CPU Optimization",
-	"Added some sched optimization",
+	"Set readahed to 512kb",
+	"Added GPU optimizations flags",
 	"Disabled USB Fastcharge v1",
-	"Reverting Permissive, Back to Enforcing",
-	"Added Blu Active CPU Governor",
-	"Added Support for Neon VFPv4 With Hard Floating"
+	"Improve Hard Floating Point for neon-vfpv4"
 	      ] 
     }
   ]
