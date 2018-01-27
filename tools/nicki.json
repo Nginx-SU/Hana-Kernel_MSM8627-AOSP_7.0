@@ -8,7 +8,7 @@
   "google_plus": "https://plus.google.com/+DickyHerlambangNicklasCRJ",
   "paypal": "https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=9dy1T4gF5jt-hygBQ4zLG23sqycm_l5YaDQC7lA9Lm58K5bsn-CmpAD_EY8&dispatch=5885d80a13c0db1f8e263663d3faee8d4fe1dd75ca3bd4f11d72275b28239088",
   "features": [
-    "Linux Kernel v3.4.113",
+    "Linux Kernel v3.4.15 (Rebase)",
     "Compatibility with AOSP,CM And LineageOS based ROM [Android 6.0+]",
     "Overclock up to 1,458Mhz",
     "Double Tap 2 Wake Feature (Incl. Vibration)",
@@ -83,22 +83,15 @@
   ],
   "downloads": [
     {
-      "name": "Mimori kernel (Sixth Build)",
+      "name": "Mimori kernel (Sixth Build REBASE)",
       "description": "<b>Only for <i>6.0.X</i> based ROM</b>",
-      "url": "https://raw.githubusercontent.com/Nicklas373/Mimori-Kernel_MSM8227_LineageOS_14.1/stable/Build/Mimori-Kernel-nicki-signed_v6.zip",
+      "url": "https://raw.githubusercontent.com/Nicklas373/Mimori-Kernel_MSM8227_LineageOS_14.1/39c59d044d2271b5b5081292889d2545132a714e/Build/Mimori_Kernel-nicki-signed.zip",
       "changelog": [
-	"Sixth Build (20180122):",
-	"Updated Kernel Security Patch to 20171106 (Based on MSM8960T Source)",
-	"Change GCC to GCC 5.4.X Hyper Toolchains",
-	"Misc fixes with intelli thermal",
-	"Applied last patch with 3.4.113",
-	"Applied security patch with (KRACKS attacks)",
-	"Removed sdcardfs drivers (not used by device)",
-	"Misc CPU Optimization",
-	"Set readahed to 512kb",
-	"Added GPU optimizations flags",
-	"Disabled USB Fastcharge v1",
-	"Improve Hard Floating Point for neon-vfpv4"
+	"Sixth REBASE Build (20180126):",
+	"Rebase kernel to 3.4.15",
+	"Fix issue with OTG problem (Recovery or System)",
+	"Not rebase for optimizations and security patch",
+	"Updated F2FS to latest 3.4.y and misc fixes"
 	      ] 
     }
   ]
